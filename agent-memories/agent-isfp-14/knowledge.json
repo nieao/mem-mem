@@ -1,0 +1,50 @@
+[
+  {
+    "id": "k-1774272337501-sedh",
+    "content": "对\"SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:25:37.501Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774279333372-435s",
+    "content": "对\"Skill 生态：Agent 的\"超能力\"怎么设计？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:22:13.372Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774345590628-txkm",
+    "content": "对\"龙虾经济学：如何用最小成本养最聪明的龙虾？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:46:30.628Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774438317019-pa0d",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:31:57.020Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774438940925-za2z",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:42:20.925Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583285883-4hvj",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:48:05.883Z",
+    "accessCount": 0
+  }
+]

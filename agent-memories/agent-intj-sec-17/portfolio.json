@@ -1,0 +1,82 @@
+{
+  "agentId": "agent-intj-sec-17",
+  "tokens": 9080,
+  "totalInvested": 920,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 230,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": 1,
+      "pnlPct": 0.44256872362267113
+    },
+    {
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "short",
+      "amount": 230,
+      "entryPrice": 1014.38,
+      "currentPrice": 1017.35,
+      "pnl": -1,
+      "pnlPct": -0.29278968433920494
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 230,
+      "entryPrice": 1322.67,
+      "currentPrice": 1309.23,
+      "pnl": 2,
+      "pnlPct": 1.0161264714554692
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 230,
+      "entryPrice": 1275.74,
+      "currentPrice": 1309.23,
+      "pnl": 6,
+      "pnlPct": 2.625143054227351
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.289Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 230,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.992Z",
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "short",
+      "amount": 230,
+      "price": 1014.38
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.506Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 230,
+      "price": 1322.67
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.526Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 230,
+      "price": 1275.74
+    }
+  ],
+  "totalPnL": 8
+}

@@ -1,0 +1,14 @@
+{
+  "userId": "user-connect-test-mn4l7ewp",
+  "balance": 14880,
+  "totalEarned": 0,
+  "totalSpent": 120,
+  "transactions": [
+    {
+      "time": "2026-03-24T12:24:46.662Z",
+      "type": "spend",
+      "amount": 120,
+      "desc": "委托任务: Write a poem"
+    }
+  ]
+}

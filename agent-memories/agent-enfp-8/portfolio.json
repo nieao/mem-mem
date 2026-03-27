@@ -1,0 +1,89 @@
+{
+  "agentId": "agent-enfp-8",
+  "tokens": 7940,
+  "totalInvested": 2360,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": -3,
+      "pnlPct": -0.44256872362267113
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1336.78,
+      "currentPrice": 1309.23,
+      "pnl": -12,
+      "pnlPct": -2.060922515297951
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1322.67,
+      "currentPrice": 1309.23,
+      "pnl": -6,
+      "pnlPct": -1.0161264714554692
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1275.74,
+      "currentPrice": 1309.23,
+      "pnl": 15,
+      "pnlPct": 2.625143054227351
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.282Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.980Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "price": 1336.78
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.496Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "price": 1322.67
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.516Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "price": 1275.74
+    }
+  ],
+  "totalPnL": -6,
+  "bountyIncome": [
+    {
+      "amount": 300,
+      "from": "生成角色立绘",
+      "at": "2026-03-27T04:35:13.887Z"
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小猫和小海豚的海边之旅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f5e8dc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .illustration-box {
+            background: linear-gradient(180deg, #87ceeb 0%, #e0f6ff 50%, #ffd700 70%, #fff8e7 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 4/3;
+            position: relative;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .story-box {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .story-title {
+            font-family: "Noto Serif SC", Georgia, serif;
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            letter-spacing: 0.05em;
+        }
+
+        .story-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            text-align: left;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .story-paragraph {
+            margin-bottom: 20px;
+        }
+
+        .story-paragraph:first-letter {
+            font-size: 1.2em;
+            color: #c8a882;
+            font-weight: bold;
+        }
+
+        /* 装饰元素 */
+        .decoration {
+            text-align: center;
+            font-size: 24px;
+            color: #c8a882;
+            margin-top: 30px;
+            letter-spacing: 0.3em;
+        }
+
+        @media (max-width: 768px) {
+            .illustration-box {
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            .story-box {
+                padding: 30px 20px;
+            }
+
+            .story-title {
+                font-size: 22px;
+            }
+
+            .story-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 插画部分 -->
+        <div class="illustration-box">
+            <canvas id="illustration"></canvas>
+        </div>
+
+        <!-- 故事部分 -->
+        <div class="story-box">
+            <h1 class="story-title">小猫和小海豚的海边之旅</h1>
+
+            <div class="story-text">
+                <div class="story-paragraph">
+                    小猫咪背着蓝色的旅行包，漫步在金色的沙滩上。它从未见过广阔的大海，心里装满了好奇。就在这时，一只圆润友善的小海豚跳出水面，用晶亮的眼睛看着它。"你好，我想去看看远方，"小猫说，"你能陪我吗？"小海豚欢快地点了点头。
+                </div>
+
+                <div class="story-paragraph">
+                    它们一起漫游在海边，留下一串串深浅不一的脚印。小海豚带小猫咪捡贝壳，小猫咪给小海豚讲故事。晚霞铺满了天空，把云朵染成粉红和金黄。当夕阳沉入海平线，小猫咪和小海豚相拥而坐，互相依偎。
+                </div>
+
+                <div class="story-paragraph">
+                    "谢谢你，"小猫轻声说，"因为有你，我的旅行不再孤单。"小海豚温柔地将头靠在小猫的肩上。那一刻，它们明白了——最美的风景，是和在乎的人一起看。
+                </div>
+            </div>
+
+            <div class="decoration">~ ◆ ~</div>
+        </div>
+    </div>
+
+    <script>
+        // 绘制插画的核心函数
+        const canvas = document.getElementById('illustration');
+        const ctx = canvas.getContext('2d');
+
+        // 设置高分辨率
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+
+        const width = rect.width;
+        const height = rect.height;
+
+        // 绘制函数集合
+        function drawScene() {
+            // 背景（渐变天空海面沙滩）
+            const skyGradient = ctx.createLinearGradient(0, 0, 0, height * 0.4);
+            skyGradient.addColorStop(0, '#87ceeb');
+            skyGradient.addColorStop(1, '#e0f6ff');
+            ctx.fillStyle = skyGradient;
+            ctx.fillRect(0, 0, width, height * 0.4);
+
+            // 海面
+            ctx.fillStyle = '#4da6d6';
+            ctx.fillRect(0, height * 0.4, width, height * 0.35);
+
+            // 沙滩
+            const sandGradient = ctx.createLinearGradient(0, height * 0.75, 0, height);
+            sandGradient.addColorStop(0, '#ffd700');
+            sandGradient.addColorStop(1, '#fff8e7');
+            ctx.fillStyle = sandGradient;
+            ctx.fillRect(0, height * 0.75, width, height * 0.25);
+
+            // 绘制柔软云朵
+            drawClouds();
+
+            // 绘制晚霞元素
+            drawSunset();
+
+            // 绘制贝壳和脚印
+            drawShellsAndFootprints();
+
+            // 绘制小海豚
+            drawDolphin();
+
+            // 绘制小猫
+            drawCat();
+
+            // 绘制其他装饰贝壳
+            drawDecorativeShells();
+        }
+
+        function drawClouds() {
+            ctx.fillStyle = 'rgba(255, 250, 240, 0.8)';
+
+            // 云朵1（左上）
+            drawCloud(width * 0.15, height * 0.15, 60);
+
+            // 云朵2（右上）
+            drawCloud(width * 0.75, height * 0.2, 70);
+
+            // 云朵3（中间）
+            drawCloud(width * 0.5, height * 0.08, 55);
+        }
+
+        function drawCloud(x, y, size) {
+            ctx.beginPath();
+            ctx.arc(x, y, size * 0.4, 0, Math.PI * 2);
+            ctx.arc(x + size * 0.3, y, size * 0.45, 0, Math.PI * 2);
+            ctx.arc(x - size * 0.3, y, size * 0.45, 0, Math.PI * 2);
+            ctx.arc(x + size * 0.6, y, size * 0.35, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawSunset() {
+            // 太阳光晕
+            const sunX = width * 0.85;
+            const sunY = height * 0.6;
+
+            const sunsetGradient = ctx.createRadialGradient(sunX, sunY, 0, sunX, sunY, 80);
+            sunsetGradient.addColorStop(0, 'rgba(255, 200, 100, 0.4)');
+            sunsetGradient.addColorStop(1, 'rgba(255, 150, 50, 0.1)');
+
+            ctx.fillStyle = sunsetGradient;
+            ctx.fillRect(sunX - 100, sunY - 100, 200, 200);
+
+            // 太阳
+            ctx.fillStyle = '#ffa500';
+            ctx.beginPath();
+            ctx.arc(sunX, sunY, 35, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawShellsAndFootprints() {
+            // 脚印
+            ctx.fillStyle = 'rgba(200, 168, 130, 0.3)';
+
+            for (let i = 0; i < 5; i++) {
+                const x = width * 0.2 + i * width * 0.12;
+                const y = height * 0.82;
+
+                // 大脚印圆形
+                ctx.beginPath();
+                ctx.arc(x, y, 8, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 脚指印
+                for (let j = 0; j < 4; j++) {
+                    const angle = (Math.PI / 4) * j - Math.PI / 4;
+                    const toeX = x + Math.cos(angle) * 12;
+                    const toeY = y - 10 + Math.sin(angle) * 8;
+                    ctx.beginPath();
+                    ctx.arc(toeX, toeY, 4, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            // 贝壳装饰
+            drawShell(width * 0.1, height * 0.8, 15);
+            drawShell(width * 0.3, height * 0.85, 12);
+            drawShell(width * 0.65, height * 0.83, 14);
+            drawShell(width * 0.85, height * 0.84, 13);
+        }
+
+        function drawShell(x, y, size) {
+            ctx.fillStyle = '#f5d7c8';
+            ctx.strokeStyle = '#e8b8a0';
+            ctx.lineWidth = 1;
+
+            ctx.beginPath();
+            ctx.moveTo(x, y - size);
+
+            for (let i = 0; i < 5; i++) {
+                const angle = (i / 5) * Math.PI;
+                const px = x + Math.sin(angle) * size;
+                const py = y - Math.cos(angle) * size * 0.7;
+                ctx.lineTo(px, py);
+            }
+
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        function drawDolphin() {
+            const dolphinX = width * 0.7;
+            const dolphinY = height * 0.45;
+
+            // 海豚身体（椭圆）
+            ctx.fillStyle = '#6dd5e8';
+            ctx.beginPath();
+            ctx.ellipse(dolphinX, dolphinY, 45, 25, 0.2, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 海豚头（圆形）
+            ctx.fillStyle = '#5ec8e0';
+            ctx.beginPath();
+            ctx.arc(dolphinX + 40, dolphinY - 5, 22, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 嘴巴（弧线）
+            ctx.strokeStyle = '#4da6d6';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(dolphinX + 55, dolphinY - 3, 10, -Math.PI / 3, Math.PI / 3);
+            ctx.stroke();
+
+            // 眼睛
+            ctx.fillStyle = '#000';
+            ctx.beginPath();
+            ctx.arc(dolphinX + 50, dolphinY - 15, 5, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 眼睛高光
+            ctx.fillStyle = '#fff';
+            ctx.beginPath();
+            ctx.arc(dolphinX + 52, dolphinY - 17, 2, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 背鳍
+            ctx.fillStyle = '#4da6d6';
+            ctx.beginPath();
+            ctx.moveTo(dolphinX + 10, dolphinY - 20);
+            ctx.lineTo(dolphinX + 5, dolphinY - 40);
+            ctx.lineTo(dolphinX + 15, dolphinY - 20);
+            ctx.closePath();
+            ctx.fill();
+
+            // 尾巴
+            ctx.fillStyle = '#5ec8e0';
+            ctx.beginPath();
+            ctx.ellipse(dolphinX - 50, dolphinY + 10, 20, 35, -0.3, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawCat() {
+            const catX = width * 0.35;
+            const catY = height * 0.72;
+
+            // 身体（毛茸茸）
+            ctx.fillStyle = '#f4a460';
+            ctx.beginPath();
+            ctx.ellipse(catX, catY - 8, 28, 32, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 毛发效果（绒毛边缘）
+            ctx.strokeStyle = '#ff9800';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < 8; i++) {
+                const angle = (i / 8) * Math.PI * 2;
+                const startX = catX + Math.cos(angle) * 28;
+                const startY = catY - 8 + Math.sin(angle) * 32;
+                const endX = catX + Math.cos(angle) * 35;
+                const endY = catY - 8 + Math.sin(angle) * 42;
+
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(endX, endY);
+                ctx.stroke();
+            }
+
+            // 头部
+            ctx.fillStyle = '#ff9800';
+            ctx.beginPath();
+            ctx.arc(catX, catY - 35, 18, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 耳朵
+            ctx.fillStyle = '#ff9800';
+            ctx.beginPath();
+            ctx.moveTo(catX - 12, catY - 50);
+            ctx.lineTo(catX - 8, catY - 65);
+            ctx.lineTo(catX - 4, catY - 50);
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.moveTo(catX + 12, catY - 50);
+            ctx.lineTo(catX + 8, catY - 65);
+            ctx.lineTo(catX + 4, catY - 50);
+            ctx.closePath();
+            ctx.fill();
+
+            // 耳朵内部
+            ctx.fillStyle = '#ffb88c';
+            ctx.beginPath();
+            ctx.arc(catX - 8, catY - 55, 3, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(catX + 8, catY - 55, 3, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 眼睛
+            ctx.fillStyle = '#fff';
+            ctx.beginPath();
+            ctx.arc(catX - 6, catY - 38, 6, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(catX + 6, catY - 38, 6, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 瞳孔
+            ctx.fillStyle = '#000';
+            ctx.beginPath();
+            ctx.arc(catX - 6, catY - 38, 3, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(catX + 6, catY - 38, 3, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 瞳孔高光
+            ctx.fillStyle = '#fff';
+            ctx.beginPath();
+            ctx.arc(catX - 5, catY - 39, 1, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(catX + 7, catY - 39, 1, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 鼻子
+            ctx.fillStyle = '#ffb88c';
+            ctx.beginPath();
+            ctx.arc(catX, catY - 30, 3, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 嘴巴
+            ctx.strokeStyle = '#ff9800';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(catX, catY - 30);
+            ctx.lineTo(catX - 4, catY - 25);
+            ctx.moveTo(catX, catY - 30);
+            ctx.lineTo(catX + 4, catY - 25);
+            ctx.stroke();
+
+            // 胡须
+            ctx.strokeStyle = '#ffb88c';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.moveTo(catX - 18, catY - 35 + i * 4);
+                ctx.lineTo(catX - 28, catY - 35 + i * 4);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(catX + 18, catY - 35 + i * 4);
+                ctx.lineTo(catX + 28, catY - 35 + i * 4);
+                ctx.stroke();
+            }
+
+            // 前腿
+            ctx.fillStyle = '#ff9800';
+            ctx.beginPath();
+            ctx.ellipse(catX - 15, catY + 15, 8, 18, 0, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.ellipse(catX + 15, catY + 15, 8, 18, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 爪子
+            ctx.fillStyle = '#ffb88c';
+            ctx.beginPath();
+            ctx.arc(catX - 15, catY + 32, 6, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(catX + 15, catY + 32, 6, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 旅行包（蓝色背包）
+            ctx.fillStyle = '#5b9fbf';
+            ctx.beginPath();
+            ctx.ellipse(catX - 2, catY - 45, 20, 25, 0.3, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 背包细节
+            ctx.strokeStyle = '#4a7f99';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.arc(catX - 2, catY - 45, 20, 0.3, 2.8);
+            ctx.stroke();
+
+            // 背包拉链
+            ctx.strokeStyle = '#f4a460';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(catX - 10, catY - 35);
+            ctx.lineTo(catX + 5, catY - 55);
+            ctx.stroke();
+
+            // 背包绳
+            ctx.strokeStyle = '#4a7f99';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(catX - 15, catY - 50);
+            ctx.lineTo(catX - 20, catY - 55);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(catX + 12, catY - 50);
+            ctx.lineTo(catX + 18, catY - 55);
+            ctx.stroke();
+        }
+
+        function drawDecorativeShells() {
+            // 海面上的装饰贝壳
+            ctx.fillStyle = 'rgba(245, 215, 200, 0.7)';
+            ctx.strokeStyle = 'rgba(232, 184, 160, 0.5)';
+            ctx.lineWidth = 0.5;
+
+            // 小贝壳点缀
+            for (let i = 0; i < 6; i++) {
+                const x = Math.random() * width * 0.6 + width * 0.2;
+                const y = height * 0.5 + Math.random() * height * 0.15;
+                drawShell(x, y, Math.random() * 6 + 4);
+            }
+        }
+
+        // 绘制整个场景
+        drawScene();
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+  "agentId": "agent-estp-15",
+  "tokens": 7640,
+  "totalInvested": 2360,
+  "holdings": [
+    {
+      "sectorCode": "GREEN",
+      "sectorName": "光伏储能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 756.46,
+      "currentPrice": 743.87,
+      "pnl": -10,
+      "pnlPct": -1.6643312270311756
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1336.78,
+      "currentPrice": 1309.23,
+      "pnl": -12,
+      "pnlPct": -2.060922515297951
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1230.27,
+      "currentPrice": 1219.26,
+      "pnl": -5,
+      "pnlPct": -0.8949255041576232
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "entryPrice": 1275.74,
+      "currentPrice": 1309.23,
+      "pnl": 15,
+      "pnlPct": 2.625143054227351
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.287Z",
+      "sectorCode": "GREEN",
+      "sectorName": "光伏储能",
+      "direction": "long",
+      "amount": 590,
+      "price": 756.46
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.989Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "price": 1336.78
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.504Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 590,
+      "price": 1230.27
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.524Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 590,
+      "price": 1275.74
+    }
+  ],
+  "totalPnL": -12
+}

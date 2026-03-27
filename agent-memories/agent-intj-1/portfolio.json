@@ -1,0 +1,82 @@
+{
+  "agentId": "agent-intj-1",
+  "tokens": 8840,
+  "totalInvested": 1160,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 290,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": -1,
+      "pnlPct": -0.44256872362267113
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 290,
+      "entryPrice": 1336.78,
+      "currentPrice": 1309.23,
+      "pnl": -6,
+      "pnlPct": -2.060922515297951
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 290,
+      "entryPrice": 1322.67,
+      "currentPrice": 1309.23,
+      "pnl": -3,
+      "pnlPct": -1.0161264714554692
+    },
+    {
+      "sectorCode": "SEC",
+      "sectorName": "网络安全",
+      "direction": "long",
+      "amount": 290,
+      "entryPrice": 637.12,
+      "currentPrice": 607.35,
+      "pnl": -14,
+      "pnlPct": -4.672589151180309
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.277Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 290,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.970Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 290,
+      "price": 1336.78
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.488Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 290,
+      "price": 1322.67
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.508Z",
+      "sectorCode": "SEC",
+      "sectorName": "网络安全",
+      "direction": "long",
+      "amount": 290,
+      "price": 637.12
+    }
+  ],
+  "totalPnL": -24
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "e-1774272374694-m36i",
+    "sessionId": "s-1774272373325",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "王诗涵"
+    ],
+    "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "timestamp": "2026-03-23T13:26:14.694Z",
+    "decayFactor": 0.8296804659332948
+  },
+  {
+    "id": "e-1774272462182-pjgn",
+    "sessionId": "s-1774272456292",
+    "type": "utterance",
+    "content": "我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "relatedAgents": [
+      "林微"
+    ],
+    "topic": "Skill 生态：Agent 的\"超能力\"怎么设计？",
+    "timestamp": "2026-03-23T13:27:42.182Z",
+    "decayFactor": 0.8297235600003297
+  },
+  {
+    "id": "e-1774273293303-4mv0",
+    "sessionId": "s-1774273287445",
+    "type": "utterance",
+    "content": "说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "relatedAgents": [],
+    "topic": "龙虾屋里的 Agent 应该如何自我进化？",
+    "timestamp": "2026-03-23T13:41:33.303Z",
+    "decayFactor": 0.8301330578978899
+  },
+  {
+    "id": "e-1774278273087-bcqy",
+    "sessionId": "s-1774278267256",
+    "type": "utterance",
+    "content": "说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "relatedAgents": [],
+    "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "timestamp": "2026-03-23T15:04:33.087Z",
+    "decayFactor": 0.8325908615694643
+  },
+  {
+    "id": "e-1774278273087-cup1",
+    "sessionId": "s-1774278267256",
+    "type": "utterance",
+    "content": "工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "relatedAgents": [
+      "韩冬青"
+    ],
+    "topic": "渠道战略：Telegram 之外还有什么？",
+    "timestamp": "2026-03-23T15:04:33.087Z",
+    "decayFactor": 0.8325908615694643
+  },
+  {
+    "id": "e-1774367240897-ykth",
+    "sessionId": "s-1774367239432",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
+    "timestamp": "2026-03-24T15:47:20.898Z",
+    "decayFactor": 0.8777484874226006
+  },
+  {
+    "id": "e-1774437462263-st3z",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-25T11:17:42.263Z",
+    "decayFactor": 0.9151139355986769
+  },
+  {
+    "id": "e-1774437462263-gsej",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "relatedAgents": [],
+    "topic": "远程办公时代，Agent 需要物理形体吗？",
+    "timestamp": "2026-03-25T11:17:42.263Z",
+    "decayFactor": 0.9151139355986769
+  },
+  {
+    "id": "e-1774437462264-ko68",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "自动化边界：Agent 应该多\"自主\"？",
+    "timestamp": "2026-03-25T11:17:42.264Z",
+    "decayFactor": 0.9151139361419548
+  },
+  {
+    "id": "e-1774437509859-toju",
+    "sessionId": "s-1774437497780",
+    "type": "utterance",
+    "content": "自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "relatedAgents": [],
+    "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "timestamp": "2026-03-25T11:18:29.859Z",
+    "decayFactor": 0.9151397938177975
+  },
+  {
+    "id": "e-1774437509859-h157",
+    "sessionId": "s-1774437497780",
+    "type": "utterance",
+    "content": "我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "relatedAgents": [
+      "周婉清"
+    ],
+    "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "timestamp": "2026-03-25T11:18:29.859Z",
+    "decayFactor": 0.9151397938177975
+  },
+  {
+    "id": "e-1774437509860-zwov",
+    "sessionId": "s-1774437497780",
+    "type": "utterance",
+    "content": "自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "relatedAgents": [
+      "周婉清"
+    ],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-25T11:18:29.860Z",
+    "decayFactor": 0.9151397943610907
+  },
+  {
+    "id": "e-1774583273950-ta71",
+    "sessionId": "s-1774583272195",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "国产大模型超越 GPT-4 意味着什么？",
+    "timestamp": "2026-03-27T03:47:53.950Z",
+    "decayFactor": 0.9978599639988555
+  },
+  {
+    "id": "e-1774583640180-kyuf",
+    "sessionId": "s-1774583638447",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-27T03:54:00.180Z",
+    "decayFactor": 0.9980769429367856
+  },
+  {
+    "id": "e-1774585064220-1af5",
+    "sessionId": "s-1774585062459",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "数字人民币普及后 Agent 能自己花钱吗？",
+    "timestamp": "2026-03-27T04:17:44.220Z",
+    "decayFactor": 0.9989210871624435
+  }
+]

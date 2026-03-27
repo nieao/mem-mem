@@ -1,0 +1,86 @@
+[
+  {
+    "id": "hb-1774276298480-quw",
+    "title": "评估今日模型使用成本",
+    "status": "done",
+    "createdAt": "2026-03-23T14:31:38.480Z",
+    "completedAt": "2026-03-23T14:48:53.987Z"
+  },
+  {
+    "id": "hb-1774276298480-qi3",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "done",
+    "createdAt": "2026-03-23T14:31:38.480Z",
+    "completedAt": "2026-03-23T15:03:00.168Z"
+  },
+  {
+    "id": "hb-1774276298480-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-23T14:31:38.480Z",
+    "completedAt": "2026-03-23T15:04:34.488Z"
+  },
+  {
+    "id": "hb-1774322586960-xtf",
+    "title": "评估今日模型使用成本",
+    "status": "done",
+    "createdAt": "2026-03-24T03:23:06.960Z",
+    "completedAt": "2026-03-24T03:23:10.038Z"
+  },
+  {
+    "id": "hb-1774322586960-m82",
+    "title": "检查各渠道连接状态",
+    "status": "done",
+    "createdAt": "2026-03-24T03:23:06.960Z",
+    "completedAt": "2026-03-24T03:23:54.717Z"
+  },
+  {
+    "id": "hb-1774322586960-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-24T03:23:06.960Z",
+    "completedAt": "2026-03-24T03:37:54.437Z"
+  },
+  {
+    "id": "hb-1774436070479-hes",
+    "title": "检查 Agent 协作队列状态",
+    "status": "done",
+    "createdAt": "2026-03-25T10:54:30.479Z",
+    "completedAt": "2026-03-25T10:54:33.379Z"
+  },
+  {
+    "id": "hb-1774436070479-1i6",
+    "title": "优化高频提示词模板",
+    "status": "done",
+    "createdAt": "2026-03-25T10:54:30.479Z",
+    "completedAt": "2026-03-25T11:17:43.800Z"
+  },
+  {
+    "id": "hb-1774436070479-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-25T10:54:30.479Z",
+    "completedAt": "2026-03-25T11:18:31.432Z"
+  },
+  {
+    "id": "hb-1774582745499-zt8",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "done",
+    "createdAt": "2026-03-27T03:39:05.499Z",
+    "completedAt": "2026-03-27T03:39:09.007Z"
+  },
+  {
+    "id": "hb-1774582745499-id5",
+    "title": "评估今日模型使用成本",
+    "status": "done",
+    "createdAt": "2026-03-27T03:39:05.499Z",
+    "completedAt": "2026-03-27T03:40:55.256Z"
+  },
+  {
+    "id": "hb-1774582745499-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-27T03:39:05.499Z",
+    "completedAt": "2026-03-27T03:47:55.527Z"
+  }
+]

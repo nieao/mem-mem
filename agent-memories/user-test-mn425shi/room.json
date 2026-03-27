@@ -1,0 +1,44 @@
+{
+  "userId": "user-test-mn425shi",
+  "furniture": [
+    {
+      "itemId": "sofa-basic",
+      "x": 150,
+      "y": 0
+    },
+    {
+      "itemId": "sofa-basic",
+      "x": 210,
+      "y": 0
+    },
+    {
+      "itemId": "sofa-basic",
+      "x": 270,
+      "y": 0
+    },
+    {
+      "itemId": "lamp-floor",
+      "x": 330,
+      "y": 0
+    },
+    {
+      "itemId": "sofa-basic",
+      "x": 390,
+      "y": 0
+    },
+    {
+      "itemId": "stock-terminal",
+      "x": 450,
+      "y": 0
+    }
+  ],
+  "pets": [
+    {
+      "petId": "lobster-blue",
+      "name": "����",
+      "happiness": 80
+    }
+  ],
+  "wallColor": "#f5f0eb",
+  "floorType": "wood"
+}

@@ -1,0 +1,63 @@
+{
+  "agentId": "agent-enfp-8",
+  "level": 5,
+  "totalXP": 1090,
+  "discussionCount": 76,
+  "topicsDiscussed": [
+    "自动化边界：Agent 应该多\"自主\"？",
+    "龙虾屋里的 Agent 应该如何自我进化？",
+    "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "多 Agent 混战：协作还是灾难？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "AI Agent 是否应该有情感？",
+    "社交媒体上的 AI 生成内容该如何监管？",
+    "远程办公时代，Agent 需要物理形体吗？",
+    "新能源发电占比突破 35%，对 Agent 有什么影响？",
+    "模型经济学：Haiku 够用还是必须 Opus？",
+    "全球供应链恢复正常，Agent 的物流优化还有意义吗？"
+  ],
+  "insightsGenerated": 0,
+  "relationships": {
+    "曹破晓": 3,
+    "冯一刀": 1,
+    "沈默然": 4,
+    "谢长安": 1,
+    "王诗涵": 2,
+    "许清河": 2,
+    "吴逆风": 3,
+    "林微": 3,
+    "秦九章": 1,
+    "钱多多": 2,
+    "陈策": 2,
+    "周婉清": 1,
+    "蒋一帆": 1,
+    "韩冬青": 1,
+    "何以归": 1
+  },
+  "skillXP": {
+    "automation": 72,
+    "security": 84,
+    "soul-design": 114,
+    "memory-arch": 36,
+    "model-strategy": 45,
+    "skill-authoring": 20,
+    "multi-agent": 20,
+    "channel-ops": 51,
+    "tool-integration": 49,
+    "prompt-craft": 95
+  },
+  "oceanDrift": {
+    "agreeableness": 11,
+    "extraversion": 7,
+    "neuroticism": 11,
+    "conscientiousness": 2,
+    "openness": 1
+  },
+  "spouse": "王诗涵",
+  "children": [
+    "小虾",
+    "小星"
+  ]
+}

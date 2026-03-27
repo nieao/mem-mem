@@ -1,0 +1,12 @@
+{
+  "id": "dlg-mn4sgzni",
+  "fromUserId": "197608",
+  "toAgentId": "agent-intj-1",
+  "task": "analyze market trends",
+  "reward": 100,
+  "fee": 120,
+  "status": "completed",
+  "createdAt": "2026-03-24T15:48:10.494Z",
+  "result": "我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+  "completedAt": "2026-03-24T15:48:10.639Z"
+}

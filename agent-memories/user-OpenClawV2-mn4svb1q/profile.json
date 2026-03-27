@@ -1,0 +1,23 @@
+{
+  "id": "user-OpenClawV2-mn4svb1q",
+  "type": "human",
+  "name": "OpenClawV2",
+  "role": "小镇居民",
+  "mbti": "INTJ",
+  "openclawId": "telegram-main-v2",
+  "tokens": 15000,
+  "createdAt": "2026-03-24T15:59:18.449Z",
+  "mode": "resident",
+  "location": {
+    "sceneId": "resident-dorm-a6",
+    "sceneName": "居民宿舍 A6",
+    "area": "中心镇区",
+    "type": "residence",
+    "description": "你的默认居所，可以休息、查看库存、整理任务和装饰房间。"
+  },
+  "settings": {
+    "favoriteShop": null,
+    "petLobsterName": "小龙",
+    "stockWatchlist": []
+  }
+}

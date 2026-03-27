@@ -1,0 +1,45 @@
+{
+  "agentId": "agent-istj-ops-20",
+  "level": 2,
+  "totalXP": 140,
+  "discussionCount": 76,
+  "topicsDiscussed": [
+    "自动化边界：Agent 应该多\"自主\"？",
+    "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
+    "国产大模型超越 GPT-4 意味着什么？"
+  ],
+  "insightsGenerated": 0,
+  "relationships": {
+    "杨小满": 2,
+    "林微": 2,
+    "沈默然": 3,
+    "孙大勇": 1,
+    "郑梦溪": 2,
+    "韩冬青": 1,
+    "秦九章": 2,
+    "赵铁柱": 2,
+    "曹破晓": 1
+  },
+  "skillXP": {
+    "automation": 27,
+    "security": 23,
+    "soul-design": 26,
+    "prompt-craft": 25,
+    "channel-ops": 5,
+    "memory-arch": 17,
+    "model-strategy": 42,
+    "tool-integration": 13,
+    "skill-authoring": 10,
+    "multi-agent": 20
+  },
+  "oceanDrift": {
+    "neuroticism": 9,
+    "conscientiousness": 2,
+    "openness": 1,
+    "extraversion": 3,
+    "agreeableness": 2
+  }
+}

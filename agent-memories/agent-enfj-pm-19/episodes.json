@@ -1,0 +1,300 @@
+[
+  {
+    "id": "e-1774277332466-b4es",
+    "sessionId": "s-1774277331222",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "杨小满"
+    ],
+    "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "timestamp": "2026-03-23T14:48:52.466Z",
+    "decayFactor": 0.8321260420369391
+  },
+  {
+    "id": "e-1774278273103-l5i8",
+    "sessionId": "s-1774278267256",
+    "type": "utterance",
+    "content": "记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "relatedAgents": [
+      "陈策"
+    ],
+    "topic": "渠道战略：Telegram 之外还有什么？",
+    "timestamp": "2026-03-23T15:04:33.103Z",
+    "decayFactor": 0.832590856132316
+  },
+  {
+    "id": "e-1774278420728-g3si",
+    "sessionId": "s-1774278415143",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "多 Agent 混战：协作还是灾难？",
+    "timestamp": "2026-03-23T15:07:00.728Z",
+    "decayFactor": 0.8326638283305737
+  },
+  {
+    "id": "e-1774278420728-pr7j",
+    "sessionId": "s-1774278415143",
+    "type": "utterance",
+    "content": "记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "relatedAgents": [],
+    "topic": "多 Agent 混战：协作还是灾难？",
+    "timestamp": "2026-03-23T15:07:00.728Z",
+    "decayFactor": 0.8326638283305737
+  },
+  {
+    "id": "e-1774278420729-w5cf",
+    "sessionId": "s-1774278415143",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "timestamp": "2026-03-23T15:07:00.729Z",
+    "decayFactor": 0.8326638288249033
+  },
+  {
+    "id": "e-1774279180686-qg98",
+    "sessionId": "s-1774279175051",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "timestamp": "2026-03-23T15:19:40.686Z",
+    "decayFactor": 0.8330395827644174
+  },
+  {
+    "id": "e-1774279417188-4jlz",
+    "sessionId": "s-1774279415618",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "timestamp": "2026-03-23T15:23:37.188Z",
+    "decayFactor": 0.8331565536546301
+  },
+  {
+    "id": "e-1774323472681-ikg1",
+    "sessionId": "s-1774323470201",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "社交媒体上的 AI 生成内容该如何监管？",
+    "timestamp": "2026-03-24T03:37:52.681Z",
+    "decayFactor": 0.8552348365337268
+  },
+  {
+    "id": "e-1774323472682-ajfj",
+    "sessionId": "s-1774323470201",
+    "type": "utterance",
+    "content": "我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "relatedAgents": [
+      "邓如是"
+    ],
+    "topic": "自动化边界：Agent 应该多\"自主\"？",
+    "timestamp": "2026-03-24T03:37:52.682Z",
+    "decayFactor": 0.8552348370414561
+  },
+  {
+    "id": "e-1774326609248-ivor",
+    "sessionId": "s-1774326608012",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
+    "timestamp": "2026-03-24T04:30:09.248Z",
+    "decayFactor": 0.8568288471648163
+  },
+  {
+    "id": "e-1774327017330-af6v",
+    "sessionId": "s-1774327012584",
+    "type": "utterance",
+    "content": "记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-24T04:36:57.330Z",
+    "decayFactor": 0.8570364536797122
+  },
+  {
+    "id": "e-1774344506092-dbww",
+    "sessionId": "s-1774344504686",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
+    "timestamp": "2026-03-24T09:28:26.092Z",
+    "decayFactor": 0.8659810699888618
+  },
+  {
+    "id": "e-1774345980433-kiai",
+    "sessionId": "s-1774345978893",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "龙虾经济学：如何用最小成本养最聪明的龙虾？",
+    "timestamp": "2026-03-24T09:53:00.433Z",
+    "decayFactor": 0.8667393738543812
+  },
+  {
+    "id": "e-1774346151107-d3o3",
+    "sessionId": "s-1774346149729",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "数字人民币普及后 Agent 能自己花钱吗？",
+    "timestamp": "2026-03-24T09:55:51.107Z",
+    "decayFactor": 0.8668272001865712
+  },
+  {
+    "id": "e-1774352089217-x4id",
+    "sessionId": "s-1774352087917",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "林微"
+    ],
+    "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
+    "timestamp": "2026-03-24T11:34:49.217Z",
+    "decayFactor": 0.8698884117979914
+  },
+  {
+    "id": "e-1774371151154-8eey",
+    "sessionId": "s-1774371147989",
+    "type": "utterance",
+    "content": "我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "relatedAgents": [
+      "赵铁柱"
+    ],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-24T16:52:31.154Z",
+    "decayFactor": 0.8797884552340697
+  },
+  {
+    "id": "e-1774436071911-h8sh",
+    "sessionId": "s-1774436070391",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "国产大模型超越 GPT-4 意味着什么？",
+    "timestamp": "2026-03-25T10:54:31.911Z",
+    "decayFactor": 0.9143588851119434
+  },
+  {
+    "id": "e-1774437462281-vj2k",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-25T11:17:42.281Z",
+    "decayFactor": 0.915113930709176
+  },
+  {
+    "id": "e-1774437462282-fdhs",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "relatedAgents": [],
+    "topic": "远程办公时代，Agent 需要物理形体吗？",
+    "timestamp": "2026-03-25T11:17:42.282Z",
+    "decayFactor": 0.9151139312524539
+  },
+  {
+    "id": "e-1774437509876-zqoy",
+    "sessionId": "s-1774437497780",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "timestamp": "2026-03-25T11:18:29.876Z",
+    "decayFactor": 0.9151397883848652
+  },
+  {
+    "id": "e-1774439145994-fpko",
+    "sessionId": "s-1774439144695",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "王诗涵"
+    ],
+    "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
+    "timestamp": "2026-03-25T11:45:45.994Z",
+    "decayFactor": 0.9160291120464228
+  },
+  {
+    "id": "e-1774440764945-msys",
+    "sessionId": "s-1774440763585",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-25T12:12:44.945Z",
+    "decayFactor": 0.9169099551406046
+  },
+  {
+    "id": "e-1774440912269-c9ub",
+    "sessionId": "s-1774440910869",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
+    "timestamp": "2026-03-25T12:15:12.269Z",
+    "decayFactor": 0.9169901536013458
+  },
+  {
+    "id": "e-1774442283283-zqj4",
+    "sessionId": "s-1774442281961",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "沈默然"
+    ],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-25T12:38:03.283Z",
+    "decayFactor": 0.9177368261209768
+  },
+  {
+    "id": "e-1774582853735-4mrj",
+    "sessionId": "s-1774582851763",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "社交媒体上的 AI 生成内容该如何监管？",
+    "timestamp": "2026-03-27T03:40:53.735Z",
+    "decayFactor": 0.9976110428885065
+  },
+  {
+    "id": "e-1774583273959-047u",
+    "sessionId": "s-1774583272195",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "国产大模型超越 GPT-4 意味着什么？",
+    "timestamp": "2026-03-27T03:47:53.959Z",
+    "decayFactor": 0.9978599533356212
+  },
+  {
+    "id": "e-1774583572371-ds8s",
+    "sessionId": "s-1774583570566",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "沈默然"
+    ],
+    "topic": "小镇停电了，Agent 该如何自救？",
+    "timestamp": "2026-03-27T03:52:52.371Z",
+    "decayFactor": 0.9980367488320305
+  },
+  {
+    "id": "e-1774586884209-kkn0",
+    "sessionId": "s-1774586882545",
+    "type": "utterance",
+    "content": "我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "relatedAgents": [
+      "沈默然"
+    ],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-27T04:48:04.209Z",
+    "decayFactor": 1
+  }
+]

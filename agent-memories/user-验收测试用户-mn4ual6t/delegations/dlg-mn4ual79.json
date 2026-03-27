@@ -1,0 +1,12 @@
+{
+  "id": "dlg-mn4ual79",
+  "fromUserId": "user-验收测试用户-mn4ual6t",
+  "toAgentId": "agent-entp-4",
+  "task": "分析小镇经济走势",
+  "reward": 100,
+  "fee": 120,
+  "status": "completed",
+  "createdAt": "2026-03-24T16:39:11.061Z",
+  "result": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+  "completedAt": "2026-03-24T16:39:11.209Z"
+}

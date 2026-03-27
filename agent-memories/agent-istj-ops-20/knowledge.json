@@ -1,0 +1,18 @@
+[
+  {
+    "id": "k-1774277301373-t0yc",
+    "content": "对\"SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:48:21.373Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774584890371-0ej7",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:14:50.371Z",
+    "accessCount": 0
+  }
+]

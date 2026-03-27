@@ -1,0 +1,14 @@
+{
+  "userId": "user-final-test-mn4shubr",
+  "balance": 14940,
+  "totalEarned": 0,
+  "totalSpent": 60,
+  "transactions": [
+    {
+      "time": "2026-03-24T15:48:50.392Z",
+      "type": "spend",
+      "amount": 60,
+      "desc": "委托 agent-entp-4: write a summary"
+    }
+  ]
+}

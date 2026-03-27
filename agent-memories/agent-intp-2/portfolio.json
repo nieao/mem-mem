@@ -1,0 +1,82 @@
+{
+  "agentId": "agent-intp-2",
+  "tokens": 7880,
+  "totalInvested": 2120,
+  "holdings": [
+    {
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 530,
+      "entryPrice": 1081.39,
+      "currentPrice": 1017.35,
+      "pnl": -31,
+      "pnlPct": -5.922007786275079
+    },
+    {
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 530,
+      "entryPrice": 1014.38,
+      "currentPrice": 1017.35,
+      "pnl": 2,
+      "pnlPct": 0.29278968433920494
+    },
+    {
+      "sectorCode": "SEC",
+      "sectorName": "网络安全",
+      "direction": "short",
+      "amount": 530,
+      "entryPrice": 613.15,
+      "currentPrice": 607.35,
+      "pnl": 5,
+      "pnlPct": 0.9459349262007591
+    },
+    {
+      "sectorCode": "MED",
+      "sectorName": "医药生物",
+      "direction": "short",
+      "amount": 530,
+      "entryPrice": 873.73,
+      "currentPrice": 829.23,
+      "pnl": 27,
+      "pnlPct": 5.093106566101656
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.278Z",
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 530,
+      "price": 1081.39
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.972Z",
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 530,
+      "price": 1014.38
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.489Z",
+      "sectorCode": "SEC",
+      "sectorName": "网络安全",
+      "direction": "short",
+      "amount": 530,
+      "price": 613.15
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.510Z",
+      "sectorCode": "MED",
+      "sectorName": "医药生物",
+      "direction": "short",
+      "amount": 530,
+      "price": 873.73
+    }
+  ],
+  "totalPnL": 3
+}

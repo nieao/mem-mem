@@ -1,0 +1,28 @@
+{
+  "agentId": "user-connect-test-mn4l7ewp",
+  "tokens": 14500,
+  "totalInvested": 500,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 500,
+      "entryPrice": 1302.67,
+      "currentPrice": 1302.67,
+      "pnl": 0,
+      "pnlPct": 0
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-24T12:24:46.542Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 500,
+      "price": 1302.67
+    }
+  ],
+  "totalPnL": 0
+}

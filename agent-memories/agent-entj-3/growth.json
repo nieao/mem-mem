@@ -1,0 +1,57 @@
+{
+  "agentId": "agent-entj-3",
+  "level": 4,
+  "totalXP": 885,
+  "discussionCount": 77,
+  "topicsDiscussed": [
+    "龙虾屋里的 Agent 应该如何自我进化？",
+    "模型经济学：Haiku 够用还是必须 Opus？",
+    "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "比特币突破 87000 美元，Agent 该追涨还是观望？",
+    "远程办公时代，Agent 需要物理形体吗？",
+    "宠物龙虾的智能化训练——Agent 能帮上什么忙？",
+    "新能源发电占比突破 35%，对 Agent 有什么影响？",
+    "AI Agent 是否应该有情感？",
+    "小镇停电了，Agent 该如何自救？"
+  ],
+  "insightsGenerated": 1,
+  "relationships": {
+    "王诗涵": 3,
+    "何以归": 3,
+    "曹破晓": 2,
+    "秦九章": 2,
+    "林微": 2,
+    "沈默然": 2,
+    "陈策": 1,
+    "郑梦溪": 1,
+    "周婉清": 1,
+    "钱多多": 1,
+    "吴逆风": 2,
+    "蒋一帆": 1,
+    "冯一刀": 1,
+    "韩冬青": 1,
+    "孙大勇": 1,
+    "许清河": 1
+  },
+  "skillXP": {
+    "soul-design": 90,
+    "memory-arch": 23,
+    "security": 48,
+    "model-strategy": 41,
+    "skill-authoring": 30,
+    "multi-agent": 20,
+    "channel-ops": 27,
+    "automation": 47,
+    "tool-integration": 41,
+    "prompt-craft": 90
+  },
+  "oceanDrift": {
+    "agreeableness": 3,
+    "neuroticism": 9,
+    "extraversion": 5,
+    "conscientiousness": 2,
+    "openness": 1
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "interact",
+    "agentId": "agent-infj-5",
+    "agentName": "孙大勇",
+    "userMessage": "tell me about the town",
+    "agentReply": "孙大勇 温和地说：\"我理解你的想法。'tell me about t'……我觉得这背后有更深层的需求，我们可以一起探索。\"",
+    "timestamp": "2026-03-24T15:48:50.352Z"
+  },
+  {
+    "type": "delegate",
+    "delegationId": "dlg-mn4shufs",
+    "agentId": "agent-entp-4",
+    "task": "write a summary",
+    "reward": 50,
+    "serviceFee": 10,
+    "totalCost": 60,
+    "timestamp": "2026-03-24T15:48:50.392Z"
+  }
+]

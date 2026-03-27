@@ -1,0 +1,28 @@
+{
+  "agentId": "user-验收测试用户-mn4ual6t",
+  "tokens": 14700,
+  "totalInvested": 300,
+  "holdings": [
+    {
+      "sectorCode": "CHIP",
+      "sectorName": "芯片半导体",
+      "direction": "long",
+      "amount": 300,
+      "entryPrice": 951.35,
+      "currentPrice": 951.35,
+      "pnl": 0,
+      "pnlPct": 0
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-24T16:39:11.219Z",
+      "sectorCode": "CHIP",
+      "sectorName": "芯片半导体",
+      "direction": "long",
+      "amount": 300,
+      "price": 951.35
+    }
+  ],
+  "totalPnL": 0
+}

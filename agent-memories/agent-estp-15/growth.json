@@ -1,0 +1,49 @@
+{
+  "agentId": "agent-estp-15",
+  "level": 4,
+  "totalXP": 630,
+  "discussionCount": 76,
+  "topicsDiscussed": [
+    "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "渠道战略：Telegram 之外还有什么？",
+    "多 Agent 混战：协作还是灾难？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "小镇停电了，Agent 该如何自救？",
+    "AI Agent 是否应该有情感？",
+    "自动化边界：Agent 应该多\"自主\"？",
+    "社交媒体上的 AI 生成内容该如何监管？",
+    "股市暴跌时 Agent 应该恐慌还是冷静？"
+  ],
+  "insightsGenerated": 0,
+  "relationships": {
+    "冯一刀": 1,
+    "杨小满": 2,
+    "吴逆风": 2,
+    "谢长安": 1,
+    "周婉清": 1,
+    "林微": 3,
+    "秦九章": 3,
+    "王诗涵": 1,
+    "曹破晓": 1,
+    "何以归": 1
+  },
+  "skillXP": {
+    "security": 50,
+    "channel-ops": 20,
+    "automation": 35,
+    "soul-design": 64,
+    "prompt-craft": 60,
+    "tool-integration": 13,
+    "multi-agent": 30,
+    "memory-arch": 30,
+    "model-strategy": 37
+  },
+  "oceanDrift": {
+    "extraversion": 6,
+    "neuroticism": 9,
+    "conscientiousness": 2,
+    "openness": 1,
+    "agreeableness": 2
+  }
+}

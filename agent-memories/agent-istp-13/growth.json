@@ -1,0 +1,59 @@
+{
+  "agentId": "agent-istp-13",
+  "level": 2,
+  "totalXP": 205,
+  "discussionCount": 76,
+  "topicsDiscussed": [
+    "自动化边界：Agent 应该多\"自主\"？",
+    "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "小镇停电了，Agent 该如何自救？",
+    "模型经济学：Haiku 够用还是必须 Opus？",
+    "AI Agent 是否应该有情感？",
+    "远程办公时代，Agent 需要物理形体吗？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "全球供应链恢复正常，Agent 的物流优化还有意义吗？"
+  ],
+  "insightsGenerated": 0,
+  "relationships": {
+    "邓如是": 2,
+    "杨小满": 2,
+    "林微": 3,
+    "王诗涵": 3,
+    "郑梦溪": 3,
+    "何以归": 1,
+    "沈默然": 1,
+    "孙大勇": 1,
+    "周婉清": 2,
+    "谢长安": 1,
+    "钱多多": 1,
+    "吴逆风": 1,
+    "秦九章": 1,
+    "赵铁柱": 1,
+    "韩冬青": 1,
+    "曹破晓": 1
+  },
+  "skillXP": {
+    "automation": 38,
+    "security": 49,
+    "soul-design": 70,
+    "channel-ops": 23,
+    "prompt-craft": 35,
+    "multi-agent": 15,
+    "model-strategy": 42,
+    "skill-authoring": 5,
+    "memory-arch": 21,
+    "tool-integration": 37
+  },
+  "oceanDrift": {
+    "extraversion": 5,
+    "neuroticism": 10,
+    "conscientiousness": 2,
+    "openness": 1,
+    "agreeableness": 7
+  },
+  "spouse": "林微",
+  "children": [
+    "小月"
+  ]
+}

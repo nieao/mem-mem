@@ -1,0 +1,16 @@
+{
+  "id": "user-demo-api-test-mn4l7euz",
+  "type": "human",
+  "name": "demo-api-test",
+  "role": "dev",
+  "mbti": "INTJ",
+  "openclawId": "agent-demo-1",
+  "tokens": 15000,
+  "createdAt": "2026-03-24T12:24:46.333Z",
+  "mode": "resident",
+  "settings": {
+    "favoriteShop": null,
+    "petLobsterName": "小龙",
+    "stockWatchlist": []
+  }
+}

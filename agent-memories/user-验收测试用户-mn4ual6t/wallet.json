@@ -1,0 +1,14 @@
+{
+  "userId": "user-验收测试用户-mn4ual6t",
+  "balance": 14880,
+  "totalEarned": 0,
+  "totalSpent": 120,
+  "transactions": [
+    {
+      "time": "2026-03-24T16:39:11.059Z",
+      "type": "spend",
+      "amount": 120,
+      "desc": "委托 agent-entp-4: 分析小镇经济走势"
+    }
+  ]
+}

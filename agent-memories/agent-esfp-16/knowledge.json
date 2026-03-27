@@ -1,0 +1,122 @@
+[
+  {
+    "id": "k-1774276322641-b6m8",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:32:02.641Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774278178602-uw38",
+    "content": "对\"SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:02:58.602Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774282320127-eree",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T16:12:00.127Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774343349370-s6aw",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:09:09.370Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774344506089-5nir",
+    "content": "对\"全球供应链恢复正常，Agent 的物流优化还有意义吗？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:28:26.089Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774345590632-kf5t",
+    "content": "对\"龙虾经济学：如何用最小成本养最聪明的龙虾？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:46:30.632Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774347458161-mn2p",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T10:17:38.161Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774367240906-82nk",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T15:47:20.906Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371091343-xegv",
+    "content": "对\"宠物龙虾的智能化训练——Agent 能帮上什么忙？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:51:31.343Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774436071909-e6ma",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T10:54:31.909Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774438642562-r7gz",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:37:22.562Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774582747259-pg93",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:39:07.259Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583285886-9bf1",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:48:05.886Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583846876-xpme",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:57:26.876Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583957779-ci3k",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:59:17.779Z",
+    "accessCount": 0
+  }
+]

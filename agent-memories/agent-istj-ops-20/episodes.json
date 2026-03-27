@@ -1,0 +1,68 @@
+[
+  {
+    "id": "e-1774272462238-b1j8",
+    "sessionId": "s-1774272456292",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "自动化边界：Agent 应该多\"自主\"？",
+    "timestamp": "2026-03-23T13:27:42.238Z",
+    "decayFactor": 0.8297235733000968
+  },
+  {
+    "id": "e-1774277301372-c5mz",
+    "sessionId": "s-1774277299801",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "邓如是"
+    ],
+    "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "timestamp": "2026-03-23T14:48:21.372Z",
+    "decayFactor": 0.8321106804358405
+  },
+  {
+    "id": "e-1774278420730-xzuc",
+    "sessionId": "s-1774278415143",
+    "type": "utterance",
+    "content": "我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "relatedAgents": [
+      "王诗涵"
+    ],
+    "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "timestamp": "2026-03-23T15:07:00.730Z",
+    "decayFactor": 0.8326638283305737
+  },
+  {
+    "id": "e-1774279180689-9iyf",
+    "sessionId": "s-1774279175051",
+    "type": "utterance",
+    "content": "说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "relatedAgents": [],
+    "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "timestamp": "2026-03-23T15:19:40.689Z",
+    "decayFactor": 0.83303958325897
+  },
+  {
+    "id": "e-1774437509877-zrio",
+    "sessionId": "s-1774437497780",
+    "type": "utterance",
+    "content": "多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "relatedAgents": [
+      "陈策"
+    ],
+    "topic": "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
+    "timestamp": "2026-03-25T11:18:29.877Z",
+    "decayFactor": 0.915139787841572
+  },
+  {
+    "id": "e-1774584890370-89df",
+    "sessionId": "s-1774584888288",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "国产大模型超越 GPT-4 意味着什么？",
+    "timestamp": "2026-03-27T04:14:50.370Z",
+    "decayFactor": 0.9988179766962624
+  }
+]

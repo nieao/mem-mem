@@ -1,0 +1,12 @@
+[
+  {
+    "type": "delegate",
+    "delegationId": "dlg-mn4sgzni",
+    "agentId": "agent-intj-1",
+    "task": "analyze market trends",
+    "reward": 100,
+    "serviceFee": 20,
+    "totalCost": 120,
+    "timestamp": "2026-03-24T15:48:10.494Z"
+  }
+]

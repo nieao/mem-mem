@@ -1,0 +1,14 @@
+{
+  "userId": "user-编码测试-mn4u232p",
+  "balance": 14904,
+  "totalEarned": 0,
+  "totalSpent": 96,
+  "transactions": [
+    {
+      "time": "2026-03-24T16:32:34.326Z",
+      "type": "spend",
+      "amount": 96,
+      "desc": "委托 agent-enfp-8: 写一首关于龙虾的诗"
+    }
+  ]
+}

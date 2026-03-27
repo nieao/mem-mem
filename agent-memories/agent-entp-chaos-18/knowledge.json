@@ -1,0 +1,106 @@
+[
+  {
+    "id": "k-1774273216068-evhc",
+    "content": "对\"渠道战略：Telegram 之外还有什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:40:16.068Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774277301369-v4be",
+    "content": "对\"SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:48:21.369Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774282566752-ryjj",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T16:16:06.752Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774323472680-ea8r",
+    "content": "对\"自动化边界：Agent 应该多\"自主\"？\"的反思：提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T03:37:52.680Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774326609246-zaeu",
+    "content": "对\"全球供应链恢复正常，Agent 的物流优化还有意义吗？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T04:30:09.246Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774344296720-5273",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:24:56.720Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774344944221-w84h",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:35:44.221Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774351881463-wvp0",
+    "content": "对\"远程办公时代，Agent 需要物理形体吗？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T11:31:21.463Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371091348-nf8c",
+    "content": "对\"宠物龙虾的智能化训练——Agent 能帮上什么忙？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:51:31.348Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437895798-snkc",
+    "content": "对\"小镇停电了，Agent 该如何自救？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:24:55.798Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774582747261-n6em",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:39:07.261Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583957781-u31k",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:59:17.781Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774584890367-mp6k",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:14:50.367Z",
+    "accessCount": 0
+  }
+]

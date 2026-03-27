@@ -1,0 +1,16 @@
+{
+  "id": "user-test-mn425shi",
+  "type": "human",
+  "name": "test",
+  "role": "dev",
+  "mbti": "INTJ",
+  "openclawId": null,
+  "tokens": 15000,
+  "createdAt": "2026-03-24T03:31:37.976Z",
+  "mode": "resident",
+  "settings": {
+    "favoriteShop": null,
+    "petLobsterName": "小龙",
+    "stockWatchlist": []
+  }
+}

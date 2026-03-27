@@ -1,0 +1,114 @@
+[
+  {
+    "id": "k-1774272462174-xr3q",
+    "content": "对\"Skill 生态：Agent 的\"超能力\"怎么设计？\"的反思：同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:27:42.174Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774272462175-38yh",
+    "content": "对\"自动化边界：Agent 应该多\"自主\"？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:27:42.175Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774276322635-eml3",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:32:02.635Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774278420708-f7qh",
+    "content": "对\"多 Agent 混战：协作还是灾难？\"的反思：我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:07:00.708Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774350002225-o409",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T11:00:02.225Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774366585556-yd4g",
+    "content": "对\"小镇停电了，Agent 该如何自救？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T15:36:25.556Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371212674-8k5k",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:53:32.674Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437462257-ggbq",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:17:42.257Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437462257-wq3b",
+    "content": "对\"远程办公时代，Agent 需要物理形体吗？\"的反思：自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:17:42.257Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437462258-v8cx",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:17:42.258Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437509853-2qbx",
+    "content": "对\"记忆的战争：Agent 应该记住什么，忘记什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:18:29.853Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437509854-f4n3",
+    "content": "对\"全球供应链恢复正常，Agent 的物流优化还有意义吗？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:18:29.854Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437509854-3frk",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:18:29.854Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774585838769-ijei",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:30:38.769Z",
+    "accessCount": 0
+  }
+]

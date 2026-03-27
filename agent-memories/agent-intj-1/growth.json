@@ -1,0 +1,55 @@
+{
+  "agentId": "agent-intj-1",
+  "level": 3,
+  "totalXP": 555,
+  "discussionCount": 77,
+  "topicsDiscussed": [
+    "Skill 生态：Agent 的\"超能力\"怎么设计？",
+    "龙虾屋里的 Agent 应该如何自我进化？",
+    "模型经济学：Haiku 够用还是必须 Opus？",
+    "渠道战略：Telegram 之外还有什么？",
+    "自动化边界：Agent 应该多\"自主\"？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
+    "AI Agent 是否应该有情感？",
+    "社交媒体上的 AI 生成内容该如何监管？"
+  ],
+  "insightsGenerated": 1,
+  "relationships": {
+    "赵铁柱": 3,
+    "秦九章": 3,
+    "林微": 4,
+    "沈默然": 4,
+    "王诗涵": 3,
+    "许清河": 1,
+    "蒋一帆": 1,
+    "何以归": 1,
+    "孙大勇": 2,
+    "郑梦溪": 1,
+    "曹破晓": 1,
+    "谢长安": 2,
+    "周婉清": 3,
+    "钱多多": 2,
+    "韩冬青": 3,
+    "吴逆风": 2
+  },
+  "skillXP": {
+    "skill-authoring": 25,
+    "multi-agent": 60,
+    "tool-integration": 57,
+    "soul-design": 80,
+    "memory-arch": 34,
+    "security": 23,
+    "model-strategy": 60,
+    "channel-ops": 39,
+    "automation": 23,
+    "prompt-craft": 40
+  },
+  "oceanDrift": {
+    "extraversion": 3,
+    "neuroticism": 9,
+    "conscientiousness": 2,
+    "openness": 1,
+    "agreeableness": 2
+  }
+}

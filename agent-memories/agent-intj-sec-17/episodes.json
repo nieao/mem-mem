@@ -1,0 +1,132 @@
+[
+  {
+    "id": "e-1774278273101-0flw",
+    "sessionId": "s-1774278267256",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "郑梦溪"
+    ],
+    "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "timestamp": "2026-03-23T15:04:33.101Z",
+    "decayFactor": 0.8325908571208884
+  },
+  {
+    "id": "e-1774278273102-0ofz",
+    "sessionId": "s-1774278267256",
+    "type": "utterance",
+    "content": "我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "relatedAgents": [
+      "秦九章"
+    ],
+    "topic": "渠道战略：Telegram 之外还有什么？",
+    "timestamp": "2026-03-23T15:04:33.102Z",
+    "decayFactor": 0.8325908576151746
+  },
+  {
+    "id": "e-1774343899760-bzj0",
+    "sessionId": "s-1774343898280",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
+    "timestamp": "2026-03-24T09:18:19.760Z",
+    "decayFactor": 0.8656694073729666
+  },
+  {
+    "id": "e-1774349774364-jn7i",
+    "sessionId": "s-1774349772867",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "社交媒体上的 AI 生成内容该如何监管？",
+    "timestamp": "2026-03-24T10:56:14.364Z",
+    "decayFactor": 0.8686937783232707
+  },
+  {
+    "id": "e-1774355060516-ywfc",
+    "sessionId": "s-1774355058965",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "宠物龙虾的智能化训练——Agent 能帮上什么忙？",
+    "timestamp": "2026-03-24T12:24:20.516Z",
+    "decayFactor": 0.8714242322172397
+  },
+  {
+    "id": "e-1774371091345-3s82",
+    "sessionId": "s-1774371087884",
+    "type": "utterance",
+    "content": "我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "relatedAgents": [],
+    "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "timestamp": "2026-03-24T16:51:31.345Z",
+    "decayFactor": 0.8797572192714465
+  },
+  {
+    "id": "e-1774371212740-ipkv",
+    "sessionId": "s-1774371208165",
+    "type": "utterance",
+    "content": "说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "relatedAgents": [
+      "韩冬青"
+    ],
+    "topic": "国产大模型超越 GPT-4 意味着什么？",
+    "timestamp": "2026-03-24T16:53:32.740Z",
+    "decayFactor": 0.8798206246557414
+  },
+  {
+    "id": "e-1774437462278-bkdv",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-25T11:17:42.278Z",
+    "decayFactor": 0.9151139312524539
+  },
+  {
+    "id": "e-1774437462279-iofp",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-25T11:17:42.279Z",
+    "decayFactor": 0.9151139317957317
+  },
+  {
+    "id": "e-1774437462279-th5l",
+    "sessionId": "s-1774437449012",
+    "type": "utterance",
+    "content": "自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "relatedAgents": [
+      "王诗涵"
+    ],
+    "topic": "模型经济学：Haiku 够用还是必须 Opus？",
+    "timestamp": "2026-03-25T11:17:42.279Z",
+    "decayFactor": 0.9151139317957317
+  },
+  {
+    "id": "e-1774437509873-k4l9",
+    "sessionId": "s-1774437497780",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "timestamp": "2026-03-25T11:18:29.873Z",
+    "decayFactor": 0.9151397889281585
+  },
+  {
+    "id": "e-1774585064226-iy0o",
+    "sessionId": "s-1774585062459",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "孙大勇"
+    ],
+    "topic": "数字人民币普及后 Agent 能自己花钱吗？",
+    "timestamp": "2026-03-27T04:17:44.226Z",
+    "decayFactor": 0.9989210770809018
+  }
+]

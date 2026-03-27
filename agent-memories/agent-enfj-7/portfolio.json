@@ -1,0 +1,89 @@
+{
+  "agentId": "agent-enfj-7",
+  "tokens": 8920,
+  "totalInvested": 1280,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 320,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": -1,
+      "pnlPct": -0.44256872362267113
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 320,
+      "entryPrice": 1220.64,
+      "currentPrice": 1219.26,
+      "pnl": 0,
+      "pnlPct": -0.11305544632324921
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 320,
+      "entryPrice": 1230.27,
+      "currentPrice": 1219.26,
+      "pnl": -3,
+      "pnlPct": -0.8949255041576232
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 320,
+      "entryPrice": 1275.74,
+      "currentPrice": 1309.23,
+      "pnl": 8,
+      "pnlPct": 2.625143054227351
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.281Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 320,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.978Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 320,
+      "price": 1220.64
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.495Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 320,
+      "price": 1230.27
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.515Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 320,
+      "price": 1275.74
+    }
+  ],
+  "totalPnL": 4,
+  "bountyIncome": [
+    {
+      "amount": 200,
+      "from": "代码安全审计",
+      "at": "2026-03-27T04:57:59.163Z"
+    }
+  ]
+}

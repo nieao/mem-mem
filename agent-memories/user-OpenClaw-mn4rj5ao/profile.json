@@ -1,0 +1,16 @@
+{
+  "id": "user-OpenClaw-mn4rj5ao",
+  "type": "human",
+  "name": "OpenClaw",
+  "role": "小镇居民",
+  "mbti": "INTJ",
+  "openclawId": "telegram-main",
+  "tokens": 15000,
+  "createdAt": "2026-03-24T15:21:51.508Z",
+  "mode": "resident",
+  "settings": {
+    "favoriteShop": null,
+    "petLobsterName": "小龙",
+    "stockWatchlist": []
+  }
+}

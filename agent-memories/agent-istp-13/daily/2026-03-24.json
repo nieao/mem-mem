@@ -1,0 +1,10 @@
+{
+  "date": "2026-03-24",
+  "crucixSummary": "专利动态 — 2 项新专利，领域：AI/ML、安全\n热点趋势 — OpenClaw 开源 Agent 框架、Claude 4 多模态能力突破、龙虾经济学：AI Agent 的成本优化\n市场行情 — SPY 528.5(+0.8%)，BTC-USD 87200(+2.1%)\n中国市场 — 上证指数 3215.80（+0.65%）\n能源价格 — WTI $78.5, Brent $82.3",
+  "highlights": [
+    "提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。"
+  ],
+  "discussedTopics": [
+    "模型经济学：Haiku 够用还是必须 Opus？"
+  ]
+}

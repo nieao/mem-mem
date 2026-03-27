@@ -1,0 +1,20 @@
+{
+  "name": "mem-mem",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "start:mock": "MOCK_LLM=1 bun run src/index.ts",
+    "test": "bun test",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "playwright": "^1.58.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.40.0"
+  }
+}

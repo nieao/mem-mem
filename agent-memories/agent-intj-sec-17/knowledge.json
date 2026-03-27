@@ -1,0 +1,42 @@
+[
+  {
+    "id": "k-1774343899760-6xsb",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:18:19.760Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774349774365-ii2l",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T10:56:14.365Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774355060517-nag4",
+    "content": "对\"宠物龙虾的智能化训练——Agent 能帮上什么忙？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T12:24:20.517Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371091345-j9gq",
+    "content": "对\"SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:51:31.345Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774585064227-wf36",
+    "content": "对\"数字人民币普及后 Agent 能自己花钱吗？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:17:44.227Z",
+    "accessCount": 0
+  }
+]

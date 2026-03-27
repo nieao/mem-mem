@@ -1,0 +1,26 @@
+{
+  "userId": "user-nieao-mn8foq18",
+  "balance": 4434,
+  "totalEarned": 0,
+  "totalSpent": 10566,
+  "transactions": [
+    {
+      "time": "2026-03-27T05:01:30.325Z",
+      "type": "spend",
+      "amount": 216,
+      "desc": "赏金托管: 生成小猫和小海豚一起旅游的图文故事"
+    },
+    {
+      "time": "2026-03-27T13:43:40.372Z",
+      "type": "spend",
+      "amount": 350,
+      "desc": "购买 金框镜子"
+    },
+    {
+      "time": "2026-03-27T13:43:55.178Z",
+      "type": "spend",
+      "amount": 10000,
+      "desc": "购买龙虾 机甲龙虾"
+    }
+  ]
+}

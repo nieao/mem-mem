@@ -1,0 +1,89 @@
+{
+  "agentId": "agent-isfj-10",
+  "tokens": 9062,
+  "totalInvested": 1088,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 272,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": 1,
+      "pnlPct": 0.44256872362267113
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 272,
+      "entryPrice": 1336.78,
+      "currentPrice": 1309.23,
+      "pnl": 6,
+      "pnlPct": 2.060922515297951
+    },
+    {
+      "sectorCode": "MIL",
+      "sectorName": "军工国防",
+      "direction": "short",
+      "amount": 272,
+      "entryPrice": 880.45,
+      "currentPrice": 875.46,
+      "pnl": 2,
+      "pnlPct": 0.5667556363223362
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "short",
+      "amount": 272,
+      "entryPrice": 1204.93,
+      "currentPrice": 1219.26,
+      "pnl": -3,
+      "pnlPct": -1.189280705103195
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.283Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 272,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.982Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 272,
+      "price": 1336.78
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.498Z",
+      "sectorCode": "MIL",
+      "sectorName": "军工国防",
+      "direction": "short",
+      "amount": 272,
+      "price": 880.45
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.518Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "short",
+      "amount": 272,
+      "price": 1204.93
+    }
+  ],
+  "totalPnL": 6,
+  "bountyIncome": [
+    {
+      "amount": 150,
+      "from": "设计 Agent 人格",
+      "at": "2026-03-27T04:57:58.379Z"
+    }
+  ]
+}

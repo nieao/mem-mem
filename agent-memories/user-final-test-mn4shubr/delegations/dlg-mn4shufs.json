@@ -1,0 +1,12 @@
+{
+  "id": "dlg-mn4shufs",
+  "fromUserId": "user-final-test-mn4shubr",
+  "toAgentId": "agent-entp-4",
+  "task": "write a summary",
+  "reward": 50,
+  "fee": 60,
+  "status": "completed",
+  "createdAt": "2026-03-24T15:48:50.392Z",
+  "result": "自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+  "completedAt": "2026-03-24T15:48:50.685Z"
+}

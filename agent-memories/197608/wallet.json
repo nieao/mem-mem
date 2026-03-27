@@ -1,0 +1,14 @@
+{
+  "userId": "197608",
+  "balance": 14880,
+  "totalEarned": 0,
+  "totalSpent": 120,
+  "transactions": [
+    {
+      "time": "2026-03-24T15:48:10.493Z",
+      "type": "spend",
+      "amount": 120,
+      "desc": "委托 agent-intj-1: analyze market trends"
+    }
+  ]
+}

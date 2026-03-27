@@ -1,0 +1,114 @@
+[
+  {
+    "id": "k-1774277332467-2i8k",
+    "content": "对\"记忆的战争：Agent 应该记住什么，忘记什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:48:52.467Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774323472682-bklb",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T03:37:52.682Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774323472683-4u2s",
+    "content": "对\"自动化边界：Agent 应该多\"自主\"？\"的反思：工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T03:37:52.683Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774326609249-gurw",
+    "content": "对\"全球供应链恢复正常，Agent 的物流优化还有意义吗？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T04:30:09.249Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774345980434-y2gk",
+    "content": "对\"龙虾经济学：如何用最小成本养最聪明的龙虾？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:53:00.434Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774346151107-ogvt",
+    "content": "对\"数字人民币普及后 Agent 能自己花钱吗？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:55:51.107Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774352089218-l8q6",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T11:34:49.218Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774436071911-r9fw",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T10:54:31.911Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774440764946-zw25",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T12:12:44.946Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774442283283-htt9",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T12:38:03.283Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774582853735-rdz9",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:40:53.735Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583273959-9f1t",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:47:53.959Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583572372-38wc",
+    "content": "对\"小镇停电了，Agent 该如何自救？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:52:52.372Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774586884210-911g",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:48:04.210Z",
+    "accessCount": 0
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "agentId": "agent-infj-5",
+  "tokens": 8600,
+  "totalInvested": 1400,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 350,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": -2,
+      "pnlPct": -0.44256872362267113
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 350,
+      "entryPrice": 1336.78,
+      "currentPrice": 1309.23,
+      "pnl": 7,
+      "pnlPct": 2.060922515297951
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 350,
+      "entryPrice": 1230.27,
+      "currentPrice": 1219.26,
+      "pnl": -3,
+      "pnlPct": -0.8949255041576232
+    },
+    {
+      "sectorCode": "MED",
+      "sectorName": "医药生物",
+      "direction": "long",
+      "amount": 350,
+      "entryPrice": 873.73,
+      "currentPrice": 829.23,
+      "pnl": -18,
+      "pnlPct": -5.093106566101656
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.280Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 350,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.976Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 350,
+      "price": 1336.78
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.493Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 350,
+      "price": 1230.27
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.513Z",
+      "sectorCode": "MED",
+      "sectorName": "医药生物",
+      "direction": "long",
+      "amount": 350,
+      "price": 873.73
+    }
+  ],
+  "totalPnL": -16
+}

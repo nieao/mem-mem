@@ -1,0 +1,74 @@
+[
+  {
+    "id": "k-1774273216064-kh54",
+    "content": "对\"渠道战略：Telegram 之外还有什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:40:16.064Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774279180669-1dd4",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:19:40.669Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774279994028-y99d",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:33:14.028Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774282320110-1ydh",
+    "content": "对\"远程办公时代，Agent 需要物理形体吗？\"的反思：工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T16:12:00.110Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774322588373-y2vs",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T03:23:08.373Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774346151103-deap",
+    "content": "对\"数字人民币普及后 Agent 能自己花钱吗？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:55:51.103Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371212732-ai40",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:53:32.732Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371212734-e5fb",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:53:32.734Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774582853731-fmtk",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:40:53.731Z",
+    "accessCount": 0
+  }
+]

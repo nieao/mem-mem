@@ -1,0 +1,146 @@
+[
+  {
+    "id": "k-1774272462199-rw5d",
+    "content": "对\"自动化边界：Agent 应该多\"自主\"？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:27:42.199Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774273293317-qq4g",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:41:33.317Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774278273091-6mxz",
+    "content": "对\"SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:04:33.091Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774278420717-v91b",
+    "content": "对\"多 Agent 混战：协作还是灾难？\"的反思：同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:07:00.717Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774278420718-d93l",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:07:00.718Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774279180663-yljq",
+    "content": "对\"安全偏执狂 vs 效率至上：权限边界在哪里？\"的反思：同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:19:40.663Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774279180664-o9hh",
+    "content": "对\"记忆的战争：Agent 应该记住什么，忘记什么？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:19:40.664Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774282566744-kn2e",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T16:16:06.744Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774322588369-nrdl",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T03:23:08.369Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774323472675-ts8b",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T03:37:52.675Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774327017320-b60q",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T04:36:57.320Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774343349366-lzyp",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:09:09.366Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774345757728-dqvj",
+    "content": "对\"远程办公时代，Agent 需要物理形体吗？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:49:17.728Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774351275994-gkme",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T11:21:15.994Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774359529105-xp3y",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T13:38:49.105Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371151136-o37b",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:52:31.136Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774584012393-wur0",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:00:12.393Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774586413081-ponf",
+    "content": "对\"新能源发电占比突破 35%，对 Agent 有什么影响？\"的反思：我认为 Telegram 作为首选渠道是正确的。它的 Bot API 足够强大，而且用户无需安装额外软件。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:40:13.081Z",
+    "accessCount": 0
+  }
+]

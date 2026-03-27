@@ -1,0 +1,82 @@
+[
+  {
+    "id": "k-1774277332463-9t37",
+    "content": "对\"记忆的战争：Agent 应该记住什么，忘记什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:48:52.463Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774282320118-krq0",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T16:12:00.118Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774327017324-hni7",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T04:36:57.324Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774343676345-36iz",
+    "content": "对\"小镇停电了，Agent 该如何自救？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:14:36.345Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774344296715-x22c",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T09:24:56.715Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774366585563-pqaf",
+    "content": "对\"小镇停电了，Agent 该如何自救？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T15:36:25.563Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774371151143-849r",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-24T16:52:31.143Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774439744386-np48",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:55:44.386Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583640187-nud2",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:54:00.187Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774583846870-q76d",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:57:26.870Z",
+    "accessCount": 0
+  }
+]

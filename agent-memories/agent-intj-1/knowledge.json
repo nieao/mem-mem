@@ -1,0 +1,98 @@
+[
+  {
+    "id": "k-1774272462167-79x5",
+    "content": "对\"Skill 生态：Agent 的\"超能力\"怎么设计？\"的反思：我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:27:42.167Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774273293292-m7cn",
+    "content": "对\"龙虾屋里的 Agent 应该如何自我进化？\"的反思：我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T13:41:33.292Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774277445827-usm2",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：**小模型并发涌现 > 单强模型，OpenClaw 的经济学最优解。**\n\n（14字，核心：规模协作制胜成本与效果的平衡）",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T14:50:45.827Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774278273077-60m2",
+    "content": "对\"渠道战略：Telegram 之外还有什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:04:33.077Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774279333360-1gic",
+    "content": "对\"Skill 生态：Agent 的\"超能力\"怎么设计？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-23T15:22:13.360Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437462251-vc5u",
+    "content": "对\"自动化边界：Agent 应该多\"自主\"？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:17:42.251Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437462253-xhns",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:17:42.253Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437509849-ft38",
+    "content": "对\"记忆的战争：Agent 应该记住什么，忘记什么？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:18:29.849Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437509850-w5gd",
+    "content": "对\"全球供应链恢复正常，Agent 的物流优化还有意义吗？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:18:29.850Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774437509850-wacw",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-25T11:18:29.850Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774582853721-dbzx",
+    "content": "对\"社交媒体上的 AI 生成内容该如何监管？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T03:40:53.721Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774585838767-pa6a",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-27T04:30:38.767Z",
+    "accessCount": 0
+  }
+]

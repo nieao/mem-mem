@@ -1,0 +1,56 @@
+{
+  "agentId": "agent-esfp-16",
+  "level": 4,
+  "totalXP": 920,
+  "discussionCount": 76,
+  "topicsDiscussed": [
+    "自动化边界：Agent 应该多\"自主\"？",
+    "安全偏执狂 vs 效率至上：权限边界在哪里？",
+    "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
+    "渠道战略：Telegram 之外还有什么？",
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "模型经济学：Haiku 够用还是必须 Opus？",
+    "AI Agent 是否应该有情感？",
+    "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
+    "龙虾经济学：如何用最小成本养最聪明的龙虾？",
+    "比特币突破 87000 美元，Agent 该追涨还是观望？",
+    "宠物龙虾的智能化训练——Agent 能帮上什么忙？",
+    "国产大模型超越 GPT-4 意味着什么？",
+    "社交媒体上的 AI 生成内容该如何监管？",
+    "新能源发电占比突破 35%，对 Agent 有什么影响？",
+    "股市暴跌时 Agent 应该恐慌还是冷静？"
+  ],
+  "insightsGenerated": 0,
+  "relationships": {
+    "林微": 2,
+    "韩冬青": 3,
+    "郑梦溪": 3,
+    "邓如是": 2,
+    "王诗涵": 2,
+    "沈默然": 3,
+    "吴逆风": 2,
+    "秦九章": 1,
+    "谢长安": 1,
+    "周婉清": 2,
+    "何以归": 1
+  },
+  "skillXP": {
+    "automation": 48,
+    "security": 68,
+    "soul-design": 79,
+    "channel-ops": 45,
+    "prompt-craft": 70,
+    "tool-integration": 44,
+    "multi-agent": 5,
+    "memory-arch": 19,
+    "model-strategy": 52,
+    "skill-authoring": 10
+  },
+  "oceanDrift": {
+    "extraversion": 5,
+    "agreeableness": 3,
+    "neuroticism": 9,
+    "conscientiousness": 2,
+    "openness": 1
+  }
+}

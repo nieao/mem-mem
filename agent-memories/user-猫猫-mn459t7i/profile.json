@@ -1,0 +1,16 @@
+{
+  "id": "user-猫猫-mn459t7i",
+  "type": "human",
+  "name": "猫猫",
+  "role": "小镇居民",
+  "mbti": "ENFP",
+  "openclawId": null,
+  "tokens": 15000,
+  "createdAt": "2026-03-24T04:58:44.384Z",
+  "mode": "resident",
+  "settings": {
+    "favoriteShop": null,
+    "petLobsterName": "小龙",
+    "stockWatchlist": []
+  }
+}

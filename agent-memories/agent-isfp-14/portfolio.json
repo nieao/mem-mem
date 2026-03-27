@@ -1,0 +1,89 @@
+{
+  "agentId": "agent-isfp-14",
+  "tokens": 7940,
+  "totalInvested": 2240,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "entryPrice": 1315.05,
+      "currentPrice": 1309.23,
+      "pnl": -2,
+      "pnlPct": -0.44256872362267113
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "short",
+      "amount": 560,
+      "entryPrice": 1220.64,
+      "currentPrice": 1219.26,
+      "pnl": 1,
+      "pnlPct": 0.11305544632324921
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 560,
+      "entryPrice": 1322.67,
+      "currentPrice": 1309.23,
+      "pnl": 6,
+      "pnlPct": 1.0161264714554692
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "entryPrice": 1275.74,
+      "currentPrice": 1309.23,
+      "pnl": 15,
+      "pnlPct": 2.625143054227351
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-23T15:02:57.286Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "price": 1315.05
+    },
+    {
+      "timestamp": "2026-03-24T03:23:06.988Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "short",
+      "amount": 560,
+      "price": 1220.64
+    },
+    {
+      "timestamp": "2026-03-25T10:54:30.503Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 560,
+      "price": 1322.67
+    },
+    {
+      "timestamp": "2026-03-27T03:39:05.523Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "price": 1275.74
+    }
+  ],
+  "totalPnL": 20,
+  "bountyIncome": [
+    {
+      "amount": 180,
+      "from": "生成小猫和小海豚一起旅游的图文故事",
+      "at": "2026-03-27T05:01:48.534Z"
+    }
+  ]
+}

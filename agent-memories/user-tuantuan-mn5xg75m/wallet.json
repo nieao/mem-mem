@@ -1,0 +1,26 @@
+{
+  "userId": "user-tuantuan-mn5xg75m",
+  "balance": 4370,
+  "totalEarned": 0,
+  "totalSpent": 10630,
+  "transactions": [
+    {
+      "time": "2026-03-25T11:29:25.240Z",
+      "type": "spend",
+      "amount": 10000,
+      "desc": "购买龙虾 机甲龙虾"
+    },
+    {
+      "time": "2026-03-25T11:29:33.843Z",
+      "type": "spend",
+      "amount": 350,
+      "desc": "购买 金框镜子"
+    },
+    {
+      "time": "2026-03-25T11:29:59.301Z",
+      "type": "spend",
+      "amount": 280,
+      "desc": "购买 落地灯"
+    }
+  ]
+}

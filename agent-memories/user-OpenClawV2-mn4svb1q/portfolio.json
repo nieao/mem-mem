@@ -1,0 +1,28 @@
+{
+  "agentId": "user-OpenClawV2-mn4svb1q",
+  "tokens": 14500,
+  "totalInvested": 500,
+  "holdings": [
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 500,
+      "entryPrice": 1289.79,
+      "currentPrice": 1289.79,
+      "pnl": 0,
+      "pnlPct": 0
+    }
+  ],
+  "tradeHistory": [
+    {
+      "timestamp": "2026-03-24T15:59:18.778Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 500,
+      "price": 1289.79
+    }
+  ],
+  "totalPnL": 0
+}
