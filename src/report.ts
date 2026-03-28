@@ -1661,7 +1661,8 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
       link: '/mafia' },
     { id: 'stock',  name: '\u80a1\u7968\u5927\u5385', icon: '\ud83d\udcc8', color: '#2a6a4a', roof: '#1a4a2a', // 股票大厅
       gx: branchRoad1[Math.floor(branchRoad1.length * 0.3)].x + 3,
-      gy: branchRoad1[Math.floor(branchRoad1.length * 0.3)].y + 2.5, type: 'stock' },
+      gy: branchRoad1[Math.floor(branchRoad1.length * 0.3)].y + 2.5, type: 'stock',
+      link: '/stock' },
   ];
 
   // ── 树木（6 种类型） ──

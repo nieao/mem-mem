@@ -1237,6 +1237,12 @@ export function startServer(port = PORT) {
         return new Response(generateMafiaPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
       }
 
+      // 股票大厅页面
+      if (path === '/stock' || path === '/stock.html') {
+        const { generateStockPage } = await import('./stock-page.js');
+        return new Response(generateStockPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
       // ── 设置向导页 ──
 
       if (path === '/setup' || path === '/setup.html') {
