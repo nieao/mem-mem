@@ -485,6 +485,117 @@ export function getUserPortfolio(userId: string, market: MarketOverview): AgentP
   return portfolio;
 }
 
+// ── Finnhub 数据源 ──
+
+export interface FinnhubQuote {
+  c: number;   // 当前价
+  d: number;   // 涨跌额
+  dp: number;  // 涨跌幅%
+  h: number;   // 最高
+  l: number;   // 最低
+  o: number;   // 开盘
+  pc: number;  // 昨收
+  t: number;   // 时间戳
+}
+
+export interface WatchlistItem {
+  symbol: string;
+  name: string;
+  sector?: string;
+}
+
+export interface Watchlist {
+  stocks: WatchlistItem[];
+}
+
+// ── 缓存层（5 分钟 TTL） ──
+
+interface CacheEntry {
+  data: FinnhubQuote;
+  expiry: number;
+}
+
+const quoteCache = new Map<string, CacheEntry>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 分钟
+
+function getCachedQuote(symbol: string): FinnhubQuote | null {
+  const entry = quoteCache.get(symbol.toUpperCase());
+  if (entry && Date.now() < entry.expiry) return entry.data;
+  return null;
+}
+
+function setCachedQuote(symbol: string, data: FinnhubQuote): void {
+  quoteCache.set(symbol.toUpperCase(), { data, expiry: Date.now() + CACHE_TTL });
+}
+
+// ── Finnhub API ──
+
+const FINNHUB_KEY = process.env.FINNHUB_API_KEY || '';
+
+/** 查询单只股票实时行情 */
+export async function fetchFinnhubQuote(symbol: string): Promise<FinnhubQuote | null> {
+  if (!FINNHUB_KEY) return null;
+
+  const cached = getCachedQuote(symbol);
+  if (cached) return cached;
+
+  try {
+    const resp = await fetch(
+      `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(symbol.toUpperCase())}&token=${FINNHUB_KEY}`,
+      { signal: AbortSignal.timeout(8000) }
+    );
+    if (!resp.ok) return null;
+    const data = await resp.json() as FinnhubQuote;
+    if (!data.c || data.c === 0) return null; // 无效数据
+    setCachedQuote(symbol, data);
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+/** 带缓存的行情查询 */
+export async function getQuoteWithCache(symbol: string): Promise<FinnhubQuote | null> {
+  return fetchFinnhubQuote(symbol);
+}
+
+/** 搜索股票代码 */
+export async function searchSymbol(query: string): Promise<Array<{ symbol: string; description: string; type: string }>> {
+  if (!FINNHUB_KEY) return [];
+
+  try {
+    const resp = await fetch(
+      `https://finnhub.io/api/v1/search?q=${encodeURIComponent(query)}&token=${FINNHUB_KEY}`,
+      { signal: AbortSignal.timeout(8000) }
+    );
+    if (!resp.ok) return [];
+    const data = await resp.json() as any;
+    return (data.result || []).slice(0, 10).map((r: any) => ({
+      symbol: r.symbol,
+      description: r.description,
+      type: r.type,
+    }));
+  } catch {
+    return [];
+  }
+}
+
+// ── 自选股 ──
+
+/** 加载用户自选股 */
+export function loadWatchlist(userId: string): Watchlist {
+  const p = join('agent-memories', userId, 'watchlist.json');
+  if (!existsSync(p)) return { stocks: [] };
+  try { return JSON.parse(readFileSync(p, 'utf-8')); } catch { return { stocks: [] }; }
+}
+
+/** 保存用户自选股 */
+export function saveWatchlist(userId: string, watchlist: Watchlist): void {
+  const dir = join('agent-memories', userId);
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, 'watchlist.json'), JSON.stringify(watchlist, null, 2), 'utf-8');
+}
+
 /** 序列化市场和持仓数据供前端使用 */
 export function serializeMarketData(
   market: MarketOverview,

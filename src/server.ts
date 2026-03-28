@@ -19,7 +19,7 @@ import { getOpenClawStatus, runHeartbeat } from './openclaw-sim.js';
 import { TASK_TEMPLATES, recommendTemplates } from './task-templates.js';
 import type { TaskRequest, TaskResult, AgentProfile } from './types.js';
 import { SHOP_ITEMS, LOBSTER_PETS, buyItem, buyPet, loadWallet, saveWallet, loadPlayerRoom, savePlayerRoom, createDelegation, serializeShopData } from './shop.js';
-import { getMarketData, getUserPortfolio, userTrade, userSellHolding } from './stock-market.js';
+import { getMarketData, getUserPortfolio, userTrade, userSellHolding, fetchFinnhubQuote, searchSymbol, loadWatchlist, saveWatchlist } from './stock-market.js';
 import { generateOnboardDoc } from './openclaw-api-doc.js';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join } from 'path';
@@ -29,6 +29,7 @@ import { executeCapability, executeCombo, checkOllamaHealth, checkComfyUIHealth,
 import { createBounty, matchAgents as matchBountyAgents, assignBounty, executeBounty, rateBounty, refundBounty, listBounties, getBounty, getBountyStats, expireOverdueBounties } from './bounty.js';
 import { getKillSwitch, setKillSwitch, getAuditLog, getAuditSummary, getDailyBudgetStatus } from './sandbox.js';
 import { startBountyHeartbeat, stopBountyHeartbeat, runBountyHeartbeat } from './bounty-heartbeat.js';
+import { createMafiaGame, joinGame, addAiPlayers, startGame, nightAction, resolveNight, daySpeak, startVoting, vote, resolveVotes, advanceGame as advanceMafiaGame, listGames as listMafiaGames, getPlayerView, generateMafiaPage } from './lobster-mafia.js';
 
 const PORT = parseInt(process.env.MEM_MEM_PORT || '3456');
 const REPORTS_DIR = './reports';
@@ -806,6 +807,55 @@ export function startServer(port = PORT) {
         return new Response(JSON.stringify({ portfolio, market: { indexName: market.indexName, indexPrice: market.indexPrice, indexChangePct: market.indexChangePct, sentiment: market.sentiment } }), { headers: corsHeaders });
       }
 
+      // GET /api/market/quote/:symbol — 查询单只股票实时行情（Finnhub）
+      if (path.startsWith('/api/market/quote/') && request.method === 'GET') {
+        const symbol = path.split('/api/market/quote/')[1];
+        if (!symbol) return new Response(JSON.stringify({ error: '请提供股票代码' }), { status: 400, headers: corsHeaders });
+        const quote = await fetchFinnhubQuote(symbol);
+        if (!quote) return new Response(JSON.stringify({ error: '无法获取行情（未配置 FINNHUB_API_KEY 或代码无效）', symbol }), { status: 404, headers: corsHeaders });
+        return new Response(JSON.stringify({ symbol: symbol.toUpperCase(), ...quote }), { headers: corsHeaders });
+      }
+
+      // GET /api/market/watchlist/:userId — 获取用户自选股
+      if (path.startsWith('/api/market/watchlist/') && request.method === 'GET') {
+        const userId = path.split('/api/market/watchlist/')[1];
+        if (!userId) return new Response(JSON.stringify({ error: '请提供 userId' }), { status: 400, headers: corsHeaders });
+        const watchlist = loadWatchlist(userId);
+        return new Response(JSON.stringify(watchlist), { headers: corsHeaders });
+      }
+
+      // POST /api/market/watchlist — 添加/删除自选股
+      if (path === '/api/market/watchlist' && request.method === 'POST') {
+        try {
+          const body = await request.json() as any;
+          const { userId, action, symbol, name, sector } = body;
+          if (!userId || !action || !symbol) {
+            return new Response(JSON.stringify({ error: '缺少 userId/action/symbol' }), { status: 400, headers: corsHeaders });
+          }
+          const watchlist = loadWatchlist(userId);
+          if (action === 'add') {
+            if (watchlist.stocks.some(s => s.symbol === symbol.toUpperCase())) {
+              return new Response(JSON.stringify({ success: false, message: '已在自选股中' }), { headers: corsHeaders });
+            }
+            watchlist.stocks.push({ symbol: symbol.toUpperCase(), name: name || symbol, sector: sector || '' });
+          } else if (action === 'remove') {
+            watchlist.stocks = watchlist.stocks.filter(s => s.symbol !== symbol.toUpperCase());
+          }
+          saveWatchlist(userId, watchlist);
+          return new Response(JSON.stringify({ success: true, watchlist }), { headers: corsHeaders });
+        } catch (err: any) {
+          return new Response(JSON.stringify({ error: err.message }), { status: 400, headers: corsHeaders });
+        }
+      }
+
+      // GET /api/market/search?q=xxx — 搜索股票代码
+      if (path === '/api/market/search' && request.method === 'GET') {
+        const q = url.searchParams.get('q');
+        if (!q) return new Response(JSON.stringify({ results: [] }), { headers: corsHeaders });
+        const results = await searchSymbol(q);
+        return new Response(JSON.stringify({ results }), { headers: corsHeaders });
+      }
+
       // POST /api/town/chat { userId, message } — 发送小镇广播
       if (path === '/api/town/chat' && request.method === 'POST') {
         try {
@@ -1182,10 +1232,21 @@ export function startServer(port = PORT) {
         }), { headers: corsHeaders });
       }
 
+      // ── 龙虾杀页面 ──
+      if (path === '/mafia' || path === '/mafia.html') {
+        return new Response(generateMafiaPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
       // ── 设置向导页 ──
 
       if (path === '/setup' || path === '/setup.html') {
         return new Response(generateSetupPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
+      // ── 游戏厅页面 ──
+      if (path === '/games' || path === '/games.html') {
+        const { generateGamesPage } = await import('./games-page.js');
+        return new Response(generateGamesPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
       }
 
       // ── 配置 API（API Key 管理 + 节能模式） ──
@@ -1686,6 +1747,117 @@ export function startServer(port = PORT) {
         }), { headers: corsHeaders });
       }
 
+      // ── 龙虾杀 API ──
+
+      // POST /api/mafia/create { hostName, aiCount }
+      if (path === '/api/mafia/create' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const hostName = body.hostName || '匿名虾友';
+        const aiCount = Math.min(Math.max(body.aiCount || 7, 3), 11);
+        const hostId = 'human-' + Date.now();
+        const game = createMafiaGame(hostId, hostName);
+        // 添加 AI 玩家
+        const agents = loadAgents();
+        const aiAgents = agents.map(a => ({
+          id: a.id, name: a.name,
+          mbti: a.personality?.mbti,
+          archetype: a.personality?.archetype,
+          communicationStyle: a.personality?.communicationStyle,
+        }));
+        addAiPlayers(game.id, aiAgents, aiCount);
+        return new Response(JSON.stringify({ gameId: game.id, playerId: hostId, playerCount: game.players.length }), { headers: corsHeaders });
+      }
+
+      // POST /api/mafia/join { gameId, playerName }
+      if (path === '/api/mafia/join' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const playerId = 'human-' + Date.now();
+        const result = joinGame(body.gameId, playerId, body.playerName || '匿名虾友');
+        return new Response(JSON.stringify({ ...result, playerId }), { headers: corsHeaders });
+      }
+
+      // POST /api/mafia/start { gameId }
+      if (path === '/api/mafia/start' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const result = startGame(body.gameId);
+        return new Response(JSON.stringify(result), { headers: corsHeaders });
+      }
+
+      // GET /api/mafia/state?gameId=X&playerId=Y
+      if (path === '/api/mafia/state' && request.method === 'GET') {
+        const gameId = url.searchParams.get('gameId') || '';
+        const playerId = url.searchParams.get('playerId') || '';
+        const view = getPlayerView(gameId, playerId);
+        if (!view) return new Response(JSON.stringify({ error: '游戏不存在' }), { status: 404, headers: corsHeaders });
+        return new Response(JSON.stringify(view), { headers: corsHeaders });
+      }
+
+      // POST /api/mafia/night-action { gameId, playerId, targetId }
+      if (path === '/api/mafia/night-action' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const result = nightAction(body.gameId, body.playerId, body.targetId);
+        return new Response(JSON.stringify(result), { headers: corsHeaders });
+      }
+
+      // POST /api/mafia/speak { gameId, playerId, message }
+      if (path === '/api/mafia/speak' && request.method === 'POST') {
+        const body = await request.json() as any;
+        daySpeak(body.gameId, body.playerId, body.message);
+        return new Response(JSON.stringify({ success: true }), { headers: corsHeaders });
+      }
+
+      // POST /api/mafia/vote { gameId, voterId, targetId }
+      if (path === '/api/mafia/vote' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const result = vote(body.gameId, body.voterId, body.targetId);
+        return new Response(JSON.stringify(result), { headers: corsHeaders });
+      }
+
+      // POST /api/mafia/advance { gameId }
+      if (path === '/api/mafia/advance' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const result = await advanceMafiaGame(body.gameId, mockMode);
+        return new Response(JSON.stringify(result), { headers: corsHeaders });
+      }
+
+      // GET /api/mafia/list
+      if (path === '/api/mafia/list') {
+        return new Response(JSON.stringify(listMafiaGames()), { headers: corsHeaders });
+      }
+
+      // ── 游戏厅排行榜 API ──
+
+      // POST /api/games/score — 保存分数
+      if (path === '/api/games/score' && request.method === 'POST') {
+        try {
+          const body = await request.json() as any;
+          const { game, score: sc, userId } = body;
+          if (!game || sc === undefined) return new Response(JSON.stringify({ success: false, message: '缺少 game 或 score' }), { status: 400, headers: corsHeaders });
+          const scoresPath = join(REPORTS_DIR, 'game-scores.json');
+          let scores: Record<string, any[]> = {};
+          try { scores = JSON.parse(readFileSync(scoresPath, 'utf-8')); } catch {}
+          if (!scores[game]) scores[game] = [];
+          scores[game].push({ score: sc, userId: userId || 'anonymous', time: new Date().toISOString() });
+          scores[game].sort((a: any, b: any) => b.score - a.score);
+          scores[game] = scores[game].slice(0, 50);
+          mkdirSync(REPORTS_DIR, { recursive: true });
+          writeFileSync(scoresPath, JSON.stringify(scores, null, 2), 'utf-8');
+          return new Response(JSON.stringify({ success: true }), { headers: corsHeaders });
+        } catch (err: any) {
+          return new Response(JSON.stringify({ success: false, message: err.message }), { status: 500, headers: corsHeaders });
+        }
+      }
+
+      // GET /api/games/leaderboard?game=2048 — 获取排行榜
+      if (path === '/api/games/leaderboard') {
+        const gameParam = url.searchParams.get('game') || '2048';
+        const scoresPath = join(REPORTS_DIR, 'game-scores.json');
+        let scores: Record<string, any[]> = {};
+        try { scores = JSON.parse(readFileSync(scoresPath, 'utf-8')); } catch {}
+        const list = (scores[gameParam] || []).slice(0, 20);
+        return new Response(JSON.stringify({ game: gameParam, leaderboard: list }), { headers: corsHeaders });
+      }
+
       // 3D 报告
       if (path === '/3d' || path === '/3d.html' || path === '/report-3d.html') {
         const report3dPath = join(REPORTS_DIR, 'report-3d.html');
@@ -1734,6 +1906,10 @@ export function startServer(port = PORT) {
   console.log(`  POST /api/market/trade     — 股票交易（买入）`);
   console.log(`  POST /api/market/sell      — 平仓（卖出）`);
   console.log(`  GET  /api/market/portfolio/:id — 持仓查询`);
+  console.log(`  GET  /api/market/quote/:symbol — Finnhub 实时行情`);
+  console.log(`  GET  /api/market/watchlist/:id — 用户自选股列表`);
+  console.log(`  POST /api/market/watchlist     — 添加/删除自选股`);
+  console.log(`  GET  /api/market/search?q=     — 搜索股票代码`);
   console.log(`  POST /api/town/chat        — 发送/获取小镇广播`);
   console.log(`  POST /api/town/interact    — 与 Agent 对话`);
   console.log(`  ── 抓人系统（上帝模式） ──`);
