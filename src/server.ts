@@ -1247,6 +1247,12 @@ export function startServer(port = PORT) {
         return new Response(generateStockPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
       }
 
+      // 新手引导页
+      if (path === '/guide' || path === '/guide.html') {
+        const { generateGuidePage } = await import('./guide-page.js');
+        return new Response(generateGuidePage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
       // ── 插件系统路由 ──
 
       // 插件列表页
