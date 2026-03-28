@@ -1377,7 +1377,7 @@ window.__economyData = ${(log.metadata as any).economyJson || '{}'};
 window.__tokenStats = ${(log.metadata as any).tokenStats || '{}'};
 window.__mediaData = ${(log.metadata as any).mediaJson || '{}'};
 window.__stockData = null;
-window.__serverUrl = window.location.origin || 'http://localhost:${(log.metadata as any).serverPort || 3456}';
+window.__serverUrl = window.location.origin; // port: ${(log.metadata as any).serverPort || 3456}';
 window.__bountyData = [];
 // 尝试从服务器加载赏金（静默失败）
 try { fetch(window.__serverUrl + '/api/bounties?limit=10').then(r=>r.json()).then(d=>{window.__bountyData=d;}).catch(()=>{}); } catch(e){}
