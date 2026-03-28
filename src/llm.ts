@@ -433,7 +433,7 @@ export async function callLlmMock(options: LlmCallOptions): Promise<LlmResult> {
 
 // ── 节能模式 ──
 
-let energySavingMode = true;  // 云端默认开启节能模式
+let energySavingMode = false;  // 已配置 MiniMax M2.7，默认关闭节能模式
 
 export function setEnergySavingMode(enabled: boolean) { energySavingMode = enabled; }
 export function isEnergySavingMode(): boolean { return energySavingMode; }

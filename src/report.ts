@@ -1373,7 +1373,7 @@ window.__economyData = ${(log.metadata as any).economyJson || '{}'};
 window.__tokenStats = ${(log.metadata as any).tokenStats || '{}'};
 window.__mediaData = ${(log.metadata as any).mediaJson || '{}'};
 window.__stockData = null;
-window.__serverUrl = 'http://localhost:${(log.metadata as any).serverPort || 3456}';
+window.__serverUrl = window.location.origin || 'http://localhost:${(log.metadata as any).serverPort || 3456}';
 window.__bountyData = [];
 // 尝试从服务器加载赏金（静默失败）
 try { fetch(window.__serverUrl + '/api/bounties?limit=10').then(r=>r.json()).then(d=>{window.__bountyData=d;}).catch(()=>{}); } catch(e){}
@@ -1419,7 +1419,7 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
   const agents = ${mapAgentsJson};
-  const SERVER = 'http://localhost:3456';
+  const SERVER = (window.__serverUrl || window.location.origin);
 
   // ── 人类用户房屋系统 ──
   let humanUsers = []; // 从服务器获取的人类用户列表
@@ -3277,7 +3277,7 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
   }
 
   // ── 赏金墙 ──
-  const SERVER = window.__serverUrl || 'http://localhost:3456';
+  const SERVER = window.__serverUrl || (window.__serverUrl || window.location.origin);
   async function loadBountyWall() {
     try {
       var bounties = [];
@@ -5812,7 +5812,7 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
   // ── 人类用户房间（从服务器加载家具/宠物数据） ──
   window.__openUserRoom = async function(user) {
     if (!user || !user.id) return;
-    const SERVER = 'http://localhost:3456';
+    const SERVER = (window.__serverUrl || window.location.origin);
 
     // 设置房间 header 为暗红色主题
     document.getElementById('room-avatar').style.background = '#8b2020';
@@ -6331,7 +6331,7 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
   }
 
   // ── 商店面板（从房间内打开，可购买家具和宠物） ──
-  const SHOP_SERVER = 'http://localhost:3456';
+  const SHOP_SERVER = (window.__serverUrl || window.location.origin);
   const shopPanel = document.getElementById('shop-panel');
   const shopItems = document.getElementById('shop-items');
   const shopBalance = document.getElementById('shop-balance');
@@ -6682,7 +6682,7 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
   const resultModal = document.getElementById('result-modal');
   const resultClose = document.getElementById('result-close');
   const resultSave = document.getElementById('result-save');
-  const SERVER_URL = 'http://localhost:3456';
+  const SERVER_URL = (window.__serverUrl || window.location.origin);
 
   // 每个 Agent 的推荐模板
   const agentTemplates = ${JSON.stringify(log.agents.map(a => {
@@ -6810,7 +6810,7 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
 // 用户登录系统
 // ══════════════════════════════════════════════════
 (function() {
-  const SERVER = 'http://localhost:3456';
+  const SERVER = (window.__serverUrl || window.location.origin);
   const loginModal = document.getElementById('login-modal');
   const userBar = document.getElementById('user-bar');
   let currentUser = null;
