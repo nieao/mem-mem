@@ -325,10 +325,45 @@ export function startServer(port = PORT) {
       // ── 用户系统（OpenClaw 登录） ──
 
       // POST /api/user/register { name, mbti, role, openclawId? }
+      // 同名用户自动登录 + 每日限额 10 人
       if (path === '/api/user/register' && request.method === 'POST') {
         try {
           const body = await request.json() as any;
-          const userId = 'user-' + (body.name || 'anon') + '-' + Date.now().toString(36);
+          const regName = (body.name || '').trim();
+          if (!regName) return new Response(JSON.stringify({ error: '请输入昵称' }), { status: 400, headers: corsHeaders });
+
+          // 同名自动登录
+          if (existsSync(MEMORY_DIR)) {
+            for (const d of readdirSync(MEMORY_DIR).filter(d => d.startsWith('user-'))) {
+              const pPath = join(MEMORY_DIR, d, 'profile.json');
+              if (existsSync(pPath)) {
+                try {
+                  const p = JSON.parse(readFileSync(pPath, 'utf-8'));
+                  if (p.name === regName) {
+                    console.log(`[用户] 自动登录: ${regName} → ${p.id}`);
+                    return new Response(JSON.stringify({ ...p, autoLogin: true, message: '欢迎回来，' + regName + '！' }), { headers: corsHeaders });
+                  }
+                } catch {}
+              }
+            }
+          }
+
+          // 每日限额 10 人
+          const today = new Date().toISOString().slice(0, 10);
+          let todayCount = 0;
+          if (existsSync(MEMORY_DIR)) {
+            for (const d of readdirSync(MEMORY_DIR).filter(d => d.startsWith('user-'))) {
+              try {
+                const p = JSON.parse(readFileSync(join(MEMORY_DIR, d, 'profile.json'), 'utf-8'));
+                if ((p.createdAt || '').startsWith(today)) todayCount++;
+              } catch {}
+            }
+          }
+          if (todayCount >= 10) {
+            return new Response(JSON.stringify({ error: '今日注册名额已满（每日限 10 人），明天再来吧！' }), { status: 429, headers: corsHeaders });
+          }
+
+          const userId = 'user-' + regName + '-' + Date.now().toString(36);
           const userDir = join(MEMORY_DIR, userId);
           mkdirSync(join(userDir, 'openclaw', 'skills'), { recursive: true });
           mkdirSync(join(userDir, 'openclaw', 'tasks'), { recursive: true });
