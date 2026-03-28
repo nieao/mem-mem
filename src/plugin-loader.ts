@@ -3,7 +3,7 @@
  * 扫描 plugins/ 目录，自动注册插件到小镇
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
 
 // ── 类型 ──
@@ -52,6 +52,28 @@ export const BADGES: Record<string, Badge> = {
   'lobster-killer':{ id: 'lobster-killer', name: '杀虾高手',   icon: '🔪', description: '龙虾杀中成功伪装3局', rarity: 'rare' },
 };
 
+// ── 插件安全检查（加载时快速验证） ──
+
+/** 插件运行时安全检查（快速版） */
+function checkPluginSafety(content: string): string | null {
+  const BLOCKED_PATTERNS = [
+    { pattern: /eval\s*\(/i, reason: '禁止 eval()' },
+    { pattern: /(?<!\w)Function\s*\(/g, reason: '禁止 Function()' },
+    { pattern: /document\.cookie/i, reason: '禁止访问 Cookie' },
+    { pattern: /<iframe/i, reason: '禁止嵌套 iframe' },
+    { pattern: /new\s+Worker/i, reason: '禁止 Web Worker' },
+    { pattern: /crypto\.subtle/i, reason: '禁止加密 API' },
+    { pattern: /SharedArrayBuffer/i, reason: '禁止共享内存' },
+    { pattern: /importScripts/i, reason: '禁止导入外部脚本' },
+  ];
+  for (const bp of BLOCKED_PATTERNS) {
+    if (bp.pattern.test(content)) return bp.reason;
+  }
+  // 文件大小检查
+  if (content.length > 512 * 1024) return '文件超过 512KB';
+  return null;
+}
+
 // ── 插件发现 ──
 
 const PLUGINS_DIR = './plugins';
@@ -80,6 +102,14 @@ export function discoverPlugins(): PluginInfo[] {
       const entry = manifest.entry || 'index.html';
       const entryPath = join(PLUGINS_DIR, dir.name, entry);
       if (!existsSync(entryPath)) continue;
+
+      // 读取入口文件内容做安全检查
+      const content = readFileSync(entryPath, 'utf-8');
+      const blocked = checkPluginSafety(content);
+      if (blocked) {
+        console.log('[插件] 安全检查拦截 ' + dir.name + ': ' + blocked);
+        continue;
+      }
 
       plugins.push({
         ...manifest,

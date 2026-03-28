@@ -1275,7 +1275,12 @@ export function startServer(port = PORT) {
             'json': 'application/json', 'png': 'image/png', 'jpg': 'image/jpeg',
             'svg': 'image/svg+xml', 'gif': 'image/gif',
           };
-          return new Response(content, { headers: { ...corsHeaders, 'Content-Type': (mimeTypes[ext] || 'application/octet-stream') + '; charset=utf-8' } });
+          const cspHeaders = {
+            ...corsHeaders,
+            'Content-Type': (mimeTypes[ext] || 'application/octet-stream') + '; charset=utf-8',
+            'Content-Security-Policy': "default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'",
+          };
+          return new Response(content, { headers: cspHeaders });
         }
         return new Response('文件不存在', { status: 404, headers: corsHeaders });
       }
