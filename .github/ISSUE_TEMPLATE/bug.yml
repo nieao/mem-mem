@@ -1,0 +1,29 @@
+name: "🐛 Bug 报告"
+description: "发现了问题？告诉我们"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 出了什么问题
+      placeholder: "点击XX按钮后页面白屏..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 /games
+        2. 点击龙虾 2048
+        3. ...
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      placeholder: "应该显示游戏画面"
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器
+      placeholder: "Chrome 120 / Safari 17 / ..."
