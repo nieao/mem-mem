@@ -546,6 +546,7 @@ export function generateHtmlReport(log: SimulationLog, outputDir: string): strin
   .agent-archetype { font-size:0.78rem; color:var(--gray-500); margin-top:4px; }
   .flip-hint { margin-top:auto; font-size:0.68rem; color:var(--gray-400); letter-spacing:0.1em; animation:hintPulse 2s ease-in-out infinite; }
   @keyframes hintPulse { 0%,100%{opacity:0.5} 50%{opacity:1} }
+  @keyframes breathe { 0%,100%{opacity:0.4;box-shadow:0 0 2px currentColor} 50%{opacity:1;box-shadow:0 0 8px currentColor} }
   .back-title { font-family:"Noto Serif SC",Georgia,serif; font-size:1rem; color:var(--black); margin-bottom:16px; margin-top:12px; text-align:center; }
   .radar-chart { margin-bottom:16px; }
   .radar-row { display:flex; align-items:center; gap:6px; margin-bottom:4px; }
@@ -1136,6 +1137,9 @@ export function generateHtmlReport(log: SimulationLog, outputDir: string): strin
     <div class="map-legend-item"><div class="map-legend-color" style="background:#8b2020"></div>人类用户</div>
     <div class="map-legend-item"><div class="map-legend-color" style="background:#6b8b5e"></div>树木</div>
     <div class="map-legend-item"><div class="map-legend-color" style="background:#c8a882;border-radius:50%"></div>公共设施</div>
+    <div class="map-legend-item"><div class="map-legend-color" style="background:#c8a882;animation:breathe 2s ease-in-out infinite"></div>🎮 游戏厅</div>
+    <div class="map-legend-item"><div class="map-legend-color" style="background:#8b2020;animation:breathe 3s ease-in-out infinite"></div>🔮 龙虾杀</div>
+    <div class="map-legend-item"><div class="map-legend-color" style="background:#2a6a4a"></div>📈 股票大厅</div>
     <div class="map-legend-item"><div class="map-legend-color" style="background:#c8a060"></div>公交车</div>
   </div>
   <div class="speed-controls">
@@ -1647,6 +1651,17 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
     { id: 'bank',   name: '\u94f6\u884c',         icon: '\u25c8', color: '#5a6a7a', roof: '#3a4a5a', // 银行
       gx: branchRoad3[Math.floor(branchRoad3.length * 0.75)].x - 2,
       gy: branchRoad3[Math.floor(branchRoad3.length * 0.75)].y - 1.5, type: 'bank' },
+    { id: 'arcade', name: '\u6e38\u620f\u5385',     icon: '\ud83c\udfae', color: '#c8a882', roof: '#a07850', // 游戏厅
+      gx: ringRoad[Math.floor(ringRoad.length * 0.3)].x + 3,
+      gy: ringRoad[Math.floor(ringRoad.length * 0.3)].y - 2, type: 'arcade',
+      link: '/games' },
+    { id: 'mafia',  name: '\u9f99\u867e\u6740',     icon: '\ud83d\udd2e', color: '#8b2020', roof: '#6b1515', // 龙虾杀
+      gx: ringRoad[Math.floor(ringRoad.length * 0.55)].x - 2,
+      gy: ringRoad[Math.floor(ringRoad.length * 0.55)].y + 3, type: 'mafia',
+      link: '/mafia' },
+    { id: 'stock',  name: '\u80a1\u7968\u5927\u5385', icon: '\ud83d\udcc8', color: '#2a6a4a', roof: '#1a4a2a', // 股票大厅
+      gx: branchRoad1[Math.floor(branchRoad1.length * 0.3)].x + 3,
+      gy: branchRoad1[Math.floor(branchRoad1.length * 0.3)].y + 2.5, type: 'stock' },
   ];
 
   // ── 树木（6 种类型） ──
@@ -1826,6 +1841,9 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
     school: ['\u4e0a\u8bfe\u8fc7\u5427','\u8001\u5e08\u597d','\u4eca\u5929\u5b66\u4ec0\u4e48','\u4e0b\u8bfe\u5566','\u8003\u8bd5\u52a0\u6cb9'],
     market: ['\u4e70\u83dc\u53bb','\u6253\u6298\u4e86\uff01','\u8fd9\u897f\u74dc\u771f\u7518','\u5355\u5b50\u597d\u957f','\u8981\u4e70\u4ec0\u4e48'],
     bank:   ['\u53d6\u94b1\u53bb','\u6392\u961f\u597d\u4e45','\u529e\u5f20\u5361','\u5229\u7387\u53c8\u964d\u4e86','\u8fd8\u8d37\u6b3e\u53bb'],
+    arcade: ['\u6253\u6e38\u620f\u53bb\uff01','\u6765\u5c40\u9f99\u867e2048','\u6211\u98de\u8d77\u6765\u4e86','\u8d5b\u8dd1\u4e0d\u670d','\u6392\u884c\u699c\u7b2c\u4e00\uff01'],
+    mafia:  ['\u6765\u5c40\u9f99\u867e\u6740','\u8c01\u662f\u6740\u624b\uff1f','\u6211\u662f\u597d\u4eba\uff01','\u6295\u4ed6\uff01','\u4e0d\u662f\u6211\uff01'],
+    stock:  ['\u80a1\u7968\u6da8\u4e86','\u52a0\u4ed3\uff01','\u5168\u7eff\u4e86...','\u6d88\u606f\u9762\u5229\u597d','\u522b\u8ffd\u9ad8'],
   };
 
   // 判断行人是否在某公共建筑附近
@@ -1857,7 +1875,7 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
       else if (hour >= 9 && hour < 12) candidates = publicBuildings.filter(p => p.type === 'school' || p.type === 'plaza' || p.type === 'bank' || p.type === 'market');
       else if (hour >= 12 && hour < 14) candidates = publicBuildings.filter(p => p.type === 'cafe' || p.type === 'plaza');
       else if (hour >= 14 && hour < 17) candidates = publicBuildings.filter(p => p.type === 'park' || p.type === 'barber' || p.type === 'school' || p.type === 'bank');
-      else if (hour >= 17 && hour < 21) candidates = publicBuildings.filter(p => p.type === 'plaza' || p.type === 'cafe' || p.type === 'park' || p.type === 'market');
+      else if (hour >= 17 && hour < 21) candidates = publicBuildings.filter(p => p.type === 'plaza' || p.type === 'cafe' || p.type === 'park' || p.type === 'market' || p.type === 'arcade' || p.type === 'mafia');
       if (candidates.length === 0) candidates = publicBuildings;
       const target = candidates[Math.floor(rr() * candidates.length)];
       w.targetX = target.gx + (rr() - 0.5) * 2;
@@ -2951,6 +2969,119 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
       ctx.fillRect(p.x + bw + 3 * s, p.y - 8 * s, 5 * s, 8 * s);
       ctx.fillStyle = isNight ? 'rgba(100,200,255,0.6)' : 'rgba(100,200,255,0.3)';
       ctx.fillRect(p.x + bw + 3.8 * s, p.y - 7 * s, 3.4 * s, 3 * s);
+
+    } else if (pb.type === 'arcade') {
+      // ── 游戏厅：霓虹灯风格 + 呼吸闪烁 ──
+      const bw = 28 * s, bh = 28 * s, bd = bw * 0.45;
+      const breathe = 0.6 + 0.4 * Math.sin(performance.now() * 0.003); // 呼吸频率
+      const flicker = 0.8 + 0.2 * Math.sin(performance.now() * 0.015 + Math.cos(performance.now() * 0.007) * 2); // 闪烁
+      // 主楼
+      ctx.fillStyle = dim('#2d2520', br);
+      ctx.beginPath(); ctx.moveTo(p.x - bw, p.y - bh); ctx.lineTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x, p.y + bd * 0.5); ctx.lineTo(p.x - bw, p.y); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = dim('#251e18', br);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x + bw, p.y - bh); ctx.lineTo(p.x + bw, p.y); ctx.lineTo(p.x, p.y + bd * 0.5); ctx.closePath(); ctx.fill();
+      // 屋顶
+      ctx.fillStyle = dim('#a07850', br);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y - bh - 6 * s); ctx.lineTo(p.x + bw + 2 * s, p.y - bh + 2 * s); ctx.lineTo(p.x, p.y - bh + bd * 0.5 + 2 * s); ctx.lineTo(p.x - bw - 2 * s, p.y - bh + 2 * s); ctx.closePath(); ctx.fill();
+      // 霓虹招牌（呼吸闪烁发光）
+      const glowAlpha = 0.3 + 0.4 * breathe;
+      ctx.shadowColor = 'rgba(200,168,130,' + glowAlpha + ')';
+      ctx.shadowBlur = 15 * s * breathe;
+      ctx.fillStyle = 'rgba(200,168,130,' + (0.7 + 0.3 * flicker) + ')';
+      ctx.fillRect(p.x - 16 * s, p.y - bh - 14 * s, 32 * s, 10 * s);
+      ctx.fillStyle = dim('#1a1a1a', br);
+      ctx.font = 'bold ' + Math.round(7 * s) + 'px "Noto Sans SC",system-ui,sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText('\u6e38\u620f\u5385', p.x, p.y - bh - 9 * s);
+      ctx.shadowBlur = 0;
+      // 游戏机轮廓（窗里可见）
+      ctx.fillStyle = isNight ? 'rgba(255,200,100,' + (0.5 + 0.3 * breathe) + ')' : 'rgba(180,210,230,0.5)';
+      if (isNight) { ctx.shadowColor = 'rgba(255,180,80,' + (0.2 + 0.2 * breathe) + ')'; ctx.shadowBlur = 8 * s; }
+      ctx.fillRect(p.x - bw * 0.7, p.y - bh * 0.65, bw * 0.4, bh * 0.35);
+      ctx.fillRect(p.x + bw * 0.15, p.y - bh * 0.6, bw * 0.35, bh * 0.3);
+      ctx.shadowBlur = 0;
+      // 闪烁小灯（门口两侧）
+      for (const side of [-1, 1]) {
+        const lx = p.x + side * bw * 0.9;
+        const glowR = 2.5 + 1.5 * breathe;
+        ctx.fillStyle = 'rgba(200,168,130,' + (0.4 + 0.5 * flicker) + ')';
+        ctx.beginPath(); ctx.arc(lx, p.y - 2 * s, glowR * s, 0, Math.PI * 2); ctx.fill();
+      }
+      // 大门
+      ctx.fillStyle = dim('#c8a882', br * flicker);
+      ctx.fillRect(p.x - 4 * s, p.y - 8 * s + bd * 0.25, 8 * s, 8 * s);
+
+    } else if (pb.type === 'mafia') {
+      // ── 龙虾杀：暗黑神秘风 + 红色呼吸灯 ──
+      const bw = 24 * s, bh = 30 * s, bd = bw * 0.45;
+      const pulse = 0.5 + 0.5 * Math.sin(performance.now() * 0.002); // 红色脉搏
+      // 主楼（暗色调）
+      ctx.fillStyle = dim('#2a1515', br);
+      ctx.beginPath(); ctx.moveTo(p.x - bw, p.y - bh); ctx.lineTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x, p.y + bd * 0.5); ctx.lineTo(p.x - bw, p.y); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = dim('#201010', br);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x + bw, p.y - bh); ctx.lineTo(p.x + bw, p.y); ctx.lineTo(p.x, p.y + bd * 0.5); ctx.closePath(); ctx.fill();
+      // 尖顶（哥特风）
+      ctx.fillStyle = dim('#6b1515', br);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y - bh - 16 * s); ctx.lineTo(p.x + bw + 2 * s, p.y - bh + 2 * s); ctx.lineTo(p.x, p.y - bh + bd * 0.5 + 2 * s); ctx.lineTo(p.x - bw - 2 * s, p.y - bh + 2 * s); ctx.closePath(); ctx.fill();
+      // 红色月亮（屋顶上方）
+      ctx.fillStyle = 'rgba(180,40,40,' + (0.3 + 0.4 * pulse) + ')';
+      ctx.shadowColor = 'rgba(200,30,30,' + (0.2 + 0.3 * pulse) + ')';
+      ctx.shadowBlur = 12 * s * pulse;
+      ctx.beginPath(); ctx.arc(p.x, p.y - bh - 22 * s, 5 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.shadowBlur = 0;
+      // 暗红窗户（脉搏发光）
+      ctx.fillStyle = isNight ? 'rgba(200,50,50,' + (0.3 + 0.4 * pulse) + ')' : 'rgba(200,50,50,0.15)';
+      if (isNight) { ctx.shadowColor = 'rgba(200,30,30,' + (0.15 + 0.15 * pulse) + ')'; ctx.shadowBlur = 6 * s; }
+      ctx.fillRect(p.x - bw * 0.6, p.y - bh * 0.65, 6 * s, 8 * s);
+      ctx.fillRect(p.x + bw * 0.2, p.y - bh * 0.6, 6 * s, 8 * s);
+      ctx.shadowBlur = 0;
+      // 门（拱形暗门）
+      ctx.fillStyle = dim('#4a0a0a', br);
+      ctx.beginPath();
+      ctx.moveTo(p.x - 4 * s, p.y + bd * 0.25);
+      ctx.lineTo(p.x - 4 * s, p.y - 6 * s + bd * 0.25);
+      ctx.quadraticCurveTo(p.x, p.y - 10 * s + bd * 0.25, p.x + 4 * s, p.y - 6 * s + bd * 0.25);
+      ctx.lineTo(p.x + 4 * s, p.y + bd * 0.25);
+      ctx.closePath(); ctx.fill();
+
+    } else if (pb.type === 'stock') {
+      // ── 股票大厅：金融大楼 + 跑马灯 ──
+      const bw = 26 * s, bh = 26 * s, bd = bw * 0.45;
+      const ticker = (performance.now() * 0.001) % 6.28; // 跑马灯动画
+      // 主楼
+      ctx.fillStyle = dim('#e8e0d0', br);
+      ctx.beginPath(); ctx.moveTo(p.x - bw, p.y - bh); ctx.lineTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x, p.y + bd * 0.5); ctx.lineTo(p.x - bw, p.y); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = dim('#d8d0c0', br);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x + bw, p.y - bh); ctx.lineTo(p.x + bw, p.y); ctx.lineTo(p.x, p.y + bd * 0.5); ctx.closePath(); ctx.fill();
+      // 平顶
+      ctx.fillStyle = dim('#2a6a4a', br);
+      ctx.beginPath(); ctx.moveTo(p.x - bw - 1 * s, p.y - bh); ctx.lineTo(p.x, p.y - bh + bd * 0.5); ctx.lineTo(p.x + bw + 1 * s, p.y - bh); ctx.lineTo(p.x, p.y - bh - bd * 0.5); ctx.closePath(); ctx.fill();
+      // LED 跑马灯（绿色数字流动）
+      ctx.save();
+      ctx.beginPath(); ctx.rect(p.x - 18 * s, p.y - bh - 8 * s, 36 * s, 8 * s); ctx.clip();
+      ctx.fillStyle = dim('#0a2a18', br);
+      ctx.fillRect(p.x - 18 * s, p.y - bh - 8 * s, 36 * s, 8 * s);
+      const tickerColor = 'rgba(80,220,120,' + (0.6 + 0.3 * Math.sin(ticker)) + ')';
+      ctx.fillStyle = tickerColor;
+      ctx.font = Math.round(5 * s) + 'px monospace';
+      ctx.textBaseline = 'middle';
+      const tickText = 'AI +3.2%  CHIP -1.1%  NEV +2.8%  MED +0.5%  ';
+      const offX = -(performance.now() * 0.03) % (tickText.length * 3.2 * s);
+      ctx.fillText(tickText + tickText, p.x - 18 * s + offX, p.y - bh - 4 * s);
+      ctx.restore();
+      // 大窗
+      ctx.fillStyle = isNight ? 'rgba(80,220,120,0.3)' : 'rgba(180,210,230,0.5)';
+      if (isNight) { ctx.shadowColor = 'rgba(80,220,120,0.2)'; ctx.shadowBlur = 6 * s; }
+      for (let col = 0; col < 3; col++) {
+        ctx.fillRect(p.x - bw * 0.7 + col * bw * 0.35, p.y - bh * 0.6, 5 * s, 7 * s);
+      }
+      ctx.shadowBlur = 0;
+      // 柱廊
+      ctx.fillStyle = dim('#c8c0b0', br);
+      for (let col = 0; col < 4; col++) {
+        const cx = p.x - bw * 0.7 + col * bw * 0.4;
+        ctx.fillRect(cx, p.y - bh * 0.15, 2 * s, bh * 0.15 + bd * 0.25);
+      }
     }
 
     // ── 地标名称标签 ──
@@ -3139,8 +3270,20 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
       const p = worldToScreen(buildings[i].gx, buildings[i].gy);
       if (mx > p.x - 28 * scale && mx < p.x + 28 * scale && my > p.y - 35 * scale && my < p.y + 14 * scale) { found = i; break; }
     }
-    // 检测人类用户房屋 hover
+    // 检测公共建筑 hover（游戏厅/龙虾杀/股票 — 有 link 的）
+    let foundPublic = null;
     if (found < 0) {
+      for (const pb of publicBuildings) {
+        if (pb.link) {
+          const pp = worldToScreen(pb.gx, pb.gy);
+          if (mx > pp.x - 35 * scale && mx < pp.x + 35 * scale && my > pp.y - 40 * scale && my < pp.y + 20 * scale) { foundPublic = pb; break; }
+        }
+      }
+    }
+    if (foundPublic && !dragging) { canvas.style.cursor = 'pointer'; }
+    else if (!dragging && found < 0) { canvas.style.cursor = 'grab'; }
+    // 检测人类用户房屋 hover
+    if (found < 0 && !foundPublic) {
       for (let i = 0; i < userBuildings.length; i++) {
         const p = worldToScreen(userBuildings[i].gx, userBuildings[i].gy);
         if (mx > p.x - 26 * scale && mx < p.x + 26 * scale && my > p.y - 32 * scale && my < p.y + 14 * scale) { foundUser = i; break; }
@@ -3175,7 +3318,19 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
     }
   });
   window.addEventListener('mouseup', () => { dragging = false; canvas.style.cursor = 'grab'; });
-  canvas.addEventListener('click', () => {
+  canvas.addEventListener('click', (e) => {
+    // 先检测公共建筑点击（游戏厅/龙虾杀/股票大厅）
+    const rect2 = canvas.getBoundingClientRect();
+    const cx = e.clientX - rect2.left, cy = e.clientY - rect2.top;
+    for (const pb of publicBuildings) {
+      if (pb.link) {
+        const pp = worldToScreen(pb.gx, pb.gy);
+        if (cx > pp.x - 35 * scale && cx < pp.x + 35 * scale && cy > pp.y - 40 * scale && cy < pp.y + 20 * scale) {
+          window.open(pb.link, '_blank');
+          return;
+        }
+      }
+    }
     if (hoveredBuilding >= 0) {
       // 打开龙虾屋室内视图
       if (window.__openRoom) { window.__openRoom(hoveredBuilding); }
