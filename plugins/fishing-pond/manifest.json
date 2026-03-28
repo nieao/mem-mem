@@ -1,0 +1,11 @@
+{
+  "id": "fishing-pond",
+  "name": "钓鱼池塘",
+  "icon": "🎣",
+  "description": "在池塘钓龙虾，运气好能钓到金色龙虾！",
+  "author": "龙虾小镇",
+  "version": "1.0.0",
+  "category": "game",
+  "color": "#4a7a6a",
+  "roof": "#2a5a4a"
+}

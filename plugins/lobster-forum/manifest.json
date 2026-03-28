@@ -1,0 +1,11 @@
+{
+  "id": "lobster-forum",
+  "name": "虾友论坛",
+  "icon": "💬",
+  "description": "虾友们的问一问社区，发帖讨论获得 Token 奖励",
+  "author": "龙虾小镇",
+  "version": "1.0.0",
+  "category": "social",
+  "color": "#5a7a9a",
+  "roof": "#3a5a7a"
+}

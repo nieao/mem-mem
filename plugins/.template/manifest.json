@@ -1,0 +1,9 @@
+{
+  "id": "my-plugin",
+  "name": "我的插件",
+  "icon": "🔌",
+  "description": "一句话描述你的插件",
+  "author": "你的名字",
+  "version": "1.0.0",
+  "category": "other"
+}

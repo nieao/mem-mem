@@ -1,0 +1,11 @@
+{
+  "id": "fortune-teller",
+  "name": "龙虾占卜",
+  "icon": "🔮",
+  "description": "让龙虾仙人为你占卜今日运势",
+  "author": "龙虾小镇",
+  "version": "1.0.0",
+  "category": "social",
+  "color": "#6a4a8a",
+  "roof": "#4a2a6a"
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>虾友论坛</title>
+<script src="/sdk/plugin-sdk.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    background: #fafafa; color: #2d2d2d;
+    min-height: 100vh; padding: 32px 24px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+
+  .header {
+    text-align: center; margin-bottom: 32px; width: 100%; max-width: 600px;
+  }
+  .header h1 {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1.8rem; color: #1a1a1a; letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  .header .sub {
+    font-size: 0.78rem; color: #888; letter-spacing: 0.15em;
+  }
+  .header .balance {
+    margin-top: 12px; font-size: 0.85rem; color: #c8a882;
+  }
+
+  .toolbar {
+    width: 100%; max-width: 600px;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 24px; padding-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .sort-tabs {
+    display: flex; gap: 16px;
+  }
+  .sort-tab {
+    font-size: 0.8rem; color: #888; cursor: pointer;
+    padding: 4px 0; border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .sort-tab.active { color: #1a1a1a; border-color: #c8a882; }
+  .sort-tab:hover { color: #1a1a1a; }
+
+  .btn {
+    padding: 8px 20px; border: 1px solid #2d2d2d;
+    background: #2d2d2d; color: #fafafa; cursor: pointer;
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    font-size: 0.8rem; transition: all 0.3s;
+  }
+  .btn:hover { background: #c8a882; border-color: #c8a882; }
+  .btn-outline {
+    background: transparent; color: #2d2d2d;
+  }
+  .btn-outline:hover { background: #c8a882; color: #fafafa; border-color: #c8a882; }
+  .btn-sm { padding: 4px 12px; font-size: 0.72rem; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .posts-list {
+    width: 100%; max-width: 600px;
+  }
+
+  .post-card {
+    border: 1px solid #e8e8e8; padding: 20px 24px;
+    margin-bottom: 12px; position: relative;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0; animation: fadeUp 0.4s ease forwards;
+  }
+  .post-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: #c8a882;
+    transform: scaleX(0); transition: transform 0.4s ease;
+  }
+  .post-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  .post-card:hover::before { transform: scaleX(1); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .post-title {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1.05rem; color: #1a1a1a; margin-bottom: 8px;
+    cursor: pointer;
+  }
+  .post-title:hover { color: #c8a882; }
+  .post-content {
+    font-size: 0.85rem; color: #555; line-height: 1.6;
+    margin-bottom: 12px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .post-content.expanded {
+    -webkit-line-clamp: unset;
+  }
+  .post-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.72rem; color: #bbb;
+  }
+  .post-tags { display: flex; gap: 6px; }
+  .post-tag {
+    padding: 2px 8px; border: 1px solid #e8e8e8;
+    font-size: 0.68rem; color: #888;
+  }
+  .post-actions { display: flex; align-items: center; gap: 12px; }
+  .like-btn {
+    cursor: pointer; padding: 2px 8px; font-size: 0.78rem;
+    color: #888; border: 1px solid #e8e8e8; background: transparent;
+    transition: all 0.3s; font-family: "Noto Sans SC", system-ui, sans-serif;
+  }
+  .like-btn:hover { color: #c8a882; border-color: #c8a882; }
+  .like-btn.liked { color: #c8a882; border-color: #c8a882; }
+
+  .empty-state {
+    text-align: center; padding: 60px 24px; color: #bbb;
+  }
+  .empty-state .icon { font-size: 3rem; margin-bottom: 16px; }
+  .empty-state p { font-size: 0.85rem; }
+
+  /* 发帖弹窗 */
+  .modal-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4); display: none;
+    align-items: center; justify-content: center; z-index: 100;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: #fafafa; border: 1px solid #e8e8e8;
+    width: 90%; max-width: 480px; padding: 32px;
+    animation: popIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .modal h2 {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1.2rem; color: #1a1a1a; margin-bottom: 20px;
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block; font-size: 0.78rem; color: #888;
+    margin-bottom: 6px; letter-spacing: 0.1em;
+  }
+  .form-input {
+    width: 100%; padding: 10px 14px; border: 1px solid #e8e8e8;
+    background: #fafafa; font-family: "Noto Sans SC", system-ui, sans-serif;
+    font-size: 0.85rem; color: #2d2d2d; outline: none;
+    transition: border-color 0.3s;
+  }
+  .form-input:focus { border-color: #c8a882; }
+  textarea.form-input { min-height: 120px; resize: vertical; line-height: 1.6; }
+  .modal-actions {
+    display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px;
+  }
+  .char-count {
+    font-size: 0.68rem; color: #bbb; text-align: right; margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>💬 虾友论坛</h1>
+  <div class="sub">虾友们的问一问社区</div>
+  <div class="balance" id="balance"></div>
+</div>
+
+<div class="toolbar">
+  <div class="sort-tabs">
+    <div class="sort-tab active" data-sort="new" onclick="setSort('new')">最新</div>
+    <div class="sort-tab" data-sort="hot" onclick="setSort('hot')">最热</div>
+  </div>
+  <button class="btn" onclick="openNewPost()">发帖 (+5 Token)</button>
+</div>
+
+<div class="posts-list" id="postsList">
+  <div class="empty-state">
+    <div class="icon">💬</div>
+    <p>还没有帖子，来发第一帖吧！</p>
+  </div>
+</div>
+
+<!-- 发帖弹窗 -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <h2>发布新帖</h2>
+    <div class="form-group">
+      <label>标题</label>
+      <input class="form-input" id="postTitle" placeholder="起个好标题吧" maxlength="50">
+      <div class="char-count"><span id="titleCount">0</span>/50</div>
+    </div>
+    <div class="form-group">
+      <label>内容</label>
+      <textarea class="form-input" id="postBody" placeholder="分享你的想法..." maxlength="500"></textarea>
+      <div class="char-count"><span id="bodyCount">0</span>/500</div>
+    </div>
+    <div class="form-group">
+      <label>标签（用空格分隔，最多 3 个）</label>
+      <input class="form-input" id="postTags" placeholder="讨论 建议 求助">
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-outline" onclick="closeNewPost()">取消</button>
+      <button class="btn" id="submitBtn" onclick="submitPost()">发布</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var posts = [];
+  var currentSort = 'new';
+  var currentUser = null;
+  var myLikes = {}; // postId -> true
+
+  async function init() {
+    try {
+      currentUser = await LobsterSDK.getCurrentUser();
+      updateBalance();
+      await loadPosts();
+      await loadMyLikes();
+      renderPosts();
+    } catch(e) {
+      document.getElementById('balance').textContent = '请先登录小镇';
+    }
+  }
+
+  async function updateBalance() {
+    try {
+      var bal = await LobsterSDK.getBalance();
+      document.getElementById('balance').textContent = 'Token 余额: ' + bal;
+    } catch(e) {}
+  }
+
+  async function loadPosts() {
+    try {
+      var data = await LobsterSDK.getData('posts');
+      if (data && Array.isArray(data)) {
+        posts = data;
+      }
+    } catch(e) {}
+  }
+
+  async function savePosts() {
+    await LobsterSDK.setData('posts', posts);
+  }
+
+  async function loadMyLikes() {
+    try {
+      var userId = currentUser && currentUser.id || 'anon';
+      var data = await LobsterSDK.getData('likes_' + userId);
+      if (data && typeof data === 'object') {
+        myLikes = data;
+      }
+    } catch(e) {}
+  }
+
+  async function saveMyLikes() {
+    var userId = currentUser && currentUser.id || 'anon';
+    await LobsterSDK.setData('likes_' + userId, myLikes);
+  }
+
+  function setSort(sort) {
+    currentSort = sort;
+    document.querySelectorAll('.sort-tab').forEach(function(t) {
+      t.classList.toggle('active', t.dataset.sort === sort);
+    });
+    renderPosts();
+  }
+
+  function renderPosts() {
+    var list = document.getElementById('postsList');
+    if (posts.length === 0) {
+      list.innerHTML = '<div class="empty-state"><div class="icon">💬</div><p>还没有帖子，来发第一帖吧！</p></div>';
+      return;
+    }
+
+    var sorted = posts.slice();
+    if (currentSort === 'hot') {
+      sorted.sort(function(a, b) { return (b.likes || 0) - (a.likes || 0); });
+    } else {
+      sorted.sort(function(a, b) { return (b.ts || 0) - (a.ts || 0); });
+    }
+
+    list.innerHTML = sorted.map(function(p, i) {
+      var tagsHtml = (p.tags || []).map(function(t) {
+        return '<span class="post-tag">' + escHtml(t) + '</span>';
+      }).join('');
+
+      var likedClass = myLikes[p.id] ? ' liked' : '';
+      var timeStr = new Date(p.ts).toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+      return '<div class="post-card" style="animation-delay:' + (i * 0.05) + 's">' +
+        '<div class="post-title" onclick="toggleExpand(this)">' + escHtml(p.title) + '</div>' +
+        '<div class="post-content">' + escHtml(p.body) + '</div>' +
+        '<div class="post-meta">' +
+          '<div style="display:flex;align-items:center;gap:12px">' +
+            '<span>' + escHtml(p.author || '虾友') + '</span>' +
+            '<span>' + timeStr + '</span>' +
+            '<div class="post-tags">' + tagsHtml + '</div>' +
+          '</div>' +
+          '<div class="post-actions">' +
+            '<button class="like-btn' + likedClass + '" onclick="likePost(\'' + p.id + '\')">👍 ' + (p.likes || 0) + '</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function toggleExpand(el) {
+    var content = el.nextElementSibling;
+    content.classList.toggle('expanded');
+  }
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.textContent = s || '';
+    return d.innerHTML;
+  }
+
+  function openNewPost() {
+    document.getElementById('modalOverlay').classList.add('show');
+    document.getElementById('postTitle').value = '';
+    document.getElementById('postBody').value = '';
+    document.getElementById('postTags').value = '';
+    document.getElementById('titleCount').textContent = '0';
+    document.getElementById('bodyCount').textContent = '0';
+  }
+
+  function closeNewPost() {
+    document.getElementById('modalOverlay').classList.remove('show');
+  }
+
+  // 字数统计
+  document.getElementById('postTitle').addEventListener('input', function() {
+    document.getElementById('titleCount').textContent = this.value.length;
+  });
+  document.getElementById('postBody').addEventListener('input', function() {
+    document.getElementById('bodyCount').textContent = this.value.length;
+  });
+
+  async function submitPost() {
+    var title = document.getElementById('postTitle').value.trim();
+    var body = document.getElementById('postBody').value.trim();
+    var tagsStr = document.getElementById('postTags').value.trim();
+
+    if (!title) { alert('请填写标题'); return; }
+    if (!body) { alert('请填写内容'); return; }
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = '发布中...';
+
+    var tags = tagsStr ? tagsStr.split(/\s+/).slice(0, 3) : [];
+    var postId = 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
+    var authorName = (currentUser && currentUser.name) || '虾友';
+
+    var post = {
+      id: postId,
+      title: title,
+      body: body,
+      tags: tags,
+      author: authorName,
+      authorId: (currentUser && currentUser.id) || 'anon',
+      likes: 0,
+      ts: Date.now(),
+    };
+
+    posts.push(post);
+    await savePosts();
+
+    // 奖励发帖 Token
+    try {
+      await LobsterSDK.addTokens(5, '发帖奖励');
+      await updateBalance();
+    } catch(e) {}
+
+    closeNewPost();
+    renderPosts();
+    btn.disabled = false;
+    btn.textContent = '发布';
+  }
+
+  async function likePost(postId) {
+    if (myLikes[postId]) return; // 已点赞
+
+    // 扣 1 Token
+    try {
+      await LobsterSDK.deductTokens(1, '点赞消耗');
+    } catch(e) { return; }
+
+    myLikes[postId] = true;
+    await saveMyLikes();
+
+    // 更新帖子点赞数
+    var post = null;
+    for (var i = 0; i < posts.length; i++) {
+      if (posts[i].id === postId) {
+        posts[i].likes = (posts[i].likes || 0) + 1;
+        post = posts[i];
+        break;
+      }
+    }
+    await savePosts();
+
+    // 帖主获得 1 Token（通过广播通知，实际由主站处理）
+    if (post) {
+      // 检查是否达到 10 赞奖励
+      if (post.likes === 10) {
+        try {
+          await LobsterSDK.addTokens(20, '帖子获得10赞奖励: ' + post.title);
+          LobsterSDK.sendMessage(post.author + ' 的帖子「' + post.title + '」获得了 10 个赞！额外奖励 20 Token！');
+        } catch(e) {}
+      }
+    }
+
+    await updateBalance();
+    renderPosts();
+  }
+
+  // 点击弹窗外关闭
+  document.getElementById('modalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeNewPost();
+  });
+
+  init();
+</script>
+</body>
+</html>
