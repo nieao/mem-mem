@@ -1141,6 +1141,7 @@ export function generateHtmlReport(log: SimulationLog, outputDir: string): strin
     <div class="map-legend-item"><div class="map-legend-color" style="background:#8b2020;animation:breathe 3s ease-in-out infinite"></div>🔮 龙虾杀</div>
     <div class="map-legend-item"><div class="map-legend-color" style="background:#2a6a4a"></div>📈 股票大厅</div>
     <div class="map-legend-item"><div class="map-legend-color" style="background:#c8a060"></div>公交车</div>
+    <div id="guest-login-btn" style="margin-top:12px;padding:8px 12px;background:rgba(200,168,130,0.15);border:1px solid rgba(200,168,130,0.3);color:#c8a882;font-size:0.72rem;text-align:center;cursor:pointer;letter-spacing:0.1em;transition:all 0.3s" onmouseover="this.style.background='rgba(200,168,130,0.3)'" onmouseout="this.style.background='rgba(200,168,130,0.15)'" onclick="document.querySelector('.login-modal').classList.add('open')">🦞 注册入住</div>
   </div>
   <div class="speed-controls">
     <button class="speed-btn" data-speed="0.5">0.5x</button>
@@ -6990,8 +6991,8 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
             if (user) { setUser(user); } else if (forceLogin) { showLogin(); }
           }).catch(() => { if (forceLogin) showLogin(); });
         } else {
-          // 访客模式：不弹登录，想注册的点右上角或加 ?login=1
-          if (forceLogin) showLogin();
+          // 首次访问自动弹登录框，点外面可关闭进入访客模式
+          showLogin();
         }
       } else {
         setServerStatus(false);
@@ -7031,11 +7032,23 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
     if (loginModal) loginModal.classList.add('open');
   }
 
+  // 点击登录框外部区域 → 关闭登录框进入访客模式
+  if (loginModal) {
+    loginModal.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.classList.remove('open');
+      }
+    });
+  }
+
   function setUser(user) {
     currentUser = user;
     localStorage.setItem('lobster-town-user-id', user.id);
     if (loginModal) loginModal.classList.remove('open');
     // 显示用户信息条
+    // 隐藏注册入住按钮
+    var guestBtn = document.getElementById('guest-login-btn');
+    if (guestBtn) guestBtn.style.display = 'none';
     if (userBar) {
       userBar.classList.add('show');
       document.getElementById('ub-name').textContent = user.name;
