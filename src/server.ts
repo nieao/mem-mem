@@ -1908,12 +1908,12 @@ export function startServer(port = PORT) {
         }
       }
 
-      // 首页 — 直接托管报告 HTML
+      // 首页 — 直接托管报告 HTML（禁缓存，确保外部用户拿到最新版）
       if (path === '/' || path === '/index.html') {
         const reportPath = join(REPORTS_DIR, 'report.html');
         if (existsSync(reportPath)) {
           const html = readFileSync(reportPath, 'utf-8');
-          return new Response(html, { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+          return new Response(html, { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } });
         }
       }
 
