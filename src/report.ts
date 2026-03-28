@@ -6973,8 +6973,8 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
 
   let serverOnline = false;
 
-  // 本地访问默认不弹登录（直接进入浏览模式）
-  // 只有通过 ?login=1 参数或外部 API 接入时才显示登录
+  // 访客模式：所有人默认不弹登录，直接进入浏览
+  // 只有通过 ?login=1 参数才显示登录框
   const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
   const forceLogin = new URLSearchParams(location.search).has('login');
 
@@ -6987,20 +6987,20 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
         const savedId = localStorage.getItem('lobster-town-user-id');
         if (savedId) {
           fetch(SERVER + '/api/user/' + savedId).then(r => r.ok ? r.json() : null).then(user => {
-            if (user) { setUser(user); } else if (forceLogin || !isLocal) { showLogin(); }
-          }).catch(() => { if (forceLogin || !isLocal) showLogin(); });
+            if (user) { setUser(user); } else if (forceLogin) { showLogin(); }
+          }).catch(() => { if (forceLogin) showLogin(); });
         } else {
-          // 本地访问不弹登录，外部访问才弹
-          if (forceLogin || !isLocal) showLogin();
+          // 访客模式：不弹登录，想注册的点右上角或加 ?login=1
+          if (forceLogin) showLogin();
         }
       } else {
         setServerStatus(false);
-        if (forceLogin || !isLocal) showLogin();
+        if (forceLogin) showLogin();
       }
     })
     .catch(() => {
       setServerStatus(false);
-      if (forceLogin || !isLocal) showLogin();
+      if (forceLogin) showLogin();
     });
 
   function setServerStatus(online) {
