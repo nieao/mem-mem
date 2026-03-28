@@ -1435,7 +1435,7 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
   // 异步加载人类用户
   (async function loadHumanUsers() {
     try {
-      const resp = await fetch(SERVER + '/api/users', { signal: AbortSignal.timeout(3000) });
+      const resp = await fetch(SERVER + '/api/users', { signal: AbortSignal.timeout(10000) });
       if (resp.ok) {
         humanUsers = await resp.json();
         // 为每个人类用户分配房屋位置 — 沿主路和支路随机分布（靠近镇中心）
@@ -6978,7 +6978,7 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
   const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
   const forceLogin = new URLSearchParams(location.search).has('login');
 
-  fetch(SERVER + '/api/users', { signal: AbortSignal.timeout(3000) })
+  fetch(SERVER + '/api/users', { signal: AbortSignal.timeout(10000) })
     .then(r => r.ok ? r.json() : null)
     .then(users => {
       if (users !== null) {
@@ -7011,7 +7011,7 @@ document.querySelectorAll('.flip-card').forEach((el, i) => {
       if (sub) sub.innerHTML = '<span style="color:#ff5f63">⚠ 正在连接龙虾小镇服务...</span><br><span style="font-size:0.72rem;color:#888">如果持续无法连接，请联系小镇管理员</span>';
       // 每 3 秒自动重试连接
       const retryTimer = setInterval(() => {
-        fetch(SERVER + '/api/users', { signal: AbortSignal.timeout(2000) })
+        fetch(SERVER + '/api/users', { signal: AbortSignal.timeout(8000) })
           .then(r => r.ok ? r.json() : null)
           .then(users => {
             if (users !== null) {
