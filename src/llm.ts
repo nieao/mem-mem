@@ -98,7 +98,8 @@ export const PROVIDERS: ProviderConfig[] = [
     id: 'minimax',
     name: 'MiniMax',
     models: [
-      { id: 'MiniMax-Text-01', name: 'MiniMax-Text-01', default: true },
+      { id: 'MiniMax-M2.7', name: 'MiniMax-M2.7', default: true },
+      { id: 'MiniMax-Text-01', name: 'MiniMax-Text-01' },
     ],
     apiBase: 'https://api.minimax.chat/v1',
     keyPrefix: '',

@@ -10,7 +10,7 @@
  * 或在 --serve 模式下由 town.ts 自动启动
  */
 
-import { chat, PROVIDERS, loadServerKeys, saveServerKeys, loadUserKeys, saveUserKeys, getTokenStats, isEnergySavingMode, setEnergySavingMode } from './llm.js';
+import { chat, callLlm, PROVIDERS, loadServerKeys, saveServerKeys, loadUserKeys, saveUserKeys, getTokenStats, isEnergySavingMode, setEnergySavingMode } from './llm.js';
 import { generateSetupPage } from './setup-page.js';
 import { buildSystemPrompt, createAgentState, createAgent } from './agent.js';
 import { getAllPersonalities } from './personalities.js';
@@ -1231,7 +1231,8 @@ export function startServer(port = PORT) {
           const testKeys = [...origKeys.filter(k => k.provider !== body.provider), { provider: body.provider, apiKey: body.apiKey, model: body.model, addedAt: new Date().toISOString() }];
           saveServerKeys(testKeys);
 
-          const result = await chat({ systemPrompt: '你是一个测试助手', userPrompt: '请回复"连接成功"四个字', maxTokens: 50, timeout: 15000 });
+          // 测试连接必须绕过节能模式，直接调用真实 API
+          const result = await callLlm({ systemPrompt: '你是一个测试助手', userPrompt: '请回复"连接成功"四个字', maxTokens: 50, timeout: 15000 });
           // 恢复原始 keys（如果测试用户没保存的话）
           saveServerKeys(origKeys);
           return new Response(JSON.stringify({ success: true, response: result.text, provider: result.provider, model: result.model }), { headers: corsHeaders });
