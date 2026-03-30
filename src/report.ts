@@ -1007,6 +1007,42 @@ export function generateHtmlReport(log: SimulationLog, outputDir: string): strin
   .lb-rank { font-family: "Noto Serif SC",Georgia,serif; color: var(--warm); width: 16px; font-size: 0.8rem; }
   .lb-val { margin-left: auto; font-size: 0.68rem; color: var(--gray-500); font-family: monospace; }
 
+  /* ── 股市行情概览条 ── */
+  .stock-ticker-strip {
+    border-bottom: 1px solid var(--gray-100); padding: 14px 20px;
+    background: rgba(2,4,8,0.03); cursor: pointer; transition: background 0.3s;
+    display: flex; align-items: center; gap: 16px; overflow-x: auto;
+  }
+  .stock-ticker-strip:hover { background: rgba(200,168,130,0.06); }
+  .stock-ticker-label {
+    font-size: 0.62rem; letter-spacing: 0.25em; color: var(--warm);
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .stock-ticker-index {
+    font-family: "Noto Serif SC",Georgia,serif; font-size: 1rem;
+    color: var(--black); white-space: nowrap; flex-shrink: 0;
+  }
+  .stock-ticker-change { font-size: 0.78rem; font-family: monospace; white-space: nowrap; flex-shrink: 0; }
+  .stock-ticker-change.up { color: #c0392b; }
+  .stock-ticker-change.down { color: #27ae60; }
+  .stock-ticker-sectors {
+    display: flex; gap: 12px; flex: 1; overflow-x: auto; scrollbar-width: none;
+  }
+  .stock-ticker-sectors::-webkit-scrollbar { display: none; }
+  .stock-ticker-sector {
+    display: flex; align-items: center; gap: 4px; font-size: 0.7rem;
+    color: var(--gray-700); white-space: nowrap; flex-shrink: 0;
+  }
+  .stock-ticker-sector .pct { font-family: monospace; font-size: 0.68rem; }
+  .stock-ticker-sector .pct.up { color: #c0392b; }
+  .stock-ticker-sector .pct.down { color: #27ae60; }
+  .stock-ticker-enter {
+    font-size: 0.62rem; letter-spacing: 0.15em; color: var(--warm);
+    white-space: nowrap; flex-shrink: 0; margin-left: auto;
+    border: 1px solid var(--warm-light); padding: 4px 12px; transition: all 0.3s;
+  }
+  .stock-ticker-enter:hover { background: var(--warm); color: #fff; }
+
   @media(max-width:768px) {
     .map-hero { min-height:500px; }
     .tv-layout { grid-template-columns: 1fr; }
@@ -1038,6 +1074,7 @@ export function generateHtmlReport(log: SimulationLog, outputDir: string): strin
       <a href="#rounds">讨论</a>
       <a href="#insights">洞察</a>
       <a href="#stats">统计</a>
+      <a href="/stock" target="_blank">股市</a>
     </div>
   </div>
 </nav>
@@ -1292,6 +1329,9 @@ export function generateHtmlReport(log: SimulationLog, outputDir: string): strin
   <div class="lb-col" id="lb-popularity"><div class="lb-title">⭐ 人气榜</div></div>
   <div class="lb-col" id="lb-productivity"><div class="lb-title">🏆 生产力榜</div></div>
 </div>
+
+<!-- 股市行情概览条 -->
+<div class="stock-ticker-strip" id="stock-ticker-strip" onclick="window.open('/stock','_blank')" title="点击进入股市交易中心"></div>
 
 <section class="section" id="agents">
   <div class="container">
@@ -3803,6 +3843,29 @@ window.__adminMode = new URLSearchParams(location.search).has('admin');
   renderLb('lb-wealth', eco.leaderboard?.wealth, 'tokens', '¤');
   renderLb('lb-popularity', eco.leaderboard?.popularity, 'score', '分');
   renderLb('lb-productivity', eco.leaderboard?.productivity, 'tasks', '次');
+})();
+
+// ── 股市行情概览条 ──
+(function() {
+  const strip = document.getElementById('stock-ticker-strip');
+  const sd = ${(log.metadata as any).marketDataJson || 'null'};
+  if (!strip || !sd || !sd.market || !sd.market.sectors) { if(strip) strip.style.display='none'; return; }
+  const m = sd.market;
+  const up = m.indexChangePct >= 0;
+  const arrow = up ? '▲' : '▼';
+  const cls = up ? 'up' : 'down';
+  let html = '<div class="stock-ticker-label">📈 龙虾股市</div>';
+  html += '<div class="stock-ticker-index">' + m.indexName + ' ' + m.indexPrice + '</div>';
+  html += '<div class="stock-ticker-change ' + cls + '">' + arrow + ' ' + (up?'+':'') + m.indexChangePct.toFixed(1) + '%</div>';
+  html += '<div style="width:1px;height:20px;background:var(--gray-100);flex-shrink:0"></div>';
+  html += '<div class="stock-ticker-sectors">';
+  m.sectors.forEach(function(s) {
+    const sc = s.changePct >= 0 ? 'up' : 'down';
+    html += '<div class="stock-ticker-sector"><span>' + s.name + '</span><span class="pct ' + sc + '">' + (s.changePct>=0?'+':'') + s.changePct.toFixed(1) + '%</span></div>';
+  });
+  html += '</div>';
+  html += '<div class="stock-ticker-enter">进入交易中心 →</div>';
+  strip.innerHTML = html;
 })();
 
 // ── 滚动入场 ──

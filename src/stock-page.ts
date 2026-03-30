@@ -145,6 +145,13 @@ a:hover{color:var(--text)}
       <input class="search-box" id="search-input" placeholder="搜索股票代码..." autocomplete="off" />
       <div class="search-results" id="search-results"></div>
     </div>
+    <!-- 模式切换 -->
+    <div class="tabs" id="preset-tabs" style="font-size:0.65rem;background:var(--bg3)">
+      <div class="tab" data-preset="cn" onclick="switchPreset(this)">A股</div>
+      <div class="tab" data-preset="hk" onclick="switchPreset(this)">港股</div>
+      <div class="tab" data-preset="us" onclick="switchPreset(this)">美股</div>
+      <div class="tab" data-preset="custom" onclick="switchPreset(this)">自定义</div>
+    </div>
     <div class="tabs">
       <div class="tab active" data-tab="watchlist" onclick="switchTab(this)">自选股</div>
       <div class="tab" data-tab="sectors" onclick="switchTab(this)">小镇板块</div>
@@ -154,7 +161,7 @@ a:hover{color:var(--text)}
       <div class="loading">加载中...</div>
     </div>
     <div class="action-bar">
-      <button class="btn btn-warm" onclick="addDefaultStocks()" title="添加热门股票">+ 热门</button>
+      <button class="btn btn-warm" onclick="addDefaultStocks()" id="btn-hot" title="添加当前市场热门股票">+ 热门</button>
       <button class="btn btn-buy" onclick="openTrade('long')" id="btn-buy" disabled>买入</button>
       <button class="btn btn-sell" onclick="openTrade('short')" id="btn-sell" disabled>卖出</button>
     </div>
@@ -355,19 +362,69 @@ async function loadWatchlist() {
   }
 }
 
-var DEFAULT_STOCKS = [
-  { symbol: 'AAPL', name: '苹果', sector: '科技' },
-  { symbol: 'GOOGL', name: '谷歌', sector: '科技' },
-  { symbol: 'TSLA', name: '特斯拉', sector: '新能源' },
-  { symbol: 'NVDA', name: '英伟达', sector: '芯片' },
-  { symbol: 'MSFT', name: '微软', sector: '科技' },
-  { symbol: 'AMZN', name: '亚马逊', sector: '电商' },
-  { symbol: 'META', name: 'Meta', sector: '社交' },
-  { symbol: 'AMD', name: 'AMD', sector: '芯片' },
-];
+// ── 预设股票列表（按市场分类） ──
+var STOCK_PRESETS = {
+  'cn': {
+    label: 'A股热门',
+    stocks: [
+      { symbol: '600519.SS', name: '贵州茅台', sector: '白酒' },
+      { symbol: '300750.SZ', name: '宁德时代', sector: '新能源' },
+      { symbol: '601318.SS', name: '中国平安', sector: '保险' },
+      { symbol: '000858.SZ', name: '五粮液', sector: '白酒' },
+      { symbol: '600036.SS', name: '招商银行', sector: '银行' },
+      { symbol: '002594.SZ', name: '比亚迪', sector: '新能源车' },
+      { symbol: '601899.SS', name: '紫金矿业', sector: '有色金属' },
+      { symbol: '000001.SZ', name: '平安银行', sector: '银行' },
+      { symbol: '600900.SS', name: '长江电力', sector: '电力' },
+      { symbol: '601012.SS', name: '隆基绿能', sector: '光伏' },
+    ]
+  },
+  'hk': {
+    label: '港股热门',
+    stocks: [
+      { symbol: '0700.HK', name: '腾讯控股', sector: '互联网' },
+      { symbol: '9988.HK', name: '阿里巴巴', sector: '电商' },
+      { symbol: '3690.HK', name: '美团', sector: '本地生活' },
+      { symbol: '9999.HK', name: '网易', sector: '游戏' },
+      { symbol: '1810.HK', name: '小米集团', sector: '消费电子' },
+      { symbol: '9618.HK', name: '京东集团', sector: '电商' },
+      { symbol: '0941.HK', name: '中国移动', sector: '通信' },
+      { symbol: '2318.HK', name: '中国平安', sector: '保险' },
+    ]
+  },
+  'us': {
+    label: '美股热门',
+    stocks: [
+      { symbol: 'AAPL', name: '苹果', sector: '科技' },
+      { symbol: 'NVDA', name: '英伟达', sector: '芯片' },
+      { symbol: 'TSLA', name: '特斯拉', sector: '新能源' },
+      { symbol: 'MSFT', name: '微软', sector: '科技' },
+      { symbol: 'GOOGL', name: '谷歌', sector: '科技' },
+      { symbol: 'AMZN', name: '亚马逊', sector: '电商' },
+      { symbol: 'META', name: 'Meta', sector: '社交' },
+      { symbol: 'AMD', name: 'AMD', sector: '芯片' },
+    ]
+  }
+};
+
+// 当前模式（从 localStorage 读取，默认 A股）
+var currentPreset = localStorage.getItem('stock-preset') || 'cn';
+var customStocks = JSON.parse(localStorage.getItem('stock-custom') || '[]');
+
+function getActiveStocks() {
+  if (currentPreset === 'custom' && customStocks.length > 0) return customStocks;
+  return (STOCK_PRESETS[currentPreset] || STOCK_PRESETS['cn']).stocks;
+}
+
+var DEFAULT_STOCKS = getActiveStocks();
 
 function renderDefaultWatchlist(list) {
-  renderStockList(list, DEFAULT_STOCKS);
+  var stocks = getActiveStocks();
+  if (currentPreset === 'custom' && stocks.length === 0) {
+    list.innerHTML = '<div class="empty"><div class="empty-icon">🔧</div>自定义模式<br><span style="font-size:0.72rem;margin-top:8px;color:var(--warm)">搜索股票代码添加到自选<br>支持 A股/港股/美股 任意组合</span></div>';
+    return;
+  }
+  renderStockList(list, stocks);
 }
 
 function renderStockList(container, stocks) {
@@ -543,6 +600,10 @@ document.getElementById('search-input').addEventListener('blur', function() {
 async function addToWatchlist(symbol, name) {
   document.getElementById('search-results').style.display = 'none';
   document.getElementById('search-input').value = '';
+  // 自定义模式：同时保存到自定义列表
+  if (currentPreset === 'custom') {
+    addToCustom(symbol, name);
+  }
   if (userId) {
     await fetch(SERVER + '/api/market/watchlist', {
       method: 'POST',
@@ -556,7 +617,33 @@ async function addToWatchlist(symbol, name) {
 }
 
 function addDefaultStocks() {
-  DEFAULT_STOCKS.forEach(function(s) { addToWatchlist(s.symbol, s.name); });
+  getActiveStocks().forEach(function(s) { addToWatchlist(s.symbol, s.name); });
+}
+
+// ── 模式切换 ──
+function switchPreset(el) {
+  document.querySelectorAll('#preset-tabs .tab').forEach(function(t) { t.classList.remove('active'); });
+  el.classList.add('active');
+  currentPreset = el.dataset.preset;
+  localStorage.setItem('stock-preset', currentPreset);
+  DEFAULT_STOCKS = getActiveStocks();
+  // 如果是自定义模式且无自定义股票，提示用户搜索添加
+  if (currentPreset === 'custom' && customStocks.length === 0) {
+    var list = document.getElementById('stock-list');
+    list.innerHTML = '<div class="empty"><div class="empty-icon">🔧</div>自定义模式<br><span style="font-size:0.72rem;margin-top:8px;color:var(--warm)">搜索股票代码添加到自选<br>支持 A股/港股/美股 任意组合</span></div>';
+    return;
+  }
+  if (currentTab === 'watchlist') loadWatchlist();
+  // 自动选中第一只
+  var first = getActiveStocks()[0];
+  if (first) setTimeout(function() { selectStock(first.symbol, first.name); }, 300);
+}
+
+// 添加到自定义列表
+function addToCustom(symbol, name) {
+  if (customStocks.some(function(s) { return s.symbol === symbol; })) return;
+  customStocks.push({ symbol: symbol, name: name, sector: '' });
+  localStorage.setItem('stock-custom', JSON.stringify(customStocks));
 }
 
 // ── 交易弹窗（简化） ──
@@ -578,10 +665,18 @@ function openTrade(direction) {
 
 // ── 初始化 ──
 initChart();
+// 高亮当前预设 tab
+(function() {
+  var tabs = document.querySelectorAll('#preset-tabs .tab');
+  tabs.forEach(function(t) {
+    if (t.dataset.preset === currentPreset) t.classList.add('active');
+  });
+})();
 loadWatchlist();
 loadSectors();
-// 默认选第一只
-setTimeout(function() { selectStock('AAPL', '苹果'); }, 500);
+// 默认选当前预设的第一只
+var _firstStock = getActiveStocks()[0];
+setTimeout(function() { selectStock(_firstStock.symbol, _firstStock.name); }, 500);
 <\/script>
 </body>
 </html>`;
