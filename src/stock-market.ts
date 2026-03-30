@@ -485,7 +485,7 @@ export function getUserPortfolio(userId: string, market: MarketOverview): AgentP
   return portfolio;
 }
 
-// ── Finnhub 数据源 ──
+// ── 行情数据源（Yahoo Finance，免费无 Key） ──
 
 export interface FinnhubQuote {
   c: number;   // 当前价
@@ -528,27 +528,49 @@ function setCachedQuote(symbol: string, data: FinnhubQuote): void {
   quoteCache.set(symbol.toUpperCase(), { data, expiry: Date.now() + CACHE_TTL });
 }
 
-// ── Finnhub API ──
+// ── Yahoo Finance API（免费、无 Key、支持 A股/港股/美股） ──
 
-const FINNHUB_KEY = process.env.FINNHUB_API_KEY || '';
+const YAHOO_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+};
 
-/** 查询单只股票实时行情 */
+/** 查询单只股票实时行情（Yahoo Finance） */
 export async function fetchFinnhubQuote(symbol: string): Promise<FinnhubQuote | null> {
-  if (!FINNHUB_KEY) return null;
-
   const cached = getCachedQuote(symbol);
   if (cached) return cached;
 
   try {
-    const resp = await fetch(
-      `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(symbol.toUpperCase())}&token=${FINNHUB_KEY}`,
-      { signal: AbortSignal.timeout(8000) }
-    );
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol.toUpperCase())}?interval=1d&range=1d`;
+    const resp = await fetch(url, {
+      headers: YAHOO_HEADERS,
+      signal: AbortSignal.timeout(10000),
+    });
     if (!resp.ok) return null;
-    const data = await resp.json() as FinnhubQuote;
-    if (!data.c || data.c === 0) return null; // 无效数据
-    setCachedQuote(symbol, data);
-    return data;
+    const json = await resp.json() as any;
+    const result = json?.chart?.result?.[0];
+    if (!result) return null;
+
+    const meta = result.meta;
+    const c = meta.regularMarketPrice ?? 0;
+    const pc = meta.previousClose ?? meta.chartPreviousClose ?? c;
+    const d = Math.round((c - pc) * 100) / 100;
+    const dp = pc !== 0 ? Math.round((d / pc) * 10000) / 100 : 0;
+
+    const indicators = result.indicators?.quote?.[0];
+    const quote: FinnhubQuote = {
+      c,
+      d,
+      dp,
+      h: indicators?.high?.[0] ?? meta.regularMarketDayHigh ?? c,
+      l: indicators?.low?.[0] ?? meta.regularMarketDayLow ?? c,
+      o: indicators?.open?.[0] ?? meta.regularMarketOpen ?? c,
+      pc,
+      t: meta.regularMarketTime ?? Math.floor(Date.now() / 1000),
+    };
+
+    if (quote.c === 0) return null;
+    setCachedQuote(symbol, quote);
+    return quote;
   } catch {
     return null;
   }
@@ -559,21 +581,20 @@ export async function getQuoteWithCache(symbol: string): Promise<FinnhubQuote | 
   return fetchFinnhubQuote(symbol);
 }
 
-/** 搜索股票代码 */
+/** 搜索股票代码（Yahoo Finance） */
 export async function searchSymbol(query: string): Promise<Array<{ symbol: string; description: string; type: string }>> {
-  if (!FINNHUB_KEY) return [];
-
   try {
-    const resp = await fetch(
-      `https://finnhub.io/api/v1/search?q=${encodeURIComponent(query)}&token=${FINNHUB_KEY}`,
-      { signal: AbortSignal.timeout(8000) }
-    );
+    const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(query)}&quotesCount=10&newsCount=0&listsCount=0`;
+    const resp = await fetch(url, {
+      headers: YAHOO_HEADERS,
+      signal: AbortSignal.timeout(8000),
+    });
     if (!resp.ok) return [];
     const data = await resp.json() as any;
-    return (data.result || []).slice(0, 10).map((r: any) => ({
-      symbol: r.symbol,
-      description: r.description,
-      type: r.type,
+    return (data.quotes || []).slice(0, 10).map((r: any) => ({
+      symbol: r.symbol || '',
+      description: r.shortname || r.longname || r.symbol || '',
+      type: r.quoteType || r.typeDisp || 'Equity',
     }));
   } catch {
     return [];
