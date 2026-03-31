@@ -9,7 +9,7 @@
     ],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T13:25:37.495Z",
-    "decayFactor": 0.8296621454264722
+    "decayFactor": 0.7078115426883933
   },
   {
     "id": "e-1774273293297-aqx0",
@@ -21,7 +21,7 @@
     ],
     "topic": "龙虾屋里的 Agent 应该如何自我进化？",
     "timestamp": "2026-03-23T13:41:33.297Z",
-    "decayFactor": 0.8301330569122357
+    "decayFactor": 0.7082132924693678
   },
   {
     "id": "e-1774277445831-gqu9",
@@ -33,7 +33,7 @@
     ],
     "topic": "模型经济学：Haiku 够用还是必须 Opus？",
     "timestamp": "2026-03-23T14:50:45.831Z",
-    "decayFactor": 0.8321820627094646
+    "decayFactor": 0.7099613654196752
   },
   {
     "id": "e-1774278273081-77nb",
@@ -43,7 +43,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T15:04:33.081Z",
-    "decayFactor": 0.8325908605808918
+    "decayFactor": 0.7103101240723602
   },
   {
     "id": "e-1774279180648-2xi8",
@@ -53,7 +53,7 @@
     "relatedAgents": [],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T15:19:40.648Z",
-    "decayFactor": 0.8330395793025491
+    "decayFactor": 0.7106929404902964
   },
   {
     "id": "e-1774279180649-huyr",
@@ -63,7 +63,7 @@
     "relatedAgents": [],
     "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
     "timestamp": "2026-03-23T15:19:40.649Z",
-    "decayFactor": 0.8330395797971017
+    "decayFactor": 0.7106929409122151
   },
   {
     "id": "e-1774282320083-c5o4",
@@ -75,7 +75,7 @@
     ],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T16:12:00.083Z",
-    "decayFactor": 0.8345936428135114
+    "decayFactor": 0.7120187622084423
   },
   {
     "id": "e-1774327017311-jgj1",
@@ -85,7 +85,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-24T04:36:57.311Z",
-    "decayFactor": 0.8570364597852986
+    "decayFactor": 0.7311654534135815
   },
   {
     "id": "e-1774343899750-rte1",
@@ -95,7 +95,7 @@
     "relatedAgents": [],
     "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
     "timestamp": "2026-03-24T09:18:19.750Z",
-    "decayFactor": 0.8656694161096751
+    "decayFactor": 0.7385305069689386
   },
   {
     "id": "e-1774345757722-dv7q",
@@ -105,7 +105,7 @@
     "relatedAgents": [],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-24T09:49:17.722Z",
-    "decayFactor": 0.8666247993775243
+    "decayFactor": 0.7393455752571602
   },
   {
     "id": "e-1774355060506-5rtc",
@@ -115,7 +115,7 @@
     "relatedAgents": [],
     "topic": "宠物龙虾的智能化训练——Agent 能帮上什么忙？",
     "timestamp": "2026-03-24T12:24:20.506Z",
-    "decayFactor": 0.8714242410120284
+    "decayFactor": 0.7434401337543604
   },
   {
     "id": "e-1774359529101-08sy",
@@ -125,7 +125,7 @@
     "relatedAgents": [],
     "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
     "timestamp": "2026-03-24T13:38:49.101Z",
-    "decayFactor": 0.8737390953912828
+    "decayFactor": 0.7454150107067574
   },
   {
     "id": "e-1774371091330-dmhb",
@@ -135,7 +135,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-24T16:51:31.330Z",
-    "decayFactor": 0.8797572255388972
+    "decayFactor": 0.7505492716916224
   },
   {
     "id": "e-1774371151124-9oq1",
@@ -145,7 +145,7 @@
     "relatedAgents": [],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-24T16:52:31.124Z",
-    "decayFactor": 0.8797884557563758
+    "decayFactor": 0.7505759151976975
   },
   {
     "id": "e-1774437462259-hdce",
@@ -157,7 +157,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:17:42.259Z",
-    "decayFactor": 0.9151139355986769
+    "decayFactor": 0.7807132217160444
   },
   {
     "id": "e-1774437462260-ofx3",
@@ -167,7 +167,7 @@
     "relatedAgents": [],
     "topic": "模型经济学：Haiku 够用还是必须 Opus？",
     "timestamp": "2026-03-25T11:17:42.260Z",
-    "decayFactor": 0.9151139361419548
+    "decayFactor": 0.7807132221795323
   },
   {
     "id": "e-1774437509855-hxlg",
@@ -179,7 +179,7 @@
     ],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-25T11:18:29.855Z",
-    "decayFactor": 0.9151397938177975
+    "decayFactor": 0.7807352821970098
   },
   {
     "id": "e-1774437509855-0lvd",
@@ -191,7 +191,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:18:29.855Z",
-    "decayFactor": 0.9151397938177975
+    "decayFactor": 0.7807352821970098
   },
   {
     "id": "e-1774440912264-mz63",
@@ -203,7 +203,7 @@
     ],
     "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
     "timestamp": "2026-03-25T12:15:12.264Z",
-    "decayFactor": 0.916990167755531
+    "decayFactor": 0.7823138958997531
   },
   {
     "id": "e-1774583572361-hg93",
@@ -215,7 +215,7 @@
     ],
     "topic": "小镇停电了，Agent 该如何自救？",
     "timestamp": "2026-03-27T03:52:52.361Z",
-    "decayFactor": 0.9980367612746747
+    "decayFactor": 0.8514573595429406
   },
   {
     "id": "e-1774584012389-rbhd",
@@ -225,7 +225,7 @@
     "relatedAgents": [],
     "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
     "timestamp": "2026-03-27T04:00:12.389Z",
-    "decayFactor": 0.9982975149440205
+    "decayFactor": 0.8516798169106519
   },
   {
     "id": "e-1774586413075-7von",
@@ -235,6 +235,26 @@
     "relatedAgents": [],
     "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
     "timestamp": "2026-03-27T04:40:13.075Z",
-    "decayFactor": 0.9997213238990218
+    "decayFactor": 0.8528945142648562
+  },
+  {
+    "id": "e-1774682178827-7m0n",
+    "sessionId": "s-1774682175541",
+    "type": "utterance",
+    "content": "提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "relatedAgents": [],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-28T07:16:18.827Z",
+    "decayFactor": 0.9027894492626046
+  },
+  {
+    "id": "e-1774854440386-14k3",
+    "sessionId": "s-1774854438672",
+    "type": "utterance",
+    "content": "我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "relatedAgents": [],
+    "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
+    "timestamp": "2026-03-30T07:07:20.386Z",
+    "decayFactor": 1
   }
 ]

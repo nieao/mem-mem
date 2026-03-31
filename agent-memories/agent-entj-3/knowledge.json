@@ -118,5 +118,21 @@
     "importance": 0.8,
     "createdAt": "2026-03-27T04:00:12.390Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774682178829-k0vh",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-28T07:16:18.829Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774854440387-w5gr",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-30T07:07:20.387Z",
+    "accessCount": 0
   }
 ]

@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.490Z",
     "completedAt": "2026-03-27T03:47:55.107Z"
+  },
+  {
+    "id": "hb-1774682175613-as2",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.613Z",
+    "completedAt": "2026-03-28T07:16:19.929Z"
+  },
+  {
+    "id": "hb-1774682175613-wlv",
+    "title": "检查 Cron 任务执行记录",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.613Z",
+    "completedAt": "2026-03-28T07:19:42.412Z"
+  },
+  {
+    "id": "hb-1774682175613-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.613Z",
+    "completedAt": "2026-03-30T07:07:21.569Z"
+  },
+  {
+    "id": "hb-1774854438745-3rd",
+    "title": "检查 Skill 触发准确率",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.745Z"
+  },
+  {
+    "id": "hb-1774854438745-k1b",
+    "title": "优化高频提示词模板",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.745Z"
+  },
+  {
+    "id": "hb-1774854438745-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.745Z"
   }
 ]

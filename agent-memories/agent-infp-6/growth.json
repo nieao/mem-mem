@@ -2,7 +2,7 @@
   "agentId": "agent-infp-6",
   "level": 3,
   "totalXP": 305,
-  "discussionCount": 76,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "龙虾屋里的 Agent 应该如何自我进化？",
     "安全偏执狂 vs 效率至上：权限边界在哪里？",
@@ -19,14 +19,14 @@
     "钱多多": 2,
     "林微": 1,
     "孙大勇": 4,
-    "蒋一帆": 1,
+    "蒋一帆": 2,
     "陈策": 1,
     "秦九章": 1,
     "邓如是": 1,
     "赵铁柱": 1
   },
   "skillXP": {
-    "soul-design": 51,
+    "soul-design": 59,
     "memory-arch": 30,
     "security": 29,
     "model-strategy": 30,

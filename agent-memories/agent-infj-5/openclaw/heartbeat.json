@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.481Z",
     "completedAt": "2026-03-27T03:47:54.588Z"
+  },
+  {
+    "id": "hb-1774682175605-wtx",
+    "title": "优化高频提示词模板",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.605Z",
+    "completedAt": "2026-03-28T07:16:19.269Z"
+  },
+  {
+    "id": "hb-1774682175605-7cj",
+    "title": "检查 Cron 任务执行记录",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.605Z",
+    "completedAt": "2026-03-28T07:19:41.959Z"
+  },
+  {
+    "id": "hb-1774682175605-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.605Z",
+    "completedAt": "2026-03-30T07:07:20.968Z"
+  },
+  {
+    "id": "hb-1774854438738-3k0",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.738Z"
+  },
+  {
+    "id": "hb-1774854438738-joe",
+    "title": "检查外部 API 可用性",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.738Z"
+  },
+  {
+    "id": "hb-1774854438738-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.738Z"
   }
 ]

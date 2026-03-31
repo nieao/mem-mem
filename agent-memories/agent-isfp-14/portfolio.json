@@ -1,7 +1,7 @@
 {
   "agentId": "agent-isfp-14",
-  "tokens": 7940,
-  "totalInvested": 2240,
+  "tokens": 6820,
+  "totalInvested": 3360,
   "holdings": [
     {
       "sectorCode": "AI",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 560,
       "entryPrice": 1315.05,
-      "currentPrice": 1309.23,
-      "pnl": -2,
-      "pnlPct": -0.44256872362267113
+      "currentPrice": 1309,
+      "pnl": -3,
+      "pnlPct": -0.46005855290673014
     },
     {
       "sectorCode": "ROBOT",
@@ -19,9 +19,9 @@
       "direction": "short",
       "amount": 560,
       "entryPrice": 1220.64,
-      "currentPrice": 1219.26,
-      "pnl": 1,
-      "pnlPct": 0.11305544632324921
+      "currentPrice": 1143.96,
+      "pnl": 35,
+      "pnlPct": 6.281950452221791
     },
     {
       "sectorCode": "AI",
@@ -29,9 +29,9 @@
       "direction": "short",
       "amount": 560,
       "entryPrice": 1322.67,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 6,
-      "pnlPct": 1.0161264714554692
+      "pnlPct": 1.0335155405354375
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,29 @@
       "direction": "long",
       "amount": 560,
       "entryPrice": 1275.74,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 15,
-      "pnlPct": 2.625143054227351
+      "pnlPct": 2.6071143022872993
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "entryPrice": 1271.55,
+      "currentPrice": 1309,
+      "pnl": 16,
+      "pnlPct": 2.945224332507573
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "entryPrice": 1309,
+      "currentPrice": 1309,
+      "pnl": 0,
+      "pnlPct": 0
     }
   ],
   "tradeHistory": [
@@ -76,9 +96,25 @@
       "direction": "long",
       "amount": 560,
       "price": 1275.74
+    },
+    {
+      "timestamp": "2026-03-28T07:16:15.640Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "price": 1271.55
+    },
+    {
+      "timestamp": "2026-03-30T07:07:18.770Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 560,
+      "price": 1309
     }
   ],
-  "totalPnL": 20,
+  "totalPnL": 69,
   "bountyIncome": [
     {
       "amount": 180,

@@ -5,10 +5,10 @@
   "personality": {
     "mbti": "ISTJ",
     "ocean": {
-      "openness": 49,
+      "openness": 52,
       "conscientiousness": 100,
       "extraversion": 100,
-      "agreeableness": 73,
+      "agreeableness": 79,
       "neuroticism": 100
     },
     "archetype": "可靠执行者",
@@ -18,49 +18,34 @@
   },
   "skills": [
     {
+      "domain": "automation",
+      "name": "自动化与定时任务",
+      "level": 2,
+      "description": "擅长 Cron 表达式、Heartbeat 机制、事件驱动自动化。让 Agent 从被动应答变为主动服务。"
+    },
+    {
       "domain": "prompt-craft",
       "name": "提示词工程",
       "level": 2,
       "description": "深谙 prompt 技巧，能用精巧的系统提示让小模型发挥大模型的效果。理解上下文窗口管理。"
     },
     {
-      "domain": "security",
-      "name": "安全与权限管理",
-      "level": 3,
-      "description": "安全意识极强，熟悉最小权限原则、Docker 隔离、Token 轮换。对提示注入攻击高度敏感。"
-    },
-    {
-      "domain": "multi-agent",
-      "name": "多 Agent 编排",
-      "level": 1,
-      "description": "理解 Agent 分工协作模式，AGENTS.md 配置，并发限制。有复杂工作流编排经验。"
-    },
-    {
       "domain": "soul-design",
       "name": "SOUL.md 人格设计",
       "level": 1,
       "description": "通过讨论和实践习得的新技能（XP: 50）"
+    },
+    {
+      "domain": "channel-ops",
+      "name": "渠道运维",
+      "level": 1,
+      "description": "通过讨论和实践习得的新技能（XP: 30）"
     }
   ],
   "createdAt": "2026-03-23T13:25:36.368Z",
-  "sessionCount": 78,
-  "lastSessionAt": "2026-03-27T04:48:02.563Z",
+  "sessionCount": 81,
+  "lastSessionAt": "2026-03-30T07:07:18.701Z",
   "evolutionHistory": [
-    {
-      "session": 57,
-      "changes": "OCEAN: extraversion+2, neuroticism+1 | 新技能: 提示词工程",
-      "timestamp": "2026-03-25T11:42:20.940Z"
-    },
-    {
-      "session": 58,
-      "changes": "OCEAN: extraversion+2, neuroticism+1, conscientiousness+1 | 新技能: 提示词工程",
-      "timestamp": "2026-03-25T11:45:46.008Z"
-    },
-    {
-      "session": 59,
-      "changes": "OCEAN: extraversion+2, neuroticism+1, conscientiousness+1",
-      "timestamp": "2026-03-25T11:55:44.399Z"
-    },
     {
       "session": 60,
       "changes": "OCEAN: extraversion+2, neuroticism+1, conscientiousness+1",
@@ -145,6 +130,21 @@
       "session": 76,
       "changes": "OCEAN: extraversion+5, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: SOUL.md 人格设计",
       "timestamp": "2026-03-27T04:48:04.219Z"
+    },
+    {
+      "session": 77,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2",
+      "timestamp": "2026-03-28T07:16:18.859Z"
+    },
+    {
+      "session": 78,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2",
+      "timestamp": "2026-03-28T07:19:41.387Z"
+    },
+    {
+      "session": 79,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: SOUL.md 人格设计, 渠道运维",
+      "timestamp": "2026-03-30T07:07:20.410Z"
     }
   ]
 }

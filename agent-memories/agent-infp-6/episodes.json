@@ -7,7 +7,7 @@
     "relatedAgents": [],
     "topic": "龙虾屋里的 Agent 应该如何自我进化？",
     "timestamp": "2026-03-23T13:41:33.305Z",
-    "decayFactor": 0.8301330578978899
+    "decayFactor": 0.7082132920489211
   },
   {
     "id": "e-1774273293307-x9vx",
@@ -17,7 +17,7 @@
     "relatedAgents": [],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T13:41:33.307Z",
-    "decayFactor": 0.830133058883544
+    "decayFactor": 0.7082132928898145
   },
   {
     "id": "e-1774278178595-rpml",
@@ -27,7 +27,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T15:02:58.595Z",
-    "decayFactor": 0.8325441557988226
+    "decayFactor": 0.7102702774509912
   },
   {
     "id": "e-1774322633064-69oq",
@@ -37,7 +37,7 @@
     "relatedAgents": [],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-24T03:23:53.064Z",
-    "decayFactor": 0.8548086572900429
+    "decayFactor": 0.7292648419330442
   },
   {
     "id": "e-1774437462266-3odo",
@@ -47,7 +47,7 @@
     "relatedAgents": [],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-25T11:17:42.266Z",
-    "decayFactor": 0.9151139361419548
+    "decayFactor": 0.7807132207890687
   },
   {
     "id": "e-1774437509861-me11",
@@ -59,7 +59,7 @@
     ],
     "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
     "timestamp": "2026-03-25T11:18:29.861Z",
-    "decayFactor": 0.9151397938177975
+    "decayFactor": 0.7807352808065069
   },
   {
     "id": "e-1774437509861-z2vj",
@@ -69,7 +69,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-25T11:18:29.861Z",
-    "decayFactor": 0.9151397938177975
+    "decayFactor": 0.7807352808065069
   },
   {
     "id": "e-1774437509862-awnx",
@@ -81,7 +81,7 @@
     ],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-25T11:18:29.862Z",
-    "decayFactor": 0.9151397943610907
+    "decayFactor": 0.7807352812700079
   },
   {
     "id": "e-1774437509862-to0x",
@@ -91,6 +91,6 @@
     "relatedAgents": [],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:18:29.862Z",
-    "decayFactor": 0.9151397943610907
+    "decayFactor": 0.7807352812700079
   }
 ]

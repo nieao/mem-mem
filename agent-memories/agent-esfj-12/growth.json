@@ -2,7 +2,7 @@
   "agentId": "agent-esfj-12",
   "level": 4,
   "totalXP": 610,
-  "discussionCount": 76,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "记忆的战争：Agent 应该记住什么，忘记什么？",
@@ -28,12 +28,13 @@
     "蒋一帆": 1,
     "沈默然": 1,
     "冯一刀": 1,
-    "许清河": 1
+    "许清河": 1,
+    "何以归": 1
   },
   "skillXP": {
     "skill-authoring": 20,
     "multi-agent": 35,
-    "tool-integration": 23,
+    "tool-integration": 31,
     "memory-arch": 10,
     "prompt-craft": 80,
     "model-strategy": 61,

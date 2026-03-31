@@ -1,7 +1,7 @@
 {
   "agentId": "agent-isfj-10",
-  "tokens": 9062,
-  "totalInvested": 1088,
+  "tokens": 8518,
+  "totalInvested": 1632,
   "holdings": [
     {
       "sectorCode": "AI",
@@ -9,9 +9,9 @@
       "direction": "short",
       "amount": 272,
       "entryPrice": 1315.05,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 1,
-      "pnlPct": 0.44256872362267113
+      "pnlPct": 0.46005855290673014
     },
     {
       "sectorCode": "AI",
@@ -19,9 +19,9 @@
       "direction": "short",
       "amount": 272,
       "entryPrice": 1336.78,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 6,
-      "pnlPct": 2.060922515297951
+      "pnlPct": 2.0781280390191337
     },
     {
       "sectorCode": "MIL",
@@ -29,9 +29,9 @@
       "direction": "short",
       "amount": 272,
       "entryPrice": 880.45,
-      "currentPrice": 875.46,
-      "pnl": 2,
-      "pnlPct": 0.5667556363223362
+      "currentPrice": 912.69,
+      "pnl": -10,
+      "pnlPct": -3.661763870747914
     },
     {
       "sectorCode": "ROBOT",
@@ -39,9 +39,29 @@
       "direction": "short",
       "amount": 272,
       "entryPrice": 1204.93,
-      "currentPrice": 1219.26,
-      "pnl": -3,
-      "pnlPct": -1.189280705103195
+      "currentPrice": 1143.96,
+      "pnl": 14,
+      "pnlPct": 5.060044981866168
+    },
+    {
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "short",
+      "amount": 272,
+      "entryPrice": 1063.66,
+      "currentPrice": 1034.1,
+      "pnl": 8,
+      "pnlPct": 2.7790835417332764
+    },
+    {
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 272,
+      "entryPrice": 1034.1,
+      "currentPrice": 1034.1,
+      "pnl": 0,
+      "pnlPct": 0
     }
   ],
   "tradeHistory": [
@@ -76,9 +96,25 @@
       "direction": "short",
       "amount": 272,
       "price": 1204.93
+    },
+    {
+      "timestamp": "2026-03-28T07:16:15.636Z",
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "short",
+      "amount": 272,
+      "price": 1063.66
+    },
+    {
+      "timestamp": "2026-03-30T07:07:18.767Z",
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 272,
+      "price": 1034.1
     }
   ],
-  "totalPnL": 6,
+  "totalPnL": 19,
   "bountyIncome": [
     {
       "amount": 150,

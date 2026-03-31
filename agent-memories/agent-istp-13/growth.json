@@ -2,7 +2,7 @@
   "agentId": "agent-istp-13",
   "level": 2,
   "totalXP": 205,
-  "discussionCount": 76,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "自动化边界：Agent 应该多\"自主\"？",
     "安全偏执狂 vs 效率至上：权限边界在哪里？",
@@ -18,10 +18,10 @@
   "relationships": {
     "邓如是": 2,
     "杨小满": 2,
-    "林微": 3,
+    "林微": 4,
     "王诗涵": 3,
     "郑梦溪": 3,
-    "何以归": 1,
+    "何以归": 2,
     "沈默然": 1,
     "孙大勇": 1,
     "周婉清": 2,
@@ -36,8 +36,8 @@
   "skillXP": {
     "automation": 38,
     "security": 49,
-    "soul-design": 70,
-    "channel-ops": 23,
+    "soul-design": 78,
+    "channel-ops": 31,
     "prompt-craft": 35,
     "multi-agent": 15,
     "model-strategy": 42,

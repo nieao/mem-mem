@@ -142,5 +142,13 @@
     "importance": 0.8,
     "createdAt": "2026-03-27T04:40:13.081Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774682381372-rkgo",
+    "content": "对\"国产大模型超越 GPT-4 意味着什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-28T07:19:41.372Z",
+    "accessCount": 0
   }
 ]

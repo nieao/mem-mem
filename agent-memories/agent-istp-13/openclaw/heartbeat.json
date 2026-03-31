@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.493Z",
     "completedAt": "2026-03-27T03:47:55.353Z"
+  },
+  {
+    "id": "hb-1774682175615-iwo",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.615Z",
+    "completedAt": "2026-03-28T07:16:20.102Z"
+  },
+  {
+    "id": "hb-1774682175615-0af",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.615Z",
+    "completedAt": "2026-03-28T07:19:42.707Z"
+  },
+  {
+    "id": "hb-1774682175615-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.615Z",
+    "completedAt": "2026-03-30T07:07:21.808Z"
+  },
+  {
+    "id": "hb-1774854438747-jyf",
+    "title": "评估今日模型使用成本",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.747Z"
+  },
+  {
+    "id": "hb-1774854438747-inz",
+    "title": "检查 Skill 触发准确率",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.747Z"
+  },
+  {
+    "id": "hb-1774854438747-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.747Z"
   }
 ]

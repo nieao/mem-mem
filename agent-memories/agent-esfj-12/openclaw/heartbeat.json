@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.492Z",
     "completedAt": "2026-03-27T03:47:55.076Z"
+  },
+  {
+    "id": "hb-1774682175614-1zj",
+    "title": "检查 Cron 任务执行记录",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.614Z",
+    "completedAt": "2026-03-28T07:16:19.851Z"
+  },
+  {
+    "id": "hb-1774682175614-3v7",
+    "title": "检查 Agent 协作队列状态",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.614Z",
+    "completedAt": "2026-03-28T07:19:42.520Z"
+  },
+  {
+    "id": "hb-1774682175614-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.614Z",
+    "completedAt": "2026-03-30T07:07:21.433Z"
+  },
+  {
+    "id": "hb-1774854438746-frk",
+    "title": "检查 Agent 协作队列状态",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.746Z"
+  },
+  {
+    "id": "hb-1774854438746-jqi",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.746Z"
+  },
+  {
+    "id": "hb-1774854438746-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.746Z"
   }
 ]

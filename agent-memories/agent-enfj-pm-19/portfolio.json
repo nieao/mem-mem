@@ -1,7 +1,7 @@
 {
   "agentId": "agent-enfj-pm-19",
-  "tokens": 8912,
-  "totalInvested": 1088,
+  "tokens": 8368,
+  "totalInvested": 1632,
   "holdings": [
     {
       "sectorCode": "SEC",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 272,
       "entryPrice": 626.37,
-      "currentPrice": 607.35,
-      "pnl": -8,
-      "pnlPct": -3.0365438957804463
+      "currentPrice": 601.93,
+      "pnl": -11,
+      "pnlPct": -3.901847151044918
     },
     {
       "sectorCode": "AI",
@@ -19,9 +19,9 @@
       "direction": "long",
       "amount": 272,
       "entryPrice": 1336.78,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": -6,
-      "pnlPct": -2.060922515297951
+      "pnlPct": -2.0781280390191337
     },
     {
       "sectorCode": "AI",
@@ -29,9 +29,9 @@
       "direction": "long",
       "amount": 272,
       "entryPrice": 1322.67,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": -3,
-      "pnlPct": -1.0161264714554692
+      "pnlPct": -1.0335155405354375
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,29 @@
       "direction": "long",
       "amount": 272,
       "entryPrice": 1275.74,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 7,
-      "pnlPct": 2.625143054227351
+      "pnlPct": 2.6071143022872993
+    },
+    {
+      "sectorCode": "NEV",
+      "sectorName": "新能源车",
+      "direction": "long",
+      "amount": 272,
+      "entryPrice": 1168.03,
+      "currentPrice": 1158.68,
+      "pnl": -2,
+      "pnlPct": -0.8004931380187075
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 272,
+      "entryPrice": 1309,
+      "currentPrice": 1309,
+      "pnl": 0,
+      "pnlPct": 0
     }
   ],
   "tradeHistory": [
@@ -76,7 +96,23 @@
       "direction": "long",
       "amount": 272,
       "price": 1275.74
+    },
+    {
+      "timestamp": "2026-03-28T07:16:15.645Z",
+      "sectorCode": "NEV",
+      "sectorName": "新能源车",
+      "direction": "long",
+      "amount": 272,
+      "price": 1168.03
+    },
+    {
+      "timestamp": "2026-03-30T07:07:18.775Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 272,
+      "price": 1309
     }
   ],
-  "totalPnL": -10
+  "totalPnL": -15
 }

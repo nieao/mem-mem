@@ -7,7 +7,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T13:25:37.501Z",
-    "decayFactor": 0.8296621375457122
+    "decayFactor": 0.7078115321831892
   },
   {
     "id": "e-1774276299798-6bcp",
@@ -17,7 +17,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T14:31:39.798Z",
-    "decayFactor": 0.8316160542437252
+    "decayFactor": 0.7094784815462999
   },
   {
     "id": "e-1774278420723-yy5s",
@@ -29,7 +29,7 @@
     ],
     "topic": "多 Agent 混战：协作还是灾难？",
     "timestamp": "2026-03-23T15:07:00.723Z",
-    "decayFactor": 0.8326638303078918
+    "decayFactor": 0.7103723731050452
   },
   {
     "id": "e-1774279180675-p4io",
@@ -41,7 +41,7 @@
     ],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T15:19:40.675Z",
-    "decayFactor": 0.8330395817753121
+    "decayFactor": 0.7106929388026213
   },
   {
     "id": "e-1774279333372-bg2p",
@@ -51,7 +51,7 @@
     "relatedAgents": [],
     "topic": "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "timestamp": "2026-03-23T15:22:13.372Z",
-    "decayFactor": 0.8331151018964079
+    "decayFactor": 0.7107573674540016
   },
   {
     "id": "e-1774345590627-0hqu",
@@ -61,7 +61,7 @@
     "relatedAgents": [],
     "topic": "龙虾经济学：如何用最小成本养最聪明的龙虾？",
     "timestamp": "2026-03-24T09:46:30.627Z",
-    "decayFactor": 0.8665388234142083
+    "decayFactor": 0.7392722224391431
   },
   {
     "id": "e-1774437462276-gjga",
@@ -73,7 +73,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:17:42.276Z",
-    "decayFactor": 0.9151139328822875
+    "decayFactor": 0.780713215227214
   },
   {
     "id": "e-1774437462277-gkhd",
@@ -83,7 +83,7 @@
     "relatedAgents": [],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-25T11:17:42.277Z",
-    "decayFactor": 0.9151139334255654
+    "decayFactor": 0.780713215690702
   },
   {
     "id": "e-1774438317019-wo85",
@@ -93,7 +93,7 @@
     "relatedAgents": [],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:31:57.019Z",
-    "decayFactor": 0.9155784136800565
+    "decayFactor": 0.7811094787786774
   },
   {
     "id": "e-1774438940924-30op",
@@ -103,7 +103,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-25T11:42:20.924Z",
-    "decayFactor": 0.9159176023168351
+    "decayFactor": 0.7813988515460156
   },
   {
     "id": "e-1774583285882-gm4g",
@@ -113,6 +113,6 @@
     "relatedAgents": [],
     "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
     "timestamp": "2026-03-27T03:48:05.882Z",
-    "decayFactor": 0.9978670219001531
+    "decayFactor": 0.8513125448578254
   }
 ]

@@ -2,7 +2,7 @@
   "agentId": "agent-istj-ops-20",
   "level": 2,
   "totalXP": 140,
-  "discussionCount": 76,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "自动化边界：Agent 应该多\"自主\"？",
     "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
@@ -14,22 +14,23 @@
   "insightsGenerated": 0,
   "relationships": {
     "杨小满": 2,
-    "林微": 2,
+    "林微": 3,
     "沈默然": 3,
     "孙大勇": 1,
     "郑梦溪": 2,
     "韩冬青": 1,
     "秦九章": 2,
     "赵铁柱": 2,
-    "曹破晓": 1
+    "曹破晓": 1,
+    "冯一刀": 1
   },
   "skillXP": {
     "automation": 27,
     "security": 23,
-    "soul-design": 26,
+    "soul-design": 38,
     "prompt-craft": 25,
     "channel-ops": 5,
-    "memory-arch": 17,
+    "memory-arch": 25,
     "model-strategy": 42,
     "tool-integration": 13,
     "skill-authoring": 10,
@@ -39,7 +40,7 @@
     "neuroticism": 9,
     "conscientiousness": 2,
     "openness": 1,
-    "extraversion": 3,
+    "extraversion": 4,
     "agreeableness": 2
   }
 }

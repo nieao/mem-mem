@@ -1,7 +1,7 @@
 {
   "agentId": "agent-entp-4",
-  "tokens": 7760,
-  "totalInvested": 2240,
+  "tokens": 6640,
+  "totalInvested": 3360,
   "holdings": [
     {
       "sectorCode": "AI",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 560,
       "entryPrice": 1315.05,
-      "currentPrice": 1309.23,
-      "pnl": -2,
-      "pnlPct": -0.44256872362267113
+      "currentPrice": 1309,
+      "pnl": -3,
+      "pnlPct": -0.46005855290673014
     },
     {
       "sectorCode": "SEC",
@@ -19,9 +19,9 @@
       "direction": "long",
       "amount": 560,
       "entryPrice": 615.8,
-      "currentPrice": 607.35,
-      "pnl": -8,
-      "pnlPct": -1.3721987658330517
+      "currentPrice": 601.93,
+      "pnl": -13,
+      "pnlPct": -2.252354660604093
     },
     {
       "sectorCode": "AI",
@@ -29,9 +29,9 @@
       "direction": "long",
       "amount": 560,
       "entryPrice": 1322.67,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": -6,
-      "pnlPct": -1.0161264714554692
+      "pnlPct": -1.0335155405354375
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,29 @@
       "direction": "long",
       "amount": 560,
       "entryPrice": 1275.74,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 15,
-      "pnlPct": 2.625143054227351
+      "pnlPct": 2.6071143022872993
+    },
+    {
+      "sectorCode": "SEC",
+      "sectorName": "网络安全",
+      "direction": "long",
+      "amount": 560,
+      "entryPrice": 622.32,
+      "currentPrice": 601.93,
+      "pnl": -18,
+      "pnlPct": -3.2764494150919297
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 560,
+      "entryPrice": 1143.96,
+      "currentPrice": 1143.96,
+      "pnl": 0,
+      "pnlPct": 0
     }
   ],
   "tradeHistory": [
@@ -76,7 +96,23 @@
       "direction": "long",
       "amount": 560,
       "price": 1275.74
+    },
+    {
+      "timestamp": "2026-03-28T07:16:15.630Z",
+      "sectorCode": "SEC",
+      "sectorName": "网络安全",
+      "direction": "long",
+      "amount": 560,
+      "price": 622.32
+    },
+    {
+      "timestamp": "2026-03-30T07:07:18.761Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 560,
+      "price": 1143.96
     }
   ],
-  "totalPnL": -1
+  "totalPnL": -25
 }

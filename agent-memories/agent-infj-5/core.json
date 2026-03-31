@@ -6,9 +6,9 @@
     "mbti": "INFJ",
     "ocean": {
       "openness": 100,
-      "conscientiousness": 98,
+      "conscientiousness": 100,
       "extraversion": 100,
-      "agreeableness": 98,
+      "agreeableness": 100,
       "neuroticism": 100
     },
     "archetype": "远见共情者",
@@ -20,53 +20,32 @@
     {
       "domain": "soul-design",
       "name": "SOUL.md 人格设计",
-      "level": 2,
-      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
-    },
-    {
-      "domain": "security",
-      "name": "安全与权限管理",
       "level": 3,
-      "description": "安全意识极强，熟悉最小权限原则、Docker 隔离、Token 轮换。对提示注入攻击高度敏感。"
-    },
-    {
-      "domain": "model-strategy",
-      "name": "模型选择策略",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 45）"
-    },
-    {
-      "domain": "channel-ops",
-      "name": "渠道运维",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 39）"
+      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
     },
     {
       "domain": "tool-integration",
       "name": "工具集成",
+      "level": 5,
+      "description": "有丰富的 API 对接经验，能让 Agent 接入日历、邮件、GitHub、Notion 等外部服务。"
+    },
+    {
+      "domain": "multi-agent",
+      "name": "多 Agent 编排",
+      "level": 4,
+      "description": "理解 Agent 分工协作模式，AGENTS.md 配置，并发限制。有复杂工作流编排经验。"
+    },
+    {
+      "domain": "prompt-craft",
+      "name": "提示词工程",
       "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 44）"
+      "description": "通过讨论和实践习得的新技能（XP: 55）"
     }
   ],
   "createdAt": "2026-03-23T13:25:36.357Z",
-  "sessionCount": 78,
-  "lastSessionAt": "2026-03-27T04:48:02.555Z",
+  "sessionCount": 81,
+  "lastSessionAt": "2026-03-30T07:07:18.689Z",
   "evolutionHistory": [
-    {
-      "session": 57,
-      "changes": "OCEAN: extraversion+2, neuroticism+1 | 新技能: SOUL.md 人格设计, 提示词工程",
-      "timestamp": "2026-03-25T11:42:20.936Z"
-    },
-    {
-      "session": 58,
-      "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1",
-      "timestamp": "2026-03-25T11:45:46.003Z"
-    },
-    {
-      "session": 59,
-      "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1",
-      "timestamp": "2026-03-25T11:55:44.395Z"
-    },
     {
       "session": 60,
       "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1 | 新技能: SOUL.md 人格设计, 工具集成",
@@ -151,6 +130,21 @@
       "session": 76,
       "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 模型选择策略, 渠道运维, 工具集成",
       "timestamp": "2026-03-27T04:48:04.216Z"
+    },
+    {
+      "session": 77,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: SOUL.md 人格设计, 安全与权限管理, 模型选择策略",
+      "timestamp": "2026-03-28T07:16:18.853Z"
+    },
+    {
+      "session": 78,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: SOUL.md 人格设计, 安全与权限管理, 模型选择策略",
+      "timestamp": "2026-03-28T07:19:41.384Z"
+    },
+    {
+      "session": 79,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 提示词工程",
+      "timestamp": "2026-03-30T07:07:20.405Z"
     }
   ]
 }

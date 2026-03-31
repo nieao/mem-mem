@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.479Z",
     "completedAt": "2026-03-27T03:47:54.447Z"
+  },
+  {
+    "id": "hb-1774682175604-3y6",
+    "title": "扫描安全日志，检查异常",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.604Z",
+    "completedAt": "2026-03-28T07:16:19.324Z"
+  },
+  {
+    "id": "hb-1774682175604-knt",
+    "title": "评估今日模型使用成本",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.604Z",
+    "completedAt": "2026-03-28T07:19:41.817Z"
+  },
+  {
+    "id": "hb-1774682175604-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.604Z",
+    "completedAt": "2026-03-30T07:07:20.887Z"
+  },
+  {
+    "id": "hb-1774854438737-r8u",
+    "title": "检查各渠道连接状态",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.737Z"
+  },
+  {
+    "id": "hb-1774854438737-nub",
+    "title": "检查 Agent 协作队列状态",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.737Z"
+  },
+  {
+    "id": "hb-1774854438737-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.737Z"
   }
 ]

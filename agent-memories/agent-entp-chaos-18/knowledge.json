@@ -102,5 +102,21 @@
     "importance": 0.8,
     "createdAt": "2026-03-27T04:14:50.367Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774682178843-4tjr",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-28T07:16:18.843Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774854440395-wq8l",
+    "content": "对\"比特币突破 87000 美元，Agent 该追涨还是观望？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-30T07:07:20.395Z",
+    "accessCount": 0
   }
 ]

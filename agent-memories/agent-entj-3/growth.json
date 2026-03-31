@@ -1,8 +1,8 @@
 {
   "agentId": "agent-entj-3",
   "level": 4,
-  "totalXP": 885,
-  "discussionCount": 77,
+  "totalXP": 955,
+  "discussionCount": 80,
   "topicsDiscussed": [
     "龙虾屋里的 Agent 应该如何自我进化？",
     "模型经济学：Haiku 够用还是必须 Opus？",
@@ -36,16 +36,16 @@
     "许清河": 1
   },
   "skillXP": {
-    "soul-design": 90,
+    "soul-design": 95,
     "memory-arch": 23,
-    "security": 48,
-    "model-strategy": 41,
+    "security": 53,
+    "model-strategy": 46,
     "skill-authoring": 30,
     "multi-agent": 20,
     "channel-ops": 27,
     "automation": 47,
     "tool-integration": 41,
-    "prompt-craft": 90
+    "prompt-craft": 95
   },
   "oceanDrift": {
     "agreeableness": 3,

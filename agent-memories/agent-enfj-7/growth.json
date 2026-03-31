@@ -2,7 +2,7 @@
   "agentId": "agent-enfj-7",
   "level": 3,
   "totalXP": 560,
-  "discussionCount": 76,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "龙虾屋里的 Agent 应该如何自我进化？",
@@ -28,7 +28,8 @@
     "林微": 1,
     "沈默然": 2,
     "王诗涵": 1,
-    "曹破晓": 1
+    "曹破晓": 1,
+    "何以归": 1
   },
   "skillXP": {
     "skill-authoring": 25,
@@ -38,7 +39,7 @@
     "memory-arch": 26,
     "security": 35,
     "model-strategy": 40,
-    "channel-ops": 25,
+    "channel-ops": 33,
     "automation": 15,
     "prompt-craft": 65
   },

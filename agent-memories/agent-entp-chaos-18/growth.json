@@ -1,8 +1,8 @@
 {
   "agentId": "agent-entp-chaos-18",
-  "level": 4,
-  "totalXP": 955,
-  "discussionCount": 76,
+  "level": 5,
+  "totalXP": 1060,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "自动化边界：Agent 应该多\"自主\"？",
@@ -32,22 +32,23 @@
     "赵铁柱": 3,
     "秦九章": 2,
     "沈默然": 3,
-    "韩冬青": 2,
+    "韩冬青": 3,
     "周婉清": 1,
     "谢长安": 1,
-    "孙大勇": 1
+    "孙大勇": 1,
+    "冯一刀": 1
   },
   "skillXP": {
     "skill-authoring": 20,
     "multi-agent": 25,
     "tool-integration": 23,
     "automation": 74,
-    "security": 88,
-    "soul-design": 81,
+    "security": 93,
+    "soul-design": 86,
     "channel-ops": 38,
-    "prompt-craft": 80,
-    "memory-arch": 28,
-    "model-strategy": 58
+    "prompt-craft": 90,
+    "memory-arch": 36,
+    "model-strategy": 76
   },
   "oceanDrift": {
     "extraversion": 3,

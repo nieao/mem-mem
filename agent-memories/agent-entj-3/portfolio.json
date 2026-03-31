@@ -1,7 +1,7 @@
 {
   "agentId": "agent-entj-3",
-  "tokens": 8960,
-  "totalInvested": 1040,
+  "tokens": 8440,
+  "totalInvested": 1560,
   "holdings": [
     {
       "sectorCode": "SEC",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 626.37,
-      "currentPrice": 607.35,
-      "pnl": -8,
-      "pnlPct": -3.0365438957804463
+      "currentPrice": 601.93,
+      "pnl": -10,
+      "pnlPct": -3.901847151044918
     },
     {
       "sectorCode": "ROBOT",
@@ -19,9 +19,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1220.64,
-      "currentPrice": 1219.26,
-      "pnl": 0,
-      "pnlPct": -0.11305544632324921
+      "currentPrice": 1143.96,
+      "pnl": -16,
+      "pnlPct": -6.281950452221791
     },
     {
       "sectorCode": "ROBOT",
@@ -29,9 +29,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1230.27,
-      "currentPrice": 1219.26,
-      "pnl": -2,
-      "pnlPct": -0.8949255041576232
+      "currentPrice": 1143.96,
+      "pnl": -18,
+      "pnlPct": -7.015533175644366
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,29 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1275.74,
-      "currentPrice": 1309.23,
+      "currentPrice": 1309,
       "pnl": 7,
-      "pnlPct": 2.625143054227351
+      "pnlPct": 2.6071143022872993
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 260,
+      "entryPrice": 1271.55,
+      "currentPrice": 1309,
+      "pnl": 8,
+      "pnlPct": 2.945224332507573
+    },
+    {
+      "sectorCode": "NEV",
+      "sectorName": "新能源车",
+      "direction": "long",
+      "amount": 260,
+      "entryPrice": 1158.68,
+      "currentPrice": 1158.68,
+      "pnl": 0,
+      "pnlPct": 0
     }
   ],
   "tradeHistory": [
@@ -76,7 +96,23 @@
       "direction": "long",
       "amount": 260,
       "price": 1275.74
+    },
+    {
+      "timestamp": "2026-03-28T07:16:15.629Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "long",
+      "amount": 260,
+      "price": 1271.55
+    },
+    {
+      "timestamp": "2026-03-30T07:07:18.760Z",
+      "sectorCode": "NEV",
+      "sectorName": "新能源车",
+      "direction": "long",
+      "amount": 260,
+      "price": 1158.68
     }
   ],
-  "totalPnL": -3
+  "totalPnL": -29
 }

@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.489Z",
     "completedAt": "2026-03-27T03:47:55.105Z"
+  },
+  {
+    "id": "hb-1774682175612-4wg",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.612Z",
+    "completedAt": "2026-03-28T07:16:19.730Z"
+  },
+  {
+    "id": "hb-1774682175612-ce1",
+    "title": "检查 Cron 任务执行记录",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.612Z",
+    "completedAt": "2026-03-28T07:19:42.427Z"
+  },
+  {
+    "id": "hb-1774682175612-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.612Z",
+    "completedAt": "2026-03-30T07:07:21.557Z"
+  },
+  {
+    "id": "hb-1774854438744-ss5",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.744Z"
+  },
+  {
+    "id": "hb-1774854438744-1pr",
+    "title": "评估今日模型使用成本",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.744Z"
+  },
+  {
+    "id": "hb-1774854438744-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.744Z"
   }
 ]

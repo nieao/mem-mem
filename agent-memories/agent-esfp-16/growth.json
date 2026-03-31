@@ -2,7 +2,7 @@
   "agentId": "agent-esfp-16",
   "level": 4,
   "totalXP": 920,
-  "discussionCount": 76,
+  "discussionCount": 79,
   "topicsDiscussed": [
     "自动化边界：Agent 应该多\"自主\"？",
     "安全偏执狂 vs 效率至上：权限边界在哪里？",
@@ -32,17 +32,18 @@
     "秦九章": 1,
     "谢长安": 1,
     "周婉清": 2,
-    "何以归": 1
+    "何以归": 2,
+    "冯一刀": 1
   },
   "skillXP": {
     "automation": 48,
     "security": 68,
     "soul-design": 79,
-    "channel-ops": 45,
+    "channel-ops": 53,
     "prompt-craft": 70,
     "tool-integration": 44,
     "multi-agent": 5,
-    "memory-arch": 19,
+    "memory-arch": 27,
     "model-strategy": 52,
     "skill-authoring": 10
   },

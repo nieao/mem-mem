@@ -82,5 +82,44 @@
     "status": "done",
     "createdAt": "2026-03-27T03:39:05.478Z",
     "completedAt": "2026-03-27T03:47:54.198Z"
+  },
+  {
+    "id": "hb-1774682175603-vz0",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.603Z",
+    "completedAt": "2026-03-28T07:16:19.043Z"
+  },
+  {
+    "id": "hb-1774682175603-qx7",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.603Z",
+    "completedAt": "2026-03-28T07:19:41.554Z"
+  },
+  {
+    "id": "hb-1774682175603-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "done",
+    "createdAt": "2026-03-28T07:16:15.603Z",
+    "completedAt": "2026-03-30T07:07:20.699Z"
+  },
+  {
+    "id": "hb-1774854438736-vql",
+    "title": "评估今日模型使用成本",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.736Z"
+  },
+  {
+    "id": "hb-1774854438736-4z8",
+    "title": "检查各渠道连接状态",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.736Z"
+  },
+  {
+    "id": "hb-1774854438736-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-30T07:07:18.736Z"
   }
 ]
