@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438733-hy2",
     "title": "扫描安全日志，检查异常",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.733Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.733Z",
+    "completedAt": "2026-03-31T02:34:14.157Z"
   },
   {
     "id": "hb-1774854438733-piq",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.733Z"
+  },
+  {
+    "id": "hb-1774924440787-524",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.787Z"
+  },
+  {
+    "id": "hb-1774924440787-tlb",
+    "title": "蒸馏昨日情节记忆为知识",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.787Z"
+  },
+  {
+    "id": "hb-1774924440787-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.787Z"
   }
 ]

@@ -1,7 +1,7 @@
 {
   "agentId": "agent-intj-sec-17",
-  "tokens": 8620,
-  "totalInvested": 1380,
+  "tokens": 8390,
+  "totalInvested": 1610,
   "holdings": [
     {
       "sectorCode": "AI",
@@ -9,9 +9,9 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1315.05,
-      "currentPrice": 1309,
-      "pnl": 1,
-      "pnlPct": 0.46005855290673014
+      "currentPrice": 1279.12,
+      "pnl": 6,
+      "pnlPct": 2.732215505113879
     },
     {
       "sectorCode": "CLOUD",
@@ -19,9 +19,9 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1014.38,
-      "currentPrice": 1034.1,
+      "currentPrice": 1029.96,
       "pnl": -4,
-      "pnlPct": -1.944044638104055
+      "pnlPct": -1.5359135629645737
     },
     {
       "sectorCode": "AI",
@@ -29,9 +29,9 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1322.67,
-      "currentPrice": 1309,
-      "pnl": 2,
-      "pnlPct": 1.0335155405354375
+      "currentPrice": 1279.12,
+      "pnl": 8,
+      "pnlPct": 3.292582427967685
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,9 @@
       "direction": "long",
       "amount": 230,
       "entryPrice": 1275.74,
-      "currentPrice": 1309,
-      "pnl": 6,
-      "pnlPct": 2.6071143022872993
+      "currentPrice": 1279.12,
+      "pnl": 1,
+      "pnlPct": 0.2649442676407326
     },
     {
       "sectorCode": "CLOUD",
@@ -49,9 +49,9 @@
       "direction": "long",
       "amount": 230,
       "entryPrice": 1063.66,
-      "currentPrice": 1034.1,
-      "pnl": -6,
-      "pnlPct": -2.7790835417332764
+      "currentPrice": 1029.96,
+      "pnl": -7,
+      "pnlPct": -3.1683056615835925
     },
     {
       "sectorCode": "CLOUD",
@@ -59,7 +59,17 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1034.1,
-      "currentPrice": 1034.1,
+      "currentPrice": 1029.96,
+      "pnl": 1,
+      "pnlPct": 0.40034812880764653
+    },
+    {
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 230,
+      "entryPrice": 1279.12,
+      "currentPrice": 1279.12,
       "pnl": 0,
       "pnlPct": 0
     }
@@ -112,7 +122,15 @@
       "direction": "short",
       "amount": 230,
       "price": 1034.1
+    },
+    {
+      "timestamp": "2026-03-31T02:34:00.836Z",
+      "sectorCode": "AI",
+      "sectorName": "人工智能",
+      "direction": "short",
+      "amount": 230,
+      "price": 1279.12
     }
   ],
-  "totalPnL": -1
+  "totalPnL": 5
 }

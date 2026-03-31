@@ -7,7 +7,7 @@
     "relatedAgents": [],
     "topic": "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "timestamp": "2026-03-23T13:27:42.204Z",
-    "decayFactor": 0.7078639399641337
+    "decayFactor": 0.6790492225046328
   },
   {
     "id": "e-1774272462206-offl",
@@ -17,7 +17,7 @@
     "relatedAgents": [],
     "topic": "自动化边界：Agent 应该多\"自主\"？",
     "timestamp": "2026-03-23T13:27:42.206Z",
-    "decayFactor": 0.7078639408046122
+    "decayFactor": 0.6790492233108983
   },
   {
     "id": "e-1774273293325-xsha",
@@ -29,7 +29,7 @@
     ],
     "topic": "龙虾屋里的 Agent 应该如何自我进化？",
     "timestamp": "2026-03-23T13:41:33.325Z",
-    "decayFactor": 0.7082132958329412
+    "decayFactor": 0.6793843572921221
   },
   {
     "id": "e-1774273293326-gjdm",
@@ -39,7 +39,7 @@
     "relatedAgents": [],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T13:41:33.326Z",
-    "decayFactor": 0.7082132962533879
+    "decayFactor": 0.6793843576954539
   },
   {
     "id": "e-1774278420719-0dad",
@@ -51,7 +51,7 @@
     ],
     "topic": "多 Agent 混战：协作还是灾难？",
     "timestamp": "2026-03-23T15:07:00.719Z",
-    "decayFactor": 0.7103723760571444
+    "decayFactor": 0.6814555487525101
   },
   {
     "id": "e-1774437462271-eqmp",
@@ -63,7 +63,7 @@
     ],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-25T11:17:42.271Z",
-    "decayFactor": 0.7807132180081413
+    "decayFactor": 0.748933055855875
   },
   {
     "id": "e-1774437509866-g648",
@@ -73,7 +73,7 @@
     "relatedAgents": [],
     "topic": "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
     "timestamp": "2026-03-25T11:18:29.866Z",
-    "decayFactor": 0.780735278025501
+    "decayFactor": 0.7489542178854556
   },
   {
     "id": "e-1774682178837-56rp",
@@ -85,6 +85,26 @@
     ],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-28T07:16:18.837Z",
-    "decayFactor": 0.902789443902993
+    "decayFactor": 0.8660399765508311
+  },
+  {
+    "id": "e-1774924453800-qvu2",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "relatedAgents": [],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-31T02:34:13.800Z",
+    "decayFactor": 1
+  },
+  {
+    "id": "e-1774924453800-4vjh",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "relatedAgents": [],
+    "topic": "模型经济学：Haiku 够用还是必须 Opus？",
+    "timestamp": "2026-03-31T02:34:13.800Z",
+    "decayFactor": 1
   }
 ]

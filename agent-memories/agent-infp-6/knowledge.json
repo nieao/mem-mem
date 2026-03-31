@@ -30,5 +30,13 @@
     "importance": 0.8,
     "createdAt": "2026-03-25T11:17:42.266Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774924453789-w1xt",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：记忆系统的设计决定了 Agent 的\"智慧\"上限。三层记忆（短期、中期、长期）是经过验证的架构。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.789Z",
+    "accessCount": 0
   }
 ]

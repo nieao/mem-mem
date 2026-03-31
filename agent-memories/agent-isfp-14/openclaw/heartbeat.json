@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438749-jbj",
     "title": "检查 SOUL.md 是否需要更新",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.749Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.749Z",
+    "completedAt": "2026-03-31T02:34:15.046Z"
   },
   {
     "id": "hb-1774854438749-lvx",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.749Z"
+  },
+  {
+    "id": "hb-1774924440805-p51",
+    "title": "检查 Cron 任务执行记录",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.805Z"
+  },
+  {
+    "id": "hb-1774924440805-pf2",
+    "title": "评估今日模型使用成本",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.805Z"
+  },
+  {
+    "id": "hb-1774924440805-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.805Z"
   }
 ]

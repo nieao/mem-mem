@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438752-9nt",
     "title": "蒸馏昨日情节记忆为知识",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.752Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.752Z",
+    "completedAt": "2026-03-31T02:34:15.358Z"
   },
   {
     "id": "hb-1774854438752-yhp",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.752Z"
+  },
+  {
+    "id": "hb-1774924440809-6z2",
+    "title": "评估今日模型使用成本",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.809Z"
+  },
+  {
+    "id": "hb-1774924440809-zk4",
+    "title": "优化高频提示词模板",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.809Z"
+  },
+  {
+    "id": "hb-1774924440809-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.809Z"
   }
 ]

@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438736-vql",
     "title": "评估今日模型使用成本",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.736Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.736Z",
+    "completedAt": "2026-03-31T02:34:14.111Z"
   },
   {
     "id": "hb-1774854438736-4z8",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.736Z"
+  },
+  {
+    "id": "hb-1774924440790-4xf",
+    "title": "检查外部 API 可用性",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.790Z"
+  },
+  {
+    "id": "hb-1774924440790-x2i",
+    "title": "检查 Skill 触发准确率",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.790Z"
+  },
+  {
+    "id": "hb-1774924440790-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.790Z"
   }
 ]

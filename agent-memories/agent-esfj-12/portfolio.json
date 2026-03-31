@@ -1,7 +1,7 @@
 {
   "agentId": "agent-esfj-12",
-  "tokens": 8080,
-  "totalInvested": 1920,
+  "tokens": 7760,
+  "totalInvested": 2240,
   "holdings": [
     {
       "sectorCode": "AI",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 320,
       "entryPrice": 1315.05,
-      "currentPrice": 1309,
-      "pnl": -1,
-      "pnlPct": -0.46005855290673014
+      "currentPrice": 1279.12,
+      "pnl": -9,
+      "pnlPct": -2.732215505113879
     },
     {
       "sectorCode": "AI",
@@ -19,9 +19,9 @@
       "direction": "long",
       "amount": 320,
       "entryPrice": 1336.78,
-      "currentPrice": 1309,
-      "pnl": -7,
-      "pnlPct": -2.0781280390191337
+      "currentPrice": 1279.12,
+      "pnl": -14,
+      "pnlPct": -4.313349990275145
     },
     {
       "sectorCode": "AI",
@@ -29,9 +29,9 @@
       "direction": "long",
       "amount": 320,
       "entryPrice": 1322.67,
-      "currentPrice": 1309,
-      "pnl": -3,
-      "pnlPct": -1.0335155405354375
+      "currentPrice": 1279.12,
+      "pnl": -11,
+      "pnlPct": -3.292582427967685
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,9 @@
       "direction": "long",
       "amount": 320,
       "entryPrice": 1275.74,
-      "currentPrice": 1309,
-      "pnl": 8,
-      "pnlPct": 2.6071143022872993
+      "currentPrice": 1279.12,
+      "pnl": 1,
+      "pnlPct": 0.2649442676407326
     },
     {
       "sectorCode": "CLOUD",
@@ -49,9 +49,9 @@
       "direction": "long",
       "amount": 320,
       "entryPrice": 1063.66,
-      "currentPrice": 1034.1,
-      "pnl": -9,
-      "pnlPct": -2.7790835417332764
+      "currentPrice": 1029.96,
+      "pnl": -10,
+      "pnlPct": -3.1683056615835925
     },
     {
       "sectorCode": "CLOUD",
@@ -59,7 +59,17 @@
       "direction": "long",
       "amount": 320,
       "entryPrice": 1034.1,
-      "currentPrice": 1034.1,
+      "currentPrice": 1029.96,
+      "pnl": -1,
+      "pnlPct": -0.40034812880764653
+    },
+    {
+      "sectorCode": "NEV",
+      "sectorName": "新能源车",
+      "direction": "long",
+      "amount": 320,
+      "entryPrice": 1169.24,
+      "currentPrice": 1169.24,
       "pnl": 0,
       "pnlPct": 0
     }
@@ -112,7 +122,15 @@
       "direction": "long",
       "amount": 320,
       "price": 1034.1
+    },
+    {
+      "timestamp": "2026-03-31T02:34:00.830Z",
+      "sectorCode": "NEV",
+      "sectorName": "新能源车",
+      "direction": "long",
+      "amount": 320,
+      "price": 1169.24
     }
   ],
-  "totalPnL": -12
+  "totalPnL": -44
 }

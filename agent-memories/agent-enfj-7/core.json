@@ -18,45 +18,28 @@
   },
   "skills": [
     {
-      "domain": "soul-design",
-      "name": "SOUL.md 人格设计",
-      "level": 2,
-      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
-    },
-    {
-      "domain": "memory-arch",
-      "name": "记忆系统架构",
-      "level": 2,
-      "description": "精通三层记忆模型（短期/中期/长期），向量检索，知识蒸馏。理解记忆对 Agent 智能的决定性作用。"
-    },
-    {
-      "domain": "security",
-      "name": "安全与权限管理",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 35）"
+      "domain": "prompt-craft",
+      "name": "提示词工程",
+      "level": 3,
+      "description": "深谙 prompt 技巧，能用精巧的系统提示让小模型发挥大模型的效果。理解上下文窗口管理。"
     },
     {
       "domain": "model-strategy",
       "name": "模型选择策略",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 40）"
+      "level": 5,
+      "description": "了解各 LLM 的性价比、延迟、能力边界。能根据任务复杂度自动切换模型层级。"
     },
     {
-      "domain": "channel-ops",
-      "name": "渠道运维",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 33）"
+      "domain": "soul-design",
+      "name": "SOUL.md 人格设计",
+      "level": 2,
+      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
     }
   ],
   "createdAt": "2026-03-23T13:25:36.363Z",
-  "sessionCount": 81,
-  "lastSessionAt": "2026-03-30T07:07:18.695Z",
+  "sessionCount": 82,
+  "lastSessionAt": "2026-03-31T02:34:00.740Z",
   "evolutionHistory": [
-    {
-      "session": 60,
-      "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1 | 新技能: SOUL.md 人格设计, 提示词工程",
-      "timestamp": "2026-03-25T12:12:44.958Z"
-    },
     {
       "session": 61,
       "changes": "OCEAN: extraversion+4, neuroticism+1, conscientiousness+1, openness+2 | 新技能: SOUL.md 人格设计, 提示词工程",
@@ -151,6 +134,11 @@
       "session": 79,
       "changes": "OCEAN: extraversion+7, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 安全与权限管理, 模型选择策略, 渠道运维",
       "timestamp": "2026-03-30T07:07:20.407Z"
+    },
+    {
+      "session": 80,
+      "changes": "OCEAN: extraversion+8, neuroticism+9, conscientiousness+2, openness+1, agreeableness+3",
+      "timestamp": "2026-03-31T02:34:13.830Z"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "agentId": "agent-istj-ops-20",
   "level": 2,
   "totalXP": 140,
-  "discussionCount": 79,
+  "discussionCount": 80,
   "topicsDiscussed": [
     "自动化边界：Agent 应该多\"自主\"？",
     "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
@@ -37,10 +37,10 @@
     "multi-agent": 20
   },
   "oceanDrift": {
-    "neuroticism": 9,
+    "neuroticism": 11,
     "conscientiousness": 2,
     "openness": 1,
     "extraversion": 4,
-    "agreeableness": 2
+    "agreeableness": 1
   }
 }

@@ -1,7 +1,7 @@
 {
   "agentId": "agent-istj-9",
-  "tokens": 8620,
-  "totalInvested": 1380,
+  "tokens": 8390,
+  "totalInvested": 1610,
   "holdings": [
     {
       "sectorCode": "AI",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 230,
       "entryPrice": 1315.05,
-      "currentPrice": 1309,
-      "pnl": -1,
-      "pnlPct": -0.46005855290673014
+      "currentPrice": 1279.12,
+      "pnl": -6,
+      "pnlPct": -2.732215505113879
     },
     {
       "sectorCode": "AI",
@@ -19,9 +19,9 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1336.78,
-      "currentPrice": 1309,
-      "pnl": 5,
-      "pnlPct": 2.0781280390191337
+      "currentPrice": 1279.12,
+      "pnl": 10,
+      "pnlPct": 4.313349990275145
     },
     {
       "sectorCode": "AI",
@@ -29,9 +29,9 @@
       "direction": "long",
       "amount": 230,
       "entryPrice": 1322.67,
-      "currentPrice": 1309,
-      "pnl": -2,
-      "pnlPct": -1.0335155405354375
+      "currentPrice": 1279.12,
+      "pnl": -8,
+      "pnlPct": -3.292582427967685
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,9 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1275.74,
-      "currentPrice": 1309,
-      "pnl": -6,
-      "pnlPct": -2.6071143022872993
+      "currentPrice": 1279.12,
+      "pnl": -1,
+      "pnlPct": -0.2649442676407326
     },
     {
       "sectorCode": "AI",
@@ -49,9 +49,9 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1271.55,
-      "currentPrice": 1309,
-      "pnl": -7,
-      "pnlPct": -2.945224332507573
+      "currentPrice": 1279.12,
+      "pnl": -1,
+      "pnlPct": -0.5953364004561312
     },
     {
       "sectorCode": "AI",
@@ -59,7 +59,17 @@
       "direction": "short",
       "amount": 230,
       "entryPrice": 1309,
-      "currentPrice": 1309,
+      "currentPrice": 1279.12,
+      "pnl": 5,
+      "pnlPct": 2.282658517952644
+    },
+    {
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 230,
+      "entryPrice": 1161.38,
+      "currentPrice": 1161.38,
       "pnl": 0,
       "pnlPct": 0
     }
@@ -112,7 +122,15 @@
       "direction": "short",
       "amount": 230,
       "price": 1309
+    },
+    {
+      "timestamp": "2026-03-31T02:34:00.826Z",
+      "sectorCode": "ROBOT",
+      "sectorName": "机器人",
+      "direction": "long",
+      "amount": 230,
+      "price": 1161.38
     }
   ],
-  "totalPnL": -11
+  "totalPnL": -1
 }

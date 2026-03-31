@@ -14,11 +14,7 @@ for /f "tokens=5" %%a in ('netstat -ano 2^>nul ^| findstr ":3456 " ^| findstr "L
     taskkill /F /PID %%a >nul 2>&1
 )
 
-:: Kill any bun processes running server.ts
-tasklist /FI "WINDOWTITLE eq LobsterTown-Server" 2>nul | findstr "cmd" >nul 2>&1
-if not errorlevel 1 (
-    taskkill /FI "WINDOWTITLE eq LobsterTown-Server" /F >nul 2>&1
-)
+:: Kill named windows
 taskkill /FI "WINDOWTITLE eq LobsterTown Server" /F >nul 2>&1
 
 echo.

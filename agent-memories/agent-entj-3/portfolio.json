@@ -1,7 +1,7 @@
 {
   "agentId": "agent-entj-3",
-  "tokens": 8440,
-  "totalInvested": 1560,
+  "tokens": 8180,
+  "totalInvested": 1820,
   "holdings": [
     {
       "sectorCode": "SEC",
@@ -9,9 +9,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 626.37,
-      "currentPrice": 601.93,
-      "pnl": -10,
-      "pnlPct": -3.901847151044918
+      "currentPrice": 634.1,
+      "pnl": 3,
+      "pnlPct": 1.2340948640579879
     },
     {
       "sectorCode": "ROBOT",
@@ -19,9 +19,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1220.64,
-      "currentPrice": 1143.96,
-      "pnl": -16,
-      "pnlPct": -6.281950452221791
+      "currentPrice": 1161.38,
+      "pnl": -13,
+      "pnlPct": -4.854830252982041
     },
     {
       "sectorCode": "ROBOT",
@@ -29,9 +29,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1230.27,
-      "currentPrice": 1143.96,
-      "pnl": -18,
-      "pnlPct": -7.015533175644366
+      "currentPrice": 1161.38,
+      "pnl": -15,
+      "pnlPct": -5.5995838311915165
     },
     {
       "sectorCode": "AI",
@@ -39,9 +39,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1275.74,
-      "currentPrice": 1309,
-      "pnl": 7,
-      "pnlPct": 2.6071143022872993
+      "currentPrice": 1279.12,
+      "pnl": 1,
+      "pnlPct": 0.2649442676407326
     },
     {
       "sectorCode": "AI",
@@ -49,9 +49,9 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1271.55,
-      "currentPrice": 1309,
-      "pnl": 8,
-      "pnlPct": 2.945224332507573
+      "currentPrice": 1279.12,
+      "pnl": 2,
+      "pnlPct": 0.5953364004561312
     },
     {
       "sectorCode": "NEV",
@@ -59,7 +59,17 @@
       "direction": "long",
       "amount": 260,
       "entryPrice": 1158.68,
-      "currentPrice": 1158.68,
+      "currentPrice": 1169.24,
+      "pnl": 2,
+      "pnlPct": 0.9113819173542259
+    },
+    {
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 260,
+      "entryPrice": 1029.96,
+      "currentPrice": 1029.96,
       "pnl": 0,
       "pnlPct": 0
     }
@@ -112,7 +122,15 @@
       "direction": "long",
       "amount": 260,
       "price": 1158.68
+    },
+    {
+      "timestamp": "2026-03-31T02:34:00.818Z",
+      "sectorCode": "CLOUD",
+      "sectorName": "云计算",
+      "direction": "long",
+      "amount": 260,
+      "price": 1029.96
     }
   ],
-  "totalPnL": -29
+  "totalPnL": -20
 }

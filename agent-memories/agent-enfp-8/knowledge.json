@@ -150,5 +150,21 @@
     "importance": 0.8,
     "createdAt": "2026-03-28T07:19:41.372Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774924453797-e4as",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：我持不同看法。安全不应该是事后考虑的事情。我们应该从第一天就设计好权限边界，Docker 隔离是基本要求。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.797Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774924453798-nd80",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.798Z",
+    "accessCount": 0
   }
 ]

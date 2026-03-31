@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438738-3k0",
     "title": "检查 SOUL.md 是否需要更新",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.738Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.738Z",
+    "completedAt": "2026-03-31T02:34:14.299Z"
   },
   {
     "id": "hb-1774854438738-joe",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.738Z"
+  },
+  {
+    "id": "hb-1774924440793-4yd",
+    "title": "评估今日模型使用成本",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.793Z"
+  },
+  {
+    "id": "hb-1774924440793-n44",
+    "title": "检查各渠道连接状态",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.793Z"
+  },
+  {
+    "id": "hb-1774924440793-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.793Z"
   }
 ]

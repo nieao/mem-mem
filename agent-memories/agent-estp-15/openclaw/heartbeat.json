@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438750-lzn",
     "title": "检查 SOUL.md 是否需要更新",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.750Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.750Z",
+    "completedAt": "2026-03-31T02:34:15.174Z"
   },
   {
     "id": "hb-1774854438750-ix7",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.750Z"
+  },
+  {
+    "id": "hb-1774924440806-ik6",
+    "title": "检查 Agent 协作队列状态",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.806Z"
+  },
+  {
+    "id": "hb-1774924440806-t1g",
+    "title": "检查 SOUL.md 是否需要更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.806Z"
+  },
+  {
+    "id": "hb-1774924440806-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.806Z"
   }
 ]

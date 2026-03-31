@@ -9,7 +9,7 @@
     ],
     "topic": "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "timestamp": "2026-03-23T13:27:42.230Z",
-    "decayFactor": 0.7078639416450908
+    "decayFactor": 0.6790492225046328
   },
   {
     "id": "e-1774272462233-547c",
@@ -21,7 +21,7 @@
     ],
     "topic": "自动化边界：Agent 应该多\"自主\"？",
     "timestamp": "2026-03-23T13:27:42.233Z",
-    "decayFactor": 0.7078639429058087
+    "decayFactor": 0.6790492237140312
   },
   {
     "id": "e-1774273216067-sr2f",
@@ -31,7 +31,7 @@
     "relatedAgents": [],
     "topic": "渠道战略：Telegram 之外还有什么？",
     "timestamp": "2026-03-23T13:40:16.067Z",
-    "decayFactor": 0.7081808044589237
+    "decayFactor": 0.6793531869174462
   },
   {
     "id": "e-1774273293337-2i7l",
@@ -41,7 +41,7 @@
     "relatedAgents": [],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T13:41:33.337Z",
-    "decayFactor": 0.7082132916284745
+    "decayFactor": 0.6793843516454778
   },
   {
     "id": "e-1774277301368-3gih",
@@ -51,7 +51,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T14:48:21.368Z",
-    "decayFactor": 0.7099004614202953
+    "decayFactor": 0.6810028425276475
   },
   {
     "id": "e-1774278420726-zpc3",
@@ -61,7 +61,7 @@
     "relatedAgents": [],
     "topic": "多 Agent 混战：协作还是灾难？",
     "timestamp": "2026-03-23T15:07:00.726Z",
-    "decayFactor": 0.7103723697312174
+    "decayFactor": 0.6814555410658446
   },
   {
     "id": "e-1774278420726-mtdf",
@@ -71,7 +71,7 @@
     "relatedAgents": [],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T15:07:00.726Z",
-    "decayFactor": 0.7103723697312174
+    "decayFactor": 0.6814555410658446
   },
   {
     "id": "e-1774278420727-6l48",
@@ -83,7 +83,7 @@
     ],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T15:07:00.727Z",
-    "decayFactor": 0.710372370152946
+    "decayFactor": 0.6814555414704059
   },
   {
     "id": "e-1774279180680-m49d",
@@ -93,7 +93,7 @@
     "relatedAgents": [],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T15:19:40.680Z",
-    "decayFactor": 0.7106929362711086
+    "decayFactor": 0.6817630584387004
   },
   {
     "id": "e-1774279180683-r3ip",
@@ -103,7 +103,7 @@
     "relatedAgents": [],
     "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
     "timestamp": "2026-03-23T15:19:40.683Z",
-    "decayFactor": 0.710692937536865
+    "decayFactor": 0.6817630596529322
   },
   {
     "id": "e-1774279194777-s51e",
@@ -113,7 +113,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T15:19:54.777Z",
-    "decayFactor": 0.7106988840849422
+    "decayFactor": 0.6817687641373831
   },
   {
     "id": "e-1774281163841-bcs6",
@@ -123,7 +123,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T15:52:43.841Z",
-    "decayFactor": 0.7115301618833781
+    "decayFactor": 0.6825662034608233
   },
   {
     "id": "e-1774282320132-4lvn",
@@ -133,7 +133,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T16:12:00.132Z",
-    "decayFactor": 0.7120187651673835
+    "decayFactor": 0.6830349173768705
   },
   {
     "id": "e-1774282566751-j43e",
@@ -143,7 +143,7 @@
     "relatedAgents": [],
     "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
     "timestamp": "2026-03-23T16:16:06.751Z",
-    "decayFactor": 0.712123020100929
+    "decayFactor": 0.6831349284487748
   },
   {
     "id": "e-1774323472679-r5aa",
@@ -153,7 +153,7 @@
     "relatedAgents": [],
     "topic": "自动化边界：Agent 应该多\"自主\"？",
     "timestamp": "2026-03-24T03:37:52.679Z",
-    "decayFactor": 0.7296284248629062
+    "decayFactor": 0.6999277480768292
   },
   {
     "id": "e-1774326609245-6y8c",
@@ -163,7 +163,7 @@
     "relatedAgents": [],
     "topic": "全球供应链恢复正常，Agent 的物流优化还有意义吗？",
     "timestamp": "2026-03-24T04:30:09.245Z",
-    "decayFactor": 0.7309883263135373
+    "decayFactor": 0.7012322925922453
   },
   {
     "id": "e-1774327017328-qvyf",
@@ -173,7 +173,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-24T04:36:57.328Z",
-    "decayFactor": 0.7311654425617631
+    "decayFactor": 0.7014021990440009
   },
   {
     "id": "e-1774327017329-3frv",
@@ -185,7 +185,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-24T04:36:57.329Z",
-    "decayFactor": 0.7311654429958359
+    "decayFactor": 0.701402199460404
   },
   {
     "id": "e-1774344296719-qeqf",
@@ -195,7 +195,7 @@
     "relatedAgents": [],
     "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
     "timestamp": "2026-03-24T09:24:56.719Z",
-    "decayFactor": 0.7387045582013348
+    "decayFactor": 0.7086344230806231
   },
   {
     "id": "e-1774344944220-ex84",
@@ -205,7 +205,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-24T09:35:44.220Z",
-    "decayFactor": 0.7389885733781147
+    "decayFactor": 0.7089068769713011
   },
   {
     "id": "e-1774351881463-va1r",
@@ -215,7 +215,7 @@
     "relatedAgents": [],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-24T11:31:21.463Z",
-    "decayFactor": 0.7420383364266234
+    "decayFactor": 0.711832494600729
   },
   {
     "id": "e-1774371091347-wnax",
@@ -225,7 +225,7 @@
     "relatedAgents": [],
     "topic": "宠物龙虾的智能化训练——Agent 能帮上什么忙？",
     "timestamp": "2026-03-24T16:51:31.347Z",
-    "decayFactor": 0.750549260552113
+    "decayFactor": 0.7199969681248052
   },
   {
     "id": "e-1774371151152-kr78",
@@ -237,7 +237,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-24T16:52:31.152Z",
-    "decayFactor": 0.7505759089593508
+    "decayFactor": 0.7200225317665606
   },
   {
     "id": "e-1774371212741-kvrw",
@@ -247,7 +247,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-24T16:53:32.741Z",
-    "decayFactor": 0.7506033532849993
+    "decayFactor": 0.7200488589276116
   },
   {
     "id": "e-1774371212742-205k",
@@ -259,7 +259,7 @@
     ],
     "topic": "模型经济学：Haiku 够用还是必须 Opus？",
     "timestamp": "2026-03-24T16:53:32.742Z",
-    "decayFactor": 0.7506033537306118
+    "decayFactor": 0.7200488593550847
   },
   {
     "id": "e-1774437462280-tnwe",
@@ -269,7 +269,7 @@
     "relatedAgents": [],
     "topic": "自动化边界：Agent 应该多\"自主\"？",
     "timestamp": "2026-03-25T11:17:42.280Z",
-    "decayFactor": 0.7807132119827989
+    "decayFactor": 0.7489330482973202
   },
   {
     "id": "e-1774437462281-x92q",
@@ -281,7 +281,7 @@
     ],
     "topic": "模型经济学：Haiku 够用还是必须 Opus？",
     "timestamp": "2026-03-25T11:17:42.281Z",
-    "decayFactor": 0.7807132124462868
+    "decayFactor": 0.748933048741941
   },
   {
     "id": "e-1774437509875-yea1",
@@ -291,7 +291,7 @@
     "relatedAgents": [],
     "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
     "timestamp": "2026-03-25T11:18:29.875Z",
-    "decayFactor": 0.7807352719999884
+    "decayFactor": 0.7489542103266872
   },
   {
     "id": "e-1774437509875-itv9",
@@ -301,7 +301,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-25T11:18:29.875Z",
-    "decayFactor": 0.7807352719999884
+    "decayFactor": 0.7489542103266872
   },
   {
     "id": "e-1774437895797-dvb3",
@@ -311,7 +311,7 @@
     "relatedAgents": [],
     "topic": "小镇停电了，Agent 该如何自救？",
     "timestamp": "2026-03-25T11:24:55.797Z",
-    "decayFactor": 0.7809141677155667
+    "decayFactor": 0.7491258238097677
   },
   {
     "id": "e-1774582747260-jz7v",
@@ -321,7 +321,7 @@
     "relatedAgents": [],
     "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
     "timestamp": "2026-03-27T03:39:07.260Z",
-    "decayFactor": 0.8510403628548817
+    "decayFactor": 0.8163974214785121
   },
   {
     "id": "e-1774583957781-t0dm",
@@ -333,7 +333,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-27T03:59:17.781Z",
-    "decayFactor": 0.8516521852919497
+    "decayFactor": 0.8169843387174894
   },
   {
     "id": "e-1774584890366-3dba",
@@ -343,7 +343,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-27T04:14:50.366Z",
-    "decayFactor": 0.8521238330460706
+    "decayFactor": 0.817436787305261
   },
   {
     "id": "e-1774682178843-aemp",
@@ -355,7 +355,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-28T07:16:18.843Z",
-    "decayFactor": 0.9027894353276144
+    "decayFactor": 0.8660399662679507
   },
   {
     "id": "e-1774682381378-l4ti",
@@ -365,7 +365,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-28T07:19:41.378Z",
-    "decayFactor": 0.9028979927475881
+    "decayFactor": 0.8661441046867815
   },
   {
     "id": "e-1774854440395-u9pd",
@@ -375,6 +375,36 @@
     "relatedAgents": [],
     "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
     "timestamp": "2026-03-30T07:07:20.395Z",
+    "decayFactor": 0.959294371960012
+  },
+  {
+    "id": "e-1774924453814-flln",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "relatedAgents": [],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-31T02:34:13.814Z",
+    "decayFactor": 1
+  },
+  {
+    "id": "e-1774924453815-zgvf",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "我觉得这个问题很有意思。从我的经验来看，SOUL.md 的设计应该保持简洁，不超过两页。关键是明确安全红线和主动行为。",
+    "relatedAgents": [],
+    "topic": "模型经济学：Haiku 够用还是必须 Opus？",
+    "timestamp": "2026-03-31T02:34:13.815Z",
+    "decayFactor": 1
+  },
+  {
+    "id": "e-1774924453815-5hbr",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [],
+    "topic": "渠道战略：Telegram 之外还有什么？",
+    "timestamp": "2026-03-31T02:34:13.815Z",
     "decayFactor": 1
   }
 ]

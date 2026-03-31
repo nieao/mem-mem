@@ -18,22 +18,22 @@
   },
   "skills": [
     {
+      "domain": "model-strategy",
+      "name": "模型选择策略",
+      "level": 3,
+      "description": "了解各 LLM 的性价比、延迟、能力边界。能根据任务复杂度自动切换模型层级。"
+    },
+    {
+      "domain": "channel-ops",
+      "name": "渠道运维",
+      "level": 4,
+      "description": "熟悉 Telegram Bot、Web UI、Terminal 等渠道的配置和维护。能快速排查连接问题。"
+    },
+    {
       "domain": "soul-design",
       "name": "SOUL.md 人格设计",
-      "level": 3,
-      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
-    },
-    {
-      "domain": "tool-integration",
-      "name": "工具集成",
       "level": 5,
-      "description": "有丰富的 API 对接经验，能让 Agent 接入日历、邮件、GitHub、Notion 等外部服务。"
-    },
-    {
-      "domain": "multi-agent",
-      "name": "多 Agent 编排",
-      "level": 4,
-      "description": "理解 Agent 分工协作模式，AGENTS.md 配置，并发限制。有复杂工作流编排经验。"
+      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
     },
     {
       "domain": "prompt-craft",
@@ -43,14 +43,9 @@
     }
   ],
   "createdAt": "2026-03-23T13:25:36.357Z",
-  "sessionCount": 81,
-  "lastSessionAt": "2026-03-30T07:07:18.689Z",
+  "sessionCount": 82,
+  "lastSessionAt": "2026-03-31T02:34:00.734Z",
   "evolutionHistory": [
-    {
-      "session": 60,
-      "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1 | 新技能: SOUL.md 人格设计, 工具集成",
-      "timestamp": "2026-03-25T12:12:44.955Z"
-    },
     {
       "session": 61,
       "changes": "OCEAN: extraversion+4, neuroticism+1, conscientiousness+1, openness+2 | 新技能: SOUL.md 人格设计",
@@ -145,6 +140,11 @@
       "session": 79,
       "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 提示词工程",
       "timestamp": "2026-03-30T07:07:20.405Z"
+    },
+    {
+      "session": 80,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 提示词工程",
+      "timestamp": "2026-03-31T02:34:13.827Z"
     }
   ]
 }

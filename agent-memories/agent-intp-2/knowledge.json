@@ -110,5 +110,21 @@
     "importance": 0.8,
     "createdAt": "2026-03-27T04:30:38.769Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774924453774-m81k",
+    "content": "对\"股市暴跌时 Agent 应该恐慌还是冷静？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.774Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774924453776-v84m",
+    "content": "对\"渠道战略：Telegram 之外还有什么？\"的反思：说到 Skill 编写，我发现很多人忽略了 description 字段的重要性。Agent 就是靠这个字段来决定何时调用 Skill 的。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.776Z",
+    "accessCount": 0
   }
 ]

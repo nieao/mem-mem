@@ -107,8 +107,9 @@
   {
     "id": "hb-1774854438742-1le",
     "title": "检查 SOUL.md 是否需要更新",
-    "status": "pending",
-    "createdAt": "2026-03-30T07:07:18.742Z"
+    "status": "done",
+    "createdAt": "2026-03-30T07:07:18.742Z",
+    "completedAt": "2026-03-31T02:34:14.673Z"
   },
   {
     "id": "hb-1774854438742-5dm",
@@ -121,5 +122,23 @@
     "title": "查看今日 Crucix 情报更新",
     "status": "pending",
     "createdAt": "2026-03-30T07:07:18.742Z"
+  },
+  {
+    "id": "hb-1774924440797-bad",
+    "title": "检查 Cron 任务执行记录",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.797Z"
+  },
+  {
+    "id": "hb-1774924440797-8em",
+    "title": "优化高频提示词模板",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.797Z"
+  },
+  {
+    "id": "hb-1774924440797-gen",
+    "title": "查看今日 Crucix 情报更新",
+    "status": "pending",
+    "createdAt": "2026-03-31T02:34:00.797Z"
   }
 ]

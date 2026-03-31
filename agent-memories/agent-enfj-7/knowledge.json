@@ -86,5 +86,21 @@
     "importance": 0.8,
     "createdAt": "2026-03-27T04:48:04.202Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774924453793-uveo",
+    "content": "对\"AI Agent 是否应该有情感？\"的反思：同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.793Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774924453794-b2w3",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.794Z",
+    "accessCount": 0
   }
 ]

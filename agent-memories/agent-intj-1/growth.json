@@ -2,7 +2,7 @@
   "agentId": "agent-intj-1",
   "level": 3,
   "totalXP": 555,
-  "discussionCount": 80,
+  "discussionCount": 81,
   "topicsDiscussed": [
     "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "龙虾屋里的 Agent 应该如何自我进化？",
@@ -31,7 +31,7 @@
     "周婉清": 3,
     "钱多多": 2,
     "韩冬青": 4,
-    "吴逆风": 2,
+    "吴逆风": 3,
     "冯一刀": 1
   },
   "skillXP": {
@@ -41,16 +41,16 @@
     "soul-design": 88,
     "memory-arch": 42,
     "security": 23,
-    "model-strategy": 68,
+    "model-strategy": 76,
     "channel-ops": 39,
     "automation": 23,
     "prompt-craft": 40
   },
   "oceanDrift": {
     "extraversion": 3,
-    "neuroticism": 9,
+    "neuroticism": 11,
     "conscientiousness": 2,
     "openness": 1,
-    "agreeableness": 2
+    "agreeableness": 1
   }
 }

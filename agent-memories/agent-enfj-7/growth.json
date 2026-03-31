@@ -1,8 +1,8 @@
 {
   "agentId": "agent-enfj-7",
-  "level": 3,
-  "totalXP": 560,
-  "discussionCount": 79,
+  "level": 4,
+  "totalXP": 720,
+  "discussionCount": 80,
   "topicsDiscussed": [
     "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "龙虾屋里的 Agent 应该如何自我进化？",
@@ -22,30 +22,33 @@
     "陈策": 1,
     "郑梦溪": 1,
     "邓如是": 2,
-    "韩冬青": 2,
+    "韩冬青": 3,
     "钱多多": 1,
     "秦九章": 1,
     "林微": 1,
     "沈默然": 2,
     "王诗涵": 1,
     "曹破晓": 1,
-    "何以归": 1
+    "何以归": 1,
+    "许清河": 2,
+    "谢长安": 1,
+    "赵铁柱": 1
   },
   "skillXP": {
-    "skill-authoring": 25,
+    "skill-authoring": 35,
     "multi-agent": 20,
     "tool-integration": 14,
-    "soul-design": 68,
+    "soul-design": 78,
     "memory-arch": 26,
-    "security": 35,
-    "model-strategy": 40,
+    "security": 40,
+    "model-strategy": 59,
     "channel-ops": 33,
     "automation": 15,
-    "prompt-craft": 65
+    "prompt-craft": 95
   },
   "oceanDrift": {
-    "extraversion": 7,
-    "neuroticism": 9,
+    "extraversion": 9,
+    "neuroticism": 11,
     "conscientiousness": 2,
     "openness": 1,
     "agreeableness": 2

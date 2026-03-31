@@ -1,15 +1,16 @@
 {
   "agentId": "agent-infp-6",
   "level": 3,
-  "totalXP": 305,
-  "discussionCount": 79,
+  "totalXP": 355,
+  "discussionCount": 80,
   "topicsDiscussed": [
     "龙虾屋里的 Agent 应该如何自我进化？",
     "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "AI Agent 是否应该有情感？",
     "远程办公时代，Agent 需要物理形体吗？",
-    "记忆的战争：Agent 应该记住什么，忘记什么？"
+    "记忆的战争：Agent 应该记住什么，忘记什么？",
+    "股市暴跌时 Agent 应该恐慌还是冷静？"
   ],
   "insightsGenerated": 0,
   "relationships": {
@@ -23,25 +24,27 @@
     "陈策": 1,
     "秦九章": 1,
     "邓如是": 1,
-    "赵铁柱": 1
+    "赵铁柱": 1,
+    "何以归": 1,
+    "许清河": 1
   },
   "skillXP": {
     "soul-design": 59,
     "memory-arch": 30,
-    "security": 29,
-    "model-strategy": 30,
+    "security": 38,
+    "model-strategy": 35,
     "skill-authoring": 5,
     "multi-agent": 25,
     "channel-ops": 31,
     "automation": 18,
     "tool-integration": 21,
-    "prompt-craft": 45
+    "prompt-craft": 55
   },
   "oceanDrift": {
-    "extraversion": 7,
-    "neuroticism": 9,
+    "extraversion": 8,
+    "neuroticism": 11,
     "conscientiousness": 2,
     "openness": 1,
-    "agreeableness": 2
+    "agreeableness": 1
   }
 }

@@ -5,10 +5,10 @@
   "personality": {
     "mbti": "ESTP",
     "ocean": {
-      "openness": 77,
-      "conscientiousness": 64,
+      "openness": 78,
+      "conscientiousness": 66,
       "extraversion": 100,
-      "agreeableness": 69,
+      "agreeableness": 71,
       "neuroticism": 100
     },
     "archetype": "行动派冒险家",
@@ -18,16 +18,22 @@
   },
   "skills": [
     {
+      "domain": "multi-agent",
+      "name": "多 Agent 编排",
+      "level": 2,
+      "description": "理解 Agent 分工协作模式，AGENTS.md 配置，并发限制。有复杂工作流编排经验。"
+    },
+    {
       "domain": "soul-design",
       "name": "SOUL.md 人格设计",
       "level": 4,
       "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
     },
     {
-      "domain": "memory-arch",
-      "name": "记忆系统架构",
-      "level": 5,
-      "description": "精通三层记忆模型（短期/中期/长期），向量检索，知识蒸馏。理解记忆对 Agent 智能的决定性作用。"
+      "domain": "skill-authoring",
+      "name": "Skill 编写专家",
+      "level": 3,
+      "description": "精通 SKILL.md 规范，知道如何写出让 Agent 能准确触发的 description。有丰富的脚本集成经验。"
     },
     {
       "domain": "security",
@@ -39,24 +45,13 @@
       "domain": "model-strategy",
       "name": "模型选择策略",
       "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 45）"
-    },
-    {
-      "domain": "multi-agent",
-      "name": "多 Agent 编排",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 30）"
+      "description": "通过讨论和实践习得的新技能（XP: 50）"
     }
   ],
   "createdAt": "2026-03-23T13:25:36.385Z",
-  "sessionCount": 81,
-  "lastSessionAt": "2026-03-30T07:07:18.717Z",
+  "sessionCount": 82,
+  "lastSessionAt": "2026-03-31T02:34:00.766Z",
   "evolutionHistory": [
-    {
-      "session": 60,
-      "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1 | 新技能: SOUL.md 人格设计, 安全与权限管理, 提示词工程",
-      "timestamp": "2026-03-25T12:12:44.968Z"
-    },
     {
       "session": 61,
       "changes": "OCEAN: extraversion+4, neuroticism+1, conscientiousness+1, openness+2 | 新技能: 安全与权限管理, 自动化与定时任务, 提示词工程",
@@ -151,6 +146,11 @@
       "session": 79,
       "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 安全与权限管理, 模型选择策略, 多 Agent 编排",
       "timestamp": "2026-03-30T07:07:20.417Z"
+    },
+    {
+      "session": 80,
+      "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 安全与权限管理, 模型选择策略",
+      "timestamp": "2026-03-31T02:34:13.844Z"
     }
   ]
 }

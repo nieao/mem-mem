@@ -5,7 +5,7 @@
   "personality": {
     "mbti": "ENFJ",
     "ocean": {
-      "openness": 94,
+      "openness": 95,
       "conscientiousness": 100,
       "extraversion": 100,
       "agreeableness": 100,
@@ -18,45 +18,40 @@
   },
   "skills": [
     {
+      "domain": "tool-integration",
+      "name": "工具集成",
+      "level": 2,
+      "description": "有丰富的 API 对接经验，能让 Agent 接入日历、邮件、GitHub、Notion 等外部服务。"
+    },
+    {
+      "domain": "prompt-craft",
+      "name": "提示词工程",
+      "level": 4,
+      "description": "深谙 prompt 技巧，能用精巧的系统提示让小模型发挥大模型的效果。理解上下文窗口管理。"
+    },
+    {
       "domain": "soul-design",
       "name": "SOUL.md 人格设计",
-      "level": 2,
-      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
+      "level": 1,
+      "description": "通过讨论和实践习得的新技能（XP: 67）"
     },
     {
-      "domain": "model-strategy",
-      "name": "模型选择策略",
-      "level": 4,
-      "description": "了解各 LLM 的性价比、延迟、能力边界。能根据任务复杂度自动切换模型层级。"
-    },
-    {
-      "domain": "multi-agent",
-      "name": "多 Agent 编排",
-      "level": 5,
-      "description": "理解 Agent 分工协作模式，AGENTS.md 配置，并发限制。有复杂工作流编排经验。"
+      "domain": "memory-arch",
+      "name": "记忆系统架构",
+      "level": 1,
+      "description": "通过讨论和实践习得的新技能（XP: 33）"
     },
     {
       "domain": "security",
       "name": "安全与权限管理",
       "level": 1,
       "description": "通过讨论和实践习得的新技能（XP: 53）"
-    },
-    {
-      "domain": "automation",
-      "name": "自动化与定时任务",
-      "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 60）"
     }
   ],
   "createdAt": "2026-03-23T13:25:36.397Z",
-  "sessionCount": 81,
-  "lastSessionAt": "2026-03-30T07:07:18.728Z",
+  "sessionCount": 82,
+  "lastSessionAt": "2026-03-31T02:34:00.780Z",
   "evolutionHistory": [
-    {
-      "session": 60,
-      "changes": "OCEAN: extraversion+3, neuroticism+1, conscientiousness+1 | 新技能: 提示词工程",
-      "timestamp": "2026-03-25T12:12:44.973Z"
-    },
     {
       "session": 61,
       "changes": "OCEAN: extraversion+4, neuroticism+1, conscientiousness+1, openness+2 | 新技能: SOUL.md 人格设计, 模型选择策略, 工具集成",
@@ -151,6 +146,11 @@
       "session": 79,
       "changes": "OCEAN: extraversion+6, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 安全与权限管理, 自动化与定时任务",
       "timestamp": "2026-03-30T07:07:20.422Z"
+    },
+    {
+      "session": 80,
+      "changes": "OCEAN: extraversion+7, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: SOUL.md 人格设计, 记忆系统架构, 安全与权限管理",
+      "timestamp": "2026-03-31T02:34:13.851Z"
     }
   ]
 }

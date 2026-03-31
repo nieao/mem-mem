@@ -134,5 +134,21 @@
     "importance": 0.8,
     "createdAt": "2026-03-30T07:07:20.387Z",
     "accessCount": 0
+  },
+  {
+    "id": "k-1774924453781-4os6",
+    "content": "对\"模型经济学：Haiku 够用还是必须 Opus？\"的反思：自动化不仅仅是 Cron 任务。Heartbeat 机制让 Agent 能主动检查待办，这才是真正的\"自主\"。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.781Z",
+    "accessCount": 0
+  },
+  {
+    "id": "k-1774924453782-3jas",
+    "content": "对\"渠道战略：Telegram 之外还有什么？\"的反思：多 Agent 编排是个深水区。我建议先从单 Agent + 多 Skill 开始，等稳定了再扩展到多 Agent 协作。",
+    "source": "讨论反思",
+    "importance": 0.8,
+    "createdAt": "2026-03-31T02:34:13.782Z",
+    "accessCount": 0
   }
 ]

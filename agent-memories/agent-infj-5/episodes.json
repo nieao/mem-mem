@@ -9,7 +9,7 @@
     ],
     "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
     "timestamp": "2026-03-23T13:26:14.694Z",
-    "decayFactor": 0.7078271716633819
+    "decayFactor": 0.6790139521248554
   },
   {
     "id": "e-1774272462182-pjgn",
@@ -21,7 +21,7 @@
     ],
     "topic": "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "timestamp": "2026-03-23T13:27:42.182Z",
-    "decayFactor": 0.7078639366022195
+    "decayFactor": 0.679049220488969
   },
   {
     "id": "e-1774273293303-4mv0",
@@ -31,7 +31,7 @@
     "relatedAgents": [],
     "topic": "龙虾屋里的 Agent 应该如何自我进化？",
     "timestamp": "2026-03-23T13:41:33.303Z",
-    "decayFactor": 0.7082132924693678
+    "decayFactor": 0.6793843552754635
   },
   {
     "id": "e-1774278273087-bcqy",
@@ -41,7 +41,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T15:04:33.087Z",
-    "decayFactor": 0.7103101240723602
+    "decayFactor": 0.68139583204647
   },
   {
     "id": "e-1774278273087-cup1",
@@ -53,7 +53,7 @@
     ],
     "topic": "渠道战略：Telegram 之外还有什么？",
     "timestamp": "2026-03-23T15:04:33.087Z",
-    "decayFactor": 0.7103101240723602
+    "decayFactor": 0.68139583204647
   },
   {
     "id": "e-1774367240897-ykth",
@@ -63,7 +63,7 @@
     "relatedAgents": [],
     "topic": "比特币突破 87000 美元，Agent 该追涨还是观望？",
     "timestamp": "2026-03-24T15:47:20.898Z",
-    "decayFactor": 0.7488355515099016
+    "decayFactor": 0.7183530212995901
   },
   {
     "id": "e-1774437462263-st3z",
@@ -73,7 +73,7 @@
     "relatedAgents": [],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:17:42.263Z",
-    "decayFactor": 0.7807132207890687
+    "decayFactor": 0.748933059857463
   },
   {
     "id": "e-1774437462263-gsej",
@@ -83,7 +83,7 @@
     "relatedAgents": [],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-25T11:17:42.263Z",
-    "decayFactor": 0.7807132207890687
+    "decayFactor": 0.748933059857463
   },
   {
     "id": "e-1774437462264-ko68",
@@ -93,7 +93,7 @@
     "relatedAgents": [],
     "topic": "自动化边界：Agent 应该多\"自主\"？",
     "timestamp": "2026-03-25T11:17:42.264Z",
-    "decayFactor": 0.7807132212525565
+    "decayFactor": 0.7489330603020838
   },
   {
     "id": "e-1774437509859-toju",
@@ -103,7 +103,7 @@
     "relatedAgents": [],
     "topic": "记忆的战争：Agent 应该记住什么，忘记什么？",
     "timestamp": "2026-03-25T11:18:29.859Z",
-    "decayFactor": 0.7807352812700079
+    "decayFactor": 0.74895422233179
   },
   {
     "id": "e-1774437509859-h157",
@@ -115,7 +115,7 @@
     ],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-25T11:18:29.859Z",
-    "decayFactor": 0.7807352812700079
+    "decayFactor": 0.74895422233179
   },
   {
     "id": "e-1774437509860-zwov",
@@ -127,7 +127,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:18:29.860Z",
-    "decayFactor": 0.7807352817335088
+    "decayFactor": 0.7489542227764234
   },
   {
     "id": "e-1774583273950-ta71",
@@ -137,7 +137,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-27T03:47:53.950Z",
-    "decayFactor": 0.8513065270723398
+    "decayFactor": 0.8166527544551154
   },
   {
     "id": "e-1774583640180-kyuf",
@@ -147,7 +147,7 @@
     "relatedAgents": [],
     "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
     "timestamp": "2026-03-27T03:54:00.180Z",
-    "decayFactor": 0.8514916388042075
+    "decayFactor": 0.8168303309224679
   },
   {
     "id": "e-1774585064220-1af5",
@@ -157,6 +157,28 @@
     "relatedAgents": [],
     "topic": "数字人民币普及后 Agent 能自己花钱吗？",
     "timestamp": "2026-03-27T04:17:44.220Z",
-    "decayFactor": 0.8522118054759047
+    "decayFactor": 0.8175211820758486
+  },
+  {
+    "id": "e-1774924453787-d6bg",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "同意前面的观点，但我想补充一点：模型选择策略同样重要。日常任务用 Sonnet 就够了，只有处理外部输入时才需要升级到 Opus。",
+    "relatedAgents": [
+      "曹破晓"
+    ],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-31T02:34:13.787Z",
+    "decayFactor": 1
+  },
+  {
+    "id": "e-1774924453787-xv9w",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "工具集成要遵循最小权限原则。每周逐步扩展权限，就像培训新员工一样。",
+    "relatedAgents": [],
+    "topic": "渠道战略：Telegram 之外还有什么？",
+    "timestamp": "2026-03-31T02:34:13.787Z",
+    "decayFactor": 1
   }
 ]

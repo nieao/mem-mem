@@ -7,7 +7,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T13:25:37.501Z",
-    "decayFactor": 0.7078115321831892
+    "decayFactor": 0.6789989472588145
   },
   {
     "id": "e-1774276299798-6bcp",
@@ -17,7 +17,7 @@
     "relatedAgents": [],
     "topic": "SOUL.md 的灵魂拷问：如何设计一个有\"人味\"的 Agent？",
     "timestamp": "2026-03-23T14:31:39.798Z",
-    "decayFactor": 0.7094784815462999
+    "decayFactor": 0.6805980408186423
   },
   {
     "id": "e-1774278420723-yy5s",
@@ -29,7 +29,7 @@
     ],
     "topic": "多 Agent 混战：协作还是灾难？",
     "timestamp": "2026-03-23T15:07:00.723Z",
-    "decayFactor": 0.7103723731050452
+    "decayFactor": 0.681455545111458
   },
   {
     "id": "e-1774279180675-p4io",
@@ -41,7 +41,7 @@
     ],
     "topic": "安全偏执狂 vs 效率至上：权限边界在哪里？",
     "timestamp": "2026-03-23T15:19:40.675Z",
-    "decayFactor": 0.7106929388026213
+    "decayFactor": 0.6817630616766518
   },
   {
     "id": "e-1774279333372-bg2p",
@@ -51,7 +51,7 @@
     "relatedAgents": [],
     "topic": "Skill 生态：Agent 的\"超能力\"怎么设计？",
     "timestamp": "2026-03-23T15:22:13.372Z",
-    "decayFactor": 0.7107573674540016
+    "decayFactor": 0.6818248676581474
   },
   {
     "id": "e-1774345590627-0hqu",
@@ -61,7 +61,7 @@
     "relatedAgents": [],
     "topic": "龙虾经济学：如何用最小成本养最聪明的龙虾？",
     "timestamp": "2026-03-24T09:46:30.627Z",
-    "decayFactor": 0.7392722224391431
+    "decayFactor": 0.7091789804915872
   },
   {
     "id": "e-1774437462276-gjga",
@@ -73,7 +73,7 @@
     ],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:17:42.276Z",
-    "decayFactor": 0.780713215227214
+    "decayFactor": 0.748933052298908
   },
   {
     "id": "e-1774437462277-gkhd",
@@ -83,7 +83,7 @@
     "relatedAgents": [],
     "topic": "远程办公时代，Agent 需要物理形体吗？",
     "timestamp": "2026-03-25T11:17:42.277Z",
-    "decayFactor": 0.780713215690702
+    "decayFactor": 0.748933052743529
   },
   {
     "id": "e-1774438317019-wo85",
@@ -93,7 +93,7 @@
     "relatedAgents": [],
     "topic": "AI Agent 是否应该有情感？",
     "timestamp": "2026-03-25T11:31:57.019Z",
-    "decayFactor": 0.7811094787786774
+    "decayFactor": 0.7493131853174402
   },
   {
     "id": "e-1774438940924-30op",
@@ -103,7 +103,7 @@
     "relatedAgents": [],
     "topic": "国产大模型超越 GPT-4 意味着什么？",
     "timestamp": "2026-03-25T11:42:20.924Z",
-    "decayFactor": 0.7813988515460156
+    "decayFactor": 0.7495907787098253
   },
   {
     "id": "e-1774583285882-gm4g",
@@ -113,6 +113,30 @@
     "relatedAgents": [],
     "topic": "新能源发电占比突破 35%，对 Agent 有什么影响？",
     "timestamp": "2026-03-27T03:48:05.882Z",
-    "decayFactor": 0.8513125448578254
+    "decayFactor": 0.8166585248530293
+  },
+  {
+    "id": "e-1774924453806-odjw",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "relatedAgents": [
+      "周婉清"
+    ],
+    "topic": "股市暴跌时 Agent 应该恐慌还是冷静？",
+    "timestamp": "2026-03-31T02:34:13.806Z",
+    "decayFactor": 1
+  },
+  {
+    "id": "e-1774924453807-7e98",
+    "sessionId": "s-1774924440717",
+    "type": "utterance",
+    "content": "提示词工程在 OpenClaw 中被低估了。一个好的系统提示可以让 Haiku 模型表现得像 Sonnet。",
+    "relatedAgents": [
+      "韩冬青"
+    ],
+    "topic": "AI Agent 是否应该有情感？",
+    "timestamp": "2026-03-31T02:34:13.807Z",
+    "decayFactor": 1
   }
 ]

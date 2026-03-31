@@ -6,7 +6,7 @@
     "mbti": "INFP",
     "ocean": {
       "openness": 100,
-      "conscientiousness": 79,
+      "conscientiousness": 81,
       "extraversion": 100,
       "agreeableness": 100,
       "neuroticism": 100
@@ -18,16 +18,16 @@
   },
   "skills": [
     {
-      "domain": "soul-design",
-      "name": "SOUL.md 人格设计",
-      "level": 4,
-      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
+      "domain": "security",
+      "name": "安全与权限管理",
+      "level": 5,
+      "description": "安全意识极强，熟悉最小权限原则、Docker 隔离、Token 轮换。对提示注入攻击高度敏感。"
     },
     {
-      "domain": "prompt-craft",
-      "name": "提示词工程",
-      "level": 3,
-      "description": "深谙 prompt 技巧，能用精巧的系统提示让小模型发挥大模型的效果。理解上下文窗口管理。"
+      "domain": "soul-design",
+      "name": "SOUL.md 人格设计",
+      "level": 2,
+      "description": "擅长设计 Agent 人格、价值观体系、行为边界。能写出让 Agent \"活起来\"的 SOUL.md。"
     },
     {
       "domain": "memory-arch",
@@ -39,7 +39,7 @@
       "domain": "model-strategy",
       "name": "模型选择策略",
       "level": 1,
-      "description": "通过讨论和实践习得的新技能（XP: 30）"
+      "description": "通过讨论和实践习得的新技能（XP: 35）"
     },
     {
       "domain": "channel-ops",
@@ -49,14 +49,9 @@
     }
   ],
   "createdAt": "2026-03-23T13:25:36.360Z",
-  "sessionCount": 81,
-  "lastSessionAt": "2026-03-30T07:07:18.692Z",
+  "sessionCount": 82,
+  "lastSessionAt": "2026-03-31T02:34:00.737Z",
   "evolutionHistory": [
-    {
-      "session": 60,
-      "changes": "OCEAN: extraversion+4, neuroticism+1, conscientiousness+1 | 新技能: SOUL.md 人格设计, 模型选择策略, 提示词工程",
-      "timestamp": "2026-03-25T12:12:44.956Z"
-    },
     {
       "session": 61,
       "changes": "OCEAN: extraversion+5, neuroticism+1, conscientiousness+1, openness+2",
@@ -151,6 +146,11 @@
       "session": 79,
       "changes": "OCEAN: extraversion+7, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 记忆系统架构, 模型选择策略, 渠道运维",
       "timestamp": "2026-03-30T07:07:20.406Z"
+    },
+    {
+      "session": 80,
+      "changes": "OCEAN: extraversion+7, neuroticism+9, conscientiousness+2, openness+1, agreeableness+2 | 新技能: 记忆系统架构, 模型选择策略, 渠道运维",
+      "timestamp": "2026-03-31T02:34:13.829Z"
     }
   ]
 }
