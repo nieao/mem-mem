@@ -1,0 +1,66 @@
+name: 插件安全检查
+
+on:
+  pull_request:
+    paths:
+      - 'plugins/**'
+
+jobs:
+  check-plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 检查修改的插件
+        run: |
+          # 找到本次 PR 修改的插件目录
+          CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD -- plugins/ | cut -d'/' -f2 | sort -u)
+          echo "修改的插件: $CHANGED"
+
+          if [ -z "$CHANGED" ]; then
+            echo "没有插件变更"
+            exit 0
+          fi
+
+          FAILED=0
+          for plugin in $CHANGED; do
+            if [ -d "plugins/$plugin" ] && [ "$plugin" != ".template" ]; then
+              echo ""
+              echo "========== 检查 $plugin =========="
+              bun run scripts/check-plugin.ts "plugins/$plugin" || FAILED=1
+            fi
+          done
+
+          if [ $FAILED -eq 1 ]; then
+            echo ""
+            echo "❌ 插件安全检查未通过"
+            exit 1
+          fi
+
+      - name: 添加检查结果评论
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            try {
+              const result = execSync('bun run scripts/check-plugin.ts --all 2>&1', { encoding: 'utf-8', timeout: 30000 });
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: '## 🔍 插件安全检查结果\n\n```\n' + result + '\n```\n\n> 自动检查由 CI 运行'
+              });
+            } catch (e) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: '## ❌ 插件安全检查失败\n\n```\n' + (e.stdout || e.message) + '\n```\n\n请修复上述问题后重新提交。'
+              });
+            }

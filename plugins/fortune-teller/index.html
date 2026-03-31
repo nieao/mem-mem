@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>龙虾占卜</title>
+<script src="/sdk/plugin-sdk.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    background: #1a1a2e; color: #e0d8f0;
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh; padding: 32px 24px;
+  }
+
+  .header {
+    text-align: center; margin-bottom: 40px;
+  }
+  .header h1 {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1.8rem; color: #d4a8e8; letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .header .sub {
+    font-size: 0.78rem; color: #8878a8; letter-spacing: 0.2em;
+  }
+  .header .balance {
+    margin-top: 12px; font-size: 0.85rem; color: #c8a882;
+  }
+
+  .crystal-ball {
+    width: 160px; height: 160px; border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #6a4a8a, #2a1a3e 70%);
+    box-shadow: 0 0 40px rgba(106, 74, 138, 0.4), inset 0 0 30px rgba(200, 168, 130, 0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem; margin-bottom: 32px;
+    animation: glow 4s ease-in-out infinite;
+    cursor: pointer; transition: transform 0.3s;
+  }
+  .crystal-ball:hover { transform: scale(1.05); }
+  .crystal-ball.spinning {
+    animation: spin 1.5s linear infinite, glow 4s ease-in-out infinite;
+  }
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 40px rgba(106, 74, 138, 0.4); }
+    50% { box-shadow: 0 0 60px rgba(106, 74, 138, 0.7), 0 0 80px rgba(200, 168, 130, 0.2); }
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .divination-area {
+    width: 100%; max-width: 420px; text-align: center;
+  }
+
+  .btn {
+    padding: 14px 40px; border: 1px solid #6a4a8a;
+    background: transparent; color: #d4a8e8; cursor: pointer;
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    font-size: 0.9rem; letter-spacing: 0.15em;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn:hover:not(:disabled) {
+    background: #6a4a8a; color: #fafafa;
+    box-shadow: 0 0 20px rgba(106, 74, 138, 0.5);
+  }
+  .btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  .cost-hint {
+    margin-top: 12px; font-size: 0.72rem; color: #5a4a6a;
+  }
+
+  .fortune-card {
+    width: 100%; max-width: 420px; margin-top: 32px;
+    border: 1px solid #3a2a4e; padding: 32px 28px;
+    background: rgba(42, 26, 62, 0.6);
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fortune-card.show {
+    opacity: 1; transform: translateY(0);
+  }
+
+  .fortune-card .date {
+    font-size: 0.72rem; letter-spacing: 0.35em; color: #8878a8;
+    margin-bottom: 16px;
+  }
+
+  .fortune-text {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1rem; line-height: 1.8; color: #e0d8f0;
+    margin-bottom: 24px; text-align: left;
+  }
+
+  .stars-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .star-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(106, 74, 138, 0.2);
+  }
+  .star-label {
+    font-size: 0.82rem; color: #8878a8;
+  }
+  .star-value {
+    font-size: 0.85rem; color: #c8a882;
+    letter-spacing: 2px;
+  }
+
+  .lucky-item {
+    margin-top: 20px; padding-top: 16px;
+    border-top: 1px solid rgba(106, 74, 138, 0.3);
+    font-size: 0.82rem; color: #8878a8; text-align: left;
+  }
+  .lucky-item span { color: #d4a8e8; }
+
+  .already-done {
+    margin-top: 24px; font-size: 0.85rem; color: #5a4a6a;
+    text-align: center;
+  }
+
+  .loading-text {
+    font-size: 0.85rem; color: #8878a8; margin-top: 16px;
+    animation: blink 1.5s ease-in-out infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔮 龙虾占卜</h1>
+  <div class="sub">龙虾仙人为你指引方向</div>
+  <div class="balance" id="balance"></div>
+</div>
+
+<div class="crystal-ball" id="crystalBall" onclick="startDivination()">
+  🔮
+</div>
+
+<div class="divination-area" id="divinationArea">
+  <button class="btn" id="divinateBtn" onclick="startDivination()">开始占卜</button>
+  <div class="cost-hint">消耗 20 Token</div>
+  <div class="loading-text" id="loadingText" style="display:none">龙虾仙人正在凝视水晶球...</div>
+</div>
+
+<div class="fortune-card" id="fortuneCard">
+  <div class="date" id="fortuneDate"></div>
+  <div class="fortune-text" id="fortuneText"></div>
+  <div class="stars-grid" id="starsGrid"></div>
+  <div class="lucky-item" id="luckyItem"></div>
+</div>
+
+<script>
+  var today = new Date().toISOString().slice(0, 10);
+  var dimensions = ['财运', '爱情', '事业', '健康'];
+
+  async function init() {
+    try {
+      await LobsterSDK.getCurrentUser();
+      updateBalance();
+      await checkTodayFortune();
+    } catch(e) {
+      document.getElementById('balance').textContent = '请先登录小镇';
+    }
+  }
+
+  async function updateBalance() {
+    try {
+      var bal = await LobsterSDK.getBalance();
+      document.getElementById('balance').textContent = 'Token 余额: ' + bal;
+    } catch(e) {}
+  }
+
+  async function checkTodayFortune() {
+    try {
+      var fortune = await LobsterSDK.getData('fortune_' + today);
+      if (fortune) {
+        renderFortune(fortune);
+        document.getElementById('divinateBtn').disabled = true;
+        document.getElementById('divinateBtn').textContent = '今日已占卜';
+      }
+    } catch(e) {}
+  }
+
+  async function startDivination() {
+    var btn = document.getElementById('divinateBtn');
+    if (btn.disabled) return;
+
+    btn.disabled = true;
+    var ball = document.getElementById('crystalBall');
+    var loading = document.getElementById('loadingText');
+    ball.classList.add('spinning');
+    loading.style.display = 'block';
+
+    // 扣费
+    try {
+      await LobsterSDK.deductTokens(20, '龙虾占卜');
+    } catch(e) {
+      btn.disabled = false;
+      ball.classList.remove('spinning');
+      loading.style.display = 'none';
+      loading.textContent = 'Token 不足，仙人也要吃饭的...';
+      loading.style.display = 'block';
+      setTimeout(function() { loading.style.display = 'none'; }, 2000);
+      return;
+    }
+    await updateBalance();
+
+    // 调用 LLM 生成运势
+    var fortune = null;
+    try {
+      var prompt = '你是龙虾仙人，请为用户占卜今日运势。要求：' +
+        '1. 用诗意优雅的语言写 2-3 句总运势描述（50字以内）；' +
+        '2. 给出财运、爱情、事业、健康各 1-5 的星级评分；' +
+        '3. 给出今日幸运物品。' +
+        '请严格按以下 JSON 格式返回（不要其他文字）：' +
+        '{"text":"总运势描述","stars":{"财运":3,"爱情":4,"事业":5,"健康":4},"lucky":"幸运物品名"}';
+
+      var result = await LobsterSDK.callLLM(prompt, 300);
+      // 尝试解析 JSON
+      var jsonMatch = result.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        fortune = JSON.parse(jsonMatch[0]);
+      }
+    } catch(e) {}
+
+    // 兜底：LLM 失败时随机生成
+    if (!fortune || !fortune.text || !fortune.stars) {
+      var texts = [
+        '今日紫气东来，宜大胆前行，龙虾仙人护佑你左右。',
+        '水波不兴之日，静守本心，好运自会来敲门。',
+        '潮汐转换之际，旧事将了，新缘将至，且行且珍惜。',
+        '今日灵感如泉涌，适合创造，不宜争论，以柔克刚。',
+        '风平浪静，适合沉淀与反思，明日将迎来转机。',
+      ];
+      var luckyItems = ['金色贝壳', '海星胸针', '珊瑚手链', '珍珠耳环', '蓝色水晶', '鲸鱼挂件'];
+      fortune = {
+        text: texts[Math.floor(Math.random() * texts.length)],
+        stars: {},
+        lucky: luckyItems[Math.floor(Math.random() * luckyItems.length)]
+      };
+      dimensions.forEach(function(d) {
+        fortune.stars[d] = Math.floor(Math.random() * 5) + 1;
+      });
+    }
+
+    // 保存
+    await LobsterSDK.setData('fortune_' + today, fortune);
+
+    ball.classList.remove('spinning');
+    loading.style.display = 'none';
+    btn.textContent = '今日已占卜';
+
+    renderFortune(fortune);
+  }
+
+  function renderFortune(fortune) {
+    var card = document.getElementById('fortuneCard');
+    document.getElementById('fortuneDate').textContent = today.replace(/-/g, ' / ') + ' 运势';
+    document.getElementById('fortuneText').textContent = fortune.text;
+
+    var grid = document.getElementById('starsGrid');
+    grid.innerHTML = dimensions.map(function(d) {
+      var score = (fortune.stars && fortune.stars[d]) || 3;
+      var starStr = '';
+      for (var i = 0; i < 5; i++) {
+        starStr += i < score ? '★' : '☆';
+      }
+      return '<div class="star-item">' +
+        '<span class="star-label">' + d + '</span>' +
+        '<span class="star-value">' + starStr + '</span>' +
+      '</div>';
+    }).join('');
+
+    document.getElementById('luckyItem').innerHTML =
+      '今日幸运物: <span>' + (fortune.lucky || '神秘宝物') + '</span>';
+
+    card.classList.add('show');
+  }
+
+  init();
+</script>
+</body>
+</html>

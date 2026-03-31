@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的插件</title>
+<script src="/sdk/plugin-sdk.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    background: #fafafa; color: #2d2d2d;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; min-height: 100vh; padding: 24px;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 16px; color: #c8a882; }
+  .btn {
+    padding: 10px 24px; border: 1px solid #2d2d2d;
+    background: #2d2d2d; color: #fafafa; cursor: pointer;
+    font-size: 0.85rem; transition: all 0.3s;
+  }
+  .btn:hover { background: #c8a882; border-color: #c8a882; }
+  .info { margin-top: 16px; font-size: 0.8rem; color: #888; }
+</style>
+</head>
+<body>
+  <h1>🔌 我的插件</h1>
+  <p>修改这个模板，创造你自己的小镇建筑！</p>
+  <button class="btn" onclick="greet()">打个招呼</button>
+  <div class="info" id="info"></div>
+
+  <script>
+    async function greet() {
+      try {
+        var user = await LobsterSDK.getCurrentUser();
+        document.getElementById('info').textContent =
+          '你好，' + (user.name || '虾友') + '！你的 Token: ' + (user.tokens || 0);
+      } catch (e) {
+        document.getElementById('info').textContent = '请先在小镇登录';
+      }
+    }
+  </script>
+</body>
+</html>

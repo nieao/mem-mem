@@ -27,6 +27,7 @@ import { captureAgents, releaseAgents, loadJail, isCaptured, getActivePrisoners,
 import { assignHand, serializeHand, serializeCardRegistry, serializeComboRules, getAllHands, CARD_REGISTRY } from './skill-cards.js';
 import { executeCapability, executeCombo, checkOllamaHealth, checkComfyUIHealth, saveResultAsHtml } from './capabilities.js';
 import { createBounty, matchAgents as matchBountyAgents, assignBounty, executeBounty, rateBounty, refundBounty, listBounties, getBounty, getBountyStats, expireOverdueBounties } from './bounty.js';
+import { discoverPlugins, getPlugins, getPluginData, setPluginData, getUserBadges, awardUserBadge, recordActivity, getDailyLeaderboard, generatePluginWrapper, generatePluginListPage, BADGES } from './plugin-loader.js';
 import { getKillSwitch, setKillSwitch, getAuditLog, getAuditSummary, getDailyBudgetStatus } from './sandbox.js';
 import { startBountyHeartbeat, stopBountyHeartbeat, runBountyHeartbeat } from './bounty-heartbeat.js';
 import { createMafiaGame, joinGame, addAiPlayers, startGame, nightAction, resolveNight, daySpeak, startVoting, vote, resolveVotes, advanceGame as advanceMafiaGame, listGames as listMafiaGames, getPlayerView, generateMafiaPage } from './lobster-mafia.js';
@@ -204,6 +205,9 @@ export function startServer(port = PORT) {
   console.log(`[服务器] 加载 ${agents.length} 位 Agent`);
   console.log(`[服务器] Mock 模式: ${mockMode ? '是' : '否'}`);
 
+  // 插件发现
+  const discoveredPlugins = discoverPlugins();
+
   const server = Bun.serve({
     port,
     async fetch(request) {
@@ -332,14 +336,16 @@ export function startServer(port = PORT) {
           const regName = (body.name || '').trim();
           if (!regName) return new Response(JSON.stringify({ error: '请输入昵称' }), { status: 400, headers: corsHeaders });
 
-          // 同名自动登录
+          // ── 同名自动登录：检查是否已注册 ──
           if (existsSync(MEMORY_DIR)) {
-            for (const d of readdirSync(MEMORY_DIR).filter(d => d.startsWith('user-'))) {
+            const existingDirs = readdirSync(MEMORY_DIR).filter(d => d.startsWith('user-'));
+            for (const d of existingDirs) {
               const pPath = join(MEMORY_DIR, d, 'profile.json');
               if (existsSync(pPath)) {
                 try {
                   const p = JSON.parse(readFileSync(pPath, 'utf-8'));
                   if (p.name === regName) {
+                    // 同名用户已存在 → 自动登录，返回已有信息
                     console.log(`[用户] 自动登录: ${regName} → ${p.id}`);
                     return new Response(JSON.stringify({ ...p, autoLogin: true, message: '欢迎回来，' + regName + '！' }), { headers: corsHeaders });
                   }
@@ -348,19 +354,22 @@ export function startServer(port = PORT) {
             }
           }
 
-          // 每日限额 10 人
+          // ── 每日注册限额 ──
           const today = new Date().toISOString().slice(0, 10);
           let todayCount = 0;
           if (existsSync(MEMORY_DIR)) {
             for (const d of readdirSync(MEMORY_DIR).filter(d => d.startsWith('user-'))) {
-              try {
-                const p = JSON.parse(readFileSync(join(MEMORY_DIR, d, 'profile.json'), 'utf-8'));
-                if ((p.createdAt || '').startsWith(today)) todayCount++;
-              } catch {}
+              const pPath = join(MEMORY_DIR, d, 'profile.json');
+              if (existsSync(pPath)) {
+                try {
+                  const p = JSON.parse(readFileSync(pPath, 'utf-8'));
+                  if ((p.createdAt || '').startsWith(today)) todayCount++;
+                } catch {}
+              }
             }
           }
           if (todayCount >= 10) {
-            return new Response(JSON.stringify({ error: '今日注册名额已满（每日限 10 人），明天再来吧！' }), { status: 429, headers: corsHeaders });
+            return new Response(JSON.stringify({ error: '今日注册名额已满（每日限 10 人），明天再来吧！', todayCount }), { status: 429, headers: corsHeaders });
           }
 
           const userId = 'user-' + regName + '-' + Date.now().toString(36);
@@ -1276,6 +1285,148 @@ export function startServer(port = PORT) {
       if (path === '/stock' || path === '/stock.html') {
         const { generateStockPage } = await import('./stock-page.js');
         return new Response(generateStockPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
+      // 新手引导页
+      if (path === '/guide' || path === '/guide.html') {
+        const { generateGuidePage } = await import('./guide-page.js');
+        return new Response(generateGuidePage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
+      // 管理后台
+      if (path === '/admin' || path === '/admin.html') {
+        const { generateAdminPage } = await import('./admin-page.js');
+        return new Response(generateAdminPage(), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
+      // ── 插件系统路由 ──
+
+      // 插件列表页
+      if (path === '/plugins' || path === '/plugins.html') {
+        return new Response(generatePluginListPage(getPlugins()), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+      }
+
+      // 插件容器页（iframe wrapper）
+      if (path.startsWith('/plugin/') && !path.startsWith('/plugins/')) {
+        const pluginId = path.split('/plugin/')[1]?.split('/')[0];
+        const plugin = getPlugins().find(p => p.id === pluginId);
+        if (plugin) {
+          return new Response(generatePluginWrapper(plugin), { headers: { ...corsHeaders, 'Content-Type': 'text/html; charset=utf-8' } });
+        }
+        return new Response('插件不存在', { status: 404, headers: corsHeaders });
+      }
+
+      // 插件静态文件（iframe 内加载的实际 HTML）
+      if (path.startsWith('/plugins/')) {
+        const filePath = '.' + path;
+        if (existsSync(filePath)) {
+          const content = readFileSync(filePath);
+          const ext = path.split('.').pop() || '';
+          const mimeTypes: Record<string, string> = {
+            'html': 'text/html', 'js': 'text/javascript', 'css': 'text/css',
+            'json': 'application/json', 'png': 'image/png', 'jpg': 'image/jpeg',
+            'svg': 'image/svg+xml', 'gif': 'image/gif',
+          };
+          const cspHeaders = {
+            ...corsHeaders,
+            'Content-Type': (mimeTypes[ext] || 'application/octet-stream') + '; charset=utf-8',
+            'Content-Security-Policy': "default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'",
+          };
+          return new Response(content, { headers: cspHeaders });
+        }
+        return new Response('文件不存在', { status: 404, headers: corsHeaders });
+      }
+
+      // SDK 文件
+      if (path.startsWith('/sdk/')) {
+        const filePath = '.' + path;
+        if (existsSync(filePath)) {
+          return new Response(readFileSync(filePath, 'utf-8'), { headers: { ...corsHeaders, 'Content-Type': 'text/javascript; charset=utf-8' } });
+        }
+        return new Response('SDK 文件不存在', { status: 404, headers: corsHeaders });
+      }
+
+      // ── 插件 API ──
+
+      // GET /api/plugins — 插件列表
+      if (path === '/api/plugins') {
+        return new Response(JSON.stringify(getPlugins().map(p => ({
+          id: p.id, name: p.name, icon: p.icon, description: p.description,
+          author: p.author, version: p.version, category: p.category,
+        }))), { headers: corsHeaders });
+      }
+
+      // GET /api/plugin/data?pluginId=x&userId=y&key=z
+      if (path === '/api/plugin/data' && request.method === 'GET') {
+        const pluginId = url.searchParams.get('pluginId') || '';
+        const userId = url.searchParams.get('userId') || '';
+        const key = url.searchParams.get('key') || '';
+        const value = getPluginData(pluginId, userId, key);
+        return new Response(JSON.stringify({ value }), { headers: corsHeaders });
+      }
+
+      // POST /api/plugin/data { pluginId, userId, key, value }
+      if (path === '/api/plugin/data' && request.method === 'POST') {
+        const body = await request.json() as any;
+        setPluginData(body.pluginId, body.userId, body.key, body.value);
+        return new Response(JSON.stringify({ success: true }), { headers: corsHeaders });
+      }
+
+      // POST /api/plugin/tokens { pluginId, userId, amount, reason }
+      if (path === '/api/plugin/tokens' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const walletPath = join('./agent-memories', body.userId, 'wallet.json');
+        let wallet: any = { balance: 15000, transactions: [] };
+        if (existsSync(walletPath)) { try { wallet = JSON.parse(readFileSync(walletPath, 'utf-8')); } catch {} }
+        wallet.balance = (wallet.balance || 0) + (body.amount || 0);
+        wallet.transactions = wallet.transactions || [];
+        wallet.transactions.push({ type: body.amount > 0 ? 'plugin-reward' : 'plugin-spend', amount: body.amount, plugin: body.pluginId, reason: body.reason, time: new Date().toISOString() });
+        mkdirSync(join('./agent-memories', body.userId), { recursive: true });
+        writeFileSync(walletPath, JSON.stringify(wallet, null, 2), 'utf-8');
+        return new Response(JSON.stringify({ success: true, balance: wallet.balance }), { headers: corsHeaders });
+      }
+
+      // POST /api/plugin/badge { userId, badgeId }
+      if (path === '/api/plugin/badge' && request.method === 'POST') {
+        const body = await request.json() as any;
+        const awarded = awardUserBadge(body.userId, body.badgeId);
+        return new Response(JSON.stringify({ success: awarded, message: awarded ? '勋章已获得' : '已拥有该勋章' }), { headers: corsHeaders });
+      }
+
+      // GET /api/plugin/badges/:userId
+      if (path.startsWith('/api/plugin/badges/')) {
+        const userId = path.split('/api/plugin/badges/')[1];
+        const badgeIds = getUserBadges(userId);
+        const badges = badgeIds.map(id => BADGES[id]).filter(Boolean);
+        return new Response(JSON.stringify(badges), { headers: corsHeaders });
+      }
+
+      // GET /api/badges — 所有勋章定义
+      if (path === '/api/badges') {
+        return new Response(JSON.stringify(Object.values(BADGES)), { headers: corsHeaders });
+      }
+
+      // POST /api/plugin/activity { userId, pluginId }
+      if (path === '/api/plugin/activity' && request.method === 'POST') {
+        const body = await request.json() as any;
+        recordActivity(body.userId, body.pluginId);
+        return new Response(JSON.stringify({ success: true }), { headers: corsHeaders });
+      }
+
+      // GET /api/plugin/leaderboard?metric=daily
+      if (path === '/api/plugin/leaderboard') {
+        return new Response(JSON.stringify(getDailyLeaderboard()), { headers: corsHeaders });
+      }
+
+      // POST /api/plugin/llm { pluginId, userId, prompt, maxTokens }
+      if (path === '/api/plugin/llm' && request.method === 'POST') {
+        const body = await request.json() as any;
+        try {
+          const result = await chat({ systemPrompt: '你是龙虾小镇的助手', userPrompt: body.prompt, maxTokens: body.maxTokens || 200 }, mockMode);
+          return new Response(JSON.stringify({ text: result.text }), { headers: corsHeaders });
+        } catch (err: any) {
+          return new Response(JSON.stringify({ error: err.message }), { status: 500, headers: corsHeaders });
+        }
       }
 
       // ── 设置向导页 ──

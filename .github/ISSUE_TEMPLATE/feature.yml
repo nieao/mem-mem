@@ -1,0 +1,33 @@
+name: "💡 功能建议"
+description: "想给龙虾小镇加什么好玩的？"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你的想法
+      description: 描述你想加的功能或玩法
+      placeholder: "比如：龙虾赛跑每日排名，前10名发勋章..."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 🎮 游戏玩法
+        - 💰 经济系统
+        - 🏅 勋章/成就
+        - 💬 社交互动
+        - 🔌 插件想法
+        - 🗺️ 地图/建筑
+        - 🦞 龙虾形象
+        - 📱 其他
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: 参考（可选）
+      description: 有没有类似的游戏/功能可以参考？
+      placeholder: "比如摩尔庄园的XX功能..."

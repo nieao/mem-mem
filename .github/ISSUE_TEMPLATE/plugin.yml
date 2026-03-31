@@ -1,0 +1,22 @@
+name: "🔌 插件提议"
+description: "想开发或想要什么插件？"
+labels: ["plugin"]
+body:
+  - type: textarea
+    id: plugin-idea
+    attributes:
+      label: 插件描述
+      description: 你想做什么插件，或者想要什么插件？
+      placeholder: "做一个龙虾美容院插件，可以给龙虾换造型..."
+    validations:
+      required: true
+  - type: dropdown
+    id: willing
+    attributes:
+      label: 你愿意自己开发吗？
+      options:
+        - 🙋 我来做！（会提交 PR）
+        - 🤝 需要帮忙一起做
+        - 💭 纯建议，等大佬实现
+    validations:
+      required: true

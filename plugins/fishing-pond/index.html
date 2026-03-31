@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>钓鱼池塘</title>
+<script src="/sdk/plugin-sdk.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    background: #fafafa; color: #2d2d2d;
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh; padding: 32px 24px;
+  }
+
+  .header {
+    text-align: center; margin-bottom: 40px;
+  }
+  .header h1 {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1.8rem; color: #1a1a1a; letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  .header .sub {
+    font-size: 0.78rem; color: #888; letter-spacing: 0.15em;
+  }
+  .header .balance {
+    margin-top: 12px; font-size: 0.85rem; color: #c8a882;
+  }
+
+  .pond {
+    width: 100%; max-width: 480px; position: relative;
+    border: 1px solid #e8e8e8; padding: 48px 32px;
+    text-align: center; margin-bottom: 32px;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .pond::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: #c8a882;
+    transform: scaleX(0); transition: transform 0.5s ease;
+  }
+  .pond:hover::before { transform: scaleX(1); }
+
+  .pond-visual {
+    font-size: 3rem; margin-bottom: 16px;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .status {
+    font-size: 1rem; color: #3a3a3a; min-height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px; line-height: 1.6;
+  }
+
+  .btn {
+    padding: 12px 36px; border: 1px solid #2d2d2d;
+    background: #2d2d2d; color: #fafafa; cursor: pointer;
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.1em;
+    transition: all 0.3s; position: relative;
+  }
+  .btn:hover:not(:disabled) { background: #c8a882; border-color: #c8a882; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn.urgent {
+    background: #c8a882; border-color: #c8a882;
+    animation: pulse 0.5s ease-in-out infinite alternate;
+  }
+  @keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+
+  .cost-hint {
+    margin-top: 12px; font-size: 0.72rem; color: #bbb;
+  }
+
+  .records {
+    width: 100%; max-width: 480px;
+  }
+  .records-title {
+    font-size: 0.72rem; letter-spacing: 0.35em; color: #c8a882;
+    text-transform: uppercase; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid #e8e8e8;
+  }
+  .record-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid #f0f0f0;
+    font-size: 0.82rem; opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+  }
+  .record-item .catch-name { color: #3a3a3a; }
+  .record-item .catch-token { color: #c8a882; font-weight: 500; }
+  .record-item .catch-time { color: #bbb; font-size: 0.72rem; }
+  .empty-record {
+    text-align: center; padding: 24px; color: #bbb; font-size: 0.82rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .result-popup {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); display: none;
+    align-items: center; justify-content: center; z-index: 100;
+  }
+  .result-popup.show { display: flex; }
+  .result-card {
+    background: #fafafa; padding: 48px 40px; text-align: center;
+    border: 1px solid #e8e8e8; max-width: 360px; width: 90%;
+    animation: popIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.8) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .result-icon { font-size: 4rem; margin-bottom: 16px; }
+  .result-name {
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 1.3rem; color: #1a1a1a; margin-bottom: 8px;
+  }
+  .result-token { font-size: 1rem; color: #c8a882; margin-bottom: 24px; }
+  .result-card .btn { font-size: 0.8rem; padding: 10px 28px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎣 钓鱼池塘</h1>
+  <div class="sub">在宁静的池塘边，碰碰运气</div>
+  <div class="balance" id="balance">余额加载中...</div>
+</div>
+
+<div class="pond" id="pond">
+  <div class="pond-visual" id="pondVisual">🌊</div>
+  <div class="status" id="status">准备好鱼竿，来一杆吧！</div>
+  <button class="btn" id="actionBtn" onclick="handleAction()">抛竿 (-5 Token)</button>
+  <div class="cost-hint">每次钓鱼消耗 5 Token 鱼饵费</div>
+</div>
+
+<div class="records" id="records">
+  <div class="records-title">今日钓鱼记录</div>
+  <div id="recordList">
+    <div class="empty-record">今天还没有钓过鱼</div>
+  </div>
+</div>
+
+<div class="result-popup" id="resultPopup">
+  <div class="result-card">
+    <div class="result-icon" id="resultIcon"></div>
+    <div class="result-name" id="resultName"></div>
+    <div class="result-token" id="resultToken"></div>
+    <button class="btn" onclick="closeResult()">收好</button>
+  </div>
+</div>
+
+<script>
+  // 钓鱼结果表
+  var CATCHES = [
+    { name: '空军',       icon: '💨', token: 0,    weight: 30, msg: '什么也没钓到...' },
+    { name: '小虾米',     icon: '🦐', token: 10,   weight: 30, msg: '钓到一只小虾！' },
+    { name: '大龙虾',     icon: '🦞', token: 50,   weight: 25, msg: '哇，一只大龙虾！' },
+    { name: '金色龙虾',   icon: '✨🦞', token: 200, weight: 10, msg: '传说中的金色龙虾！！' },
+    { name: '龙虾王',     icon: '👑🦞', token: 1000, weight: 5,  msg: '天啊！！龙虾王降临！！！' },
+  ];
+
+  var state = 'idle'; // idle -> waiting -> biting -> done
+  var biteTimer = null;
+  var missTimer = null;
+  var todayRecords = [];
+  var currentUser = null;
+
+  // 初始化
+  async function init() {
+    try {
+      currentUser = await LobsterSDK.getCurrentUser();
+      updateBalance();
+      await loadRecords();
+    } catch(e) {
+      document.getElementById('balance').textContent = '请先登录小镇';
+    }
+  }
+
+  async function updateBalance() {
+    try {
+      var bal = await LobsterSDK.getBalance();
+      document.getElementById('balance').textContent = 'Token 余额: ' + bal;
+    } catch(e) {}
+  }
+
+  async function loadRecords() {
+    try {
+      var today = new Date().toISOString().slice(0, 10);
+      var data = await LobsterSDK.getData('fishing_' + today);
+      if (data && Array.isArray(data)) {
+        todayRecords = data;
+        renderRecords();
+      }
+    } catch(e) {}
+  }
+
+  async function saveRecords() {
+    var today = new Date().toISOString().slice(0, 10);
+    await LobsterSDK.setData('fishing_' + today, todayRecords);
+  }
+
+  function renderRecords() {
+    var list = document.getElementById('recordList');
+    if (todayRecords.length === 0) {
+      list.innerHTML = '<div class="empty-record">今天还没有钓过鱼</div>';
+      return;
+    }
+    list.innerHTML = todayRecords.map(function(r, i) {
+      return '<div class="record-item" style="animation-delay:' + (i * 0.05) + 's">' +
+        '<span class="catch-name">' + r.icon + ' ' + r.name + '</span>' +
+        '<span class="catch-token">' + (r.token > 0 ? '+' + r.token : '0') + ' Token</span>' +
+        '<span class="catch-time">' + r.time + '</span>' +
+      '</div>';
+    }).reverse().join('');
+  }
+
+  // 随机选择钓鱼结果
+  function rollCatch() {
+    var total = CATCHES.reduce(function(s, c) { return s + c.weight; }, 0);
+    var r = Math.random() * total;
+    var acc = 0;
+    for (var i = 0; i < CATCHES.length; i++) {
+      acc += CATCHES[i].weight;
+      if (r <= acc) return CATCHES[i];
+    }
+    return CATCHES[0];
+  }
+
+  async function handleAction() {
+    var btn = document.getElementById('actionBtn');
+    var status = document.getElementById('status');
+    var visual = document.getElementById('pondVisual');
+
+    if (state === 'idle') {
+      // 抛竿 - 扣费
+      btn.disabled = true;
+      try {
+        await LobsterSDK.deductTokens(5, '钓鱼鱼饵费');
+      } catch(e) {
+        status.textContent = 'Token 不足，买点鱼饵再来吧！';
+        btn.disabled = false;
+        return;
+      }
+      await updateBalance();
+
+      state = 'waiting';
+      status.textContent = '鱼竿已抛出，耐心等待...';
+      visual.textContent = '🎣';
+      visual.style.animation = 'none';
+      btn.textContent = '等待中...';
+
+      // 随机 2-5 秒后鱼咬钩
+      var waitTime = 2000 + Math.random() * 3000;
+      biteTimer = setTimeout(function() {
+        state = 'biting';
+        status.textContent = '🔔 鱼咬钩了！快点击收杆！';
+        visual.textContent = '🐟💥';
+        btn.textContent = '收杆！';
+        btn.disabled = false;
+        btn.className = 'btn urgent';
+
+        // 1.5 秒内必须点击
+        missTimer = setTimeout(function() {
+          if (state === 'biting') {
+            state = 'idle';
+            status.textContent = '鱼跑了... 下次手速快点！';
+            visual.textContent = '🌊';
+            visual.style.animation = 'float 3s ease-in-out infinite';
+            btn.textContent = '抛竿 (-5 Token)';
+            btn.className = 'btn';
+            btn.disabled = false;
+
+            todayRecords.push({
+              name: '鱼跑了', icon: '💨', token: 0,
+              time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
+            });
+            renderRecords();
+            saveRecords();
+          }
+        }, 1500);
+      }, waitTime);
+
+    } else if (state === 'biting') {
+      // 收杆 - 结算
+      clearTimeout(missTimer);
+      state = 'idle';
+      btn.className = 'btn';
+      btn.disabled = true;
+
+      var caught = rollCatch();
+      status.textContent = caught.msg;
+      visual.textContent = caught.icon;
+
+      // 奖励 Token
+      if (caught.token > 0) {
+        try {
+          await LobsterSDK.addTokens(caught.token, '钓鱼收获: ' + caught.name);
+          await updateBalance();
+        } catch(e) {}
+      }
+
+      // 记录
+      var timeStr = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+      todayRecords.push({
+        name: caught.name, icon: caught.icon, token: caught.token, time: timeStr
+      });
+      renderRecords();
+      saveRecords();
+
+      // 广播好东西
+      if (caught.token >= 200) {
+        var userName = (currentUser && currentUser.name) || '虾友';
+        LobsterSDK.sendMessage(userName + ' 在钓鱼池塘钓到了 ' + caught.name + '！奖励 ' + caught.token + ' Token！');
+      }
+
+      // 弹窗
+      showResult(caught);
+
+      setTimeout(function() {
+        visual.textContent = '🌊';
+        visual.style.animation = 'float 3s ease-in-out infinite';
+        btn.textContent = '抛竿 (-5 Token)';
+        btn.disabled = false;
+      }, 1500);
+    }
+  }
+
+  function showResult(caught) {
+    document.getElementById('resultIcon').textContent = caught.icon;
+    document.getElementById('resultName').textContent = caught.name;
+    document.getElementById('resultToken').textContent =
+      caught.token > 0 ? '+' + caught.token + ' Token' : '颗粒无收';
+    document.getElementById('resultPopup').className = 'result-popup show';
+  }
+
+  function closeResult() {
+    document.getElementById('resultPopup').className = 'result-popup';
+  }
+
+  init();
+</script>
+</body>
+</html>
